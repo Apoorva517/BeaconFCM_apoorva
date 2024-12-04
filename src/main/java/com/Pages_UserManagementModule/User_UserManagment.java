@@ -1,12 +1,15 @@
 package com.Pages_UserManagementModule;
 
 import java.util.Arrays;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.*;
 import org.testng.Assert;
+import com.BasePackage.Base_Class;
 
 import com.BasePackage.Base_Class;
 import com.Page_Repositary.UserManagement;
@@ -20,34 +23,31 @@ public class User_UserManagment extends Base_Class
 
 	public boolean GoCollection() throws InterruptedException 
 	{
-	
 		Thread.sleep(20000);
-		click(PageRepositry.GoCollection);
-		Thread.sleep(20000);
-		
+		fluentWait("Gocollection", PageRepositry.GoCollection);
+		jsClick(PageRepositry.GoCollection);
+		Thread.sleep(30000);
 		return true;
 	}
 	public boolean SelectSecurityManagementMenu() throws InterruptedException 
 	{
-		Thread.sleep(4000);
-		click(PageRepositry.SecurityManagementMenu);
-		Thread.sleep(4000);
 		
+		waitVisibility(PageRepositry.SecurityManagementMenu);
+		click(PageRepositry.SecurityManagementMenu);
+		Thread.sleep(10000);
 		return true;
 	}
 	public boolean SelectUserManagementMenu() throws InterruptedException 
 	{
-		Thread.sleep(4000);
+		
 		click(PageRepositry.UserManagementMenu);
-		Thread.sleep(6000);
-
 		return true;
 	}
 	
 	
 	public boolean LocatorDisplayed() throws InterruptedException {
 	    
-	    
+		    waitVisibility(PageRepositry.UserManagementPageUsername);
 	        ElementDisplayed(PageRepositry.UserManagementPageUsername);
 	        ElementDisplayed(PageRepositry.UserManagementPageName);
 	        ElementDisplayed(PageRepositry.UserManagementPageMobilenumber);
@@ -62,22 +62,20 @@ public class User_UserManagment extends Base_Class
 	public boolean UsernameInput(String username) throws InterruptedException 
 	{
 		input(PageRepositry.UserManagementPageUsername,username);
-		Thread.sleep(3000);
 
 		return true;
 	}
 	public boolean UserManagementSearchBtn() throws InterruptedException 
 	{
 		click(PageRepositry.UserManagementPageSearch);
-		Thread.sleep(3000);
+		Thread.sleep(20000);
 
 		return true;
 	}
 	public boolean UserManagementInvalidSearchMsg() throws InterruptedException 
 	{
+		waitVisibility(PageRepositry.UserManagementInvalidSearchMsg);
 		click(PageRepositry.UserManagementInvalidSearchMsg);
-		Thread.sleep(3000);
-
 		return true;
 	}
 
@@ -126,6 +124,7 @@ public class User_UserManagment extends Base_Class
 	
 	public boolean ClickUserManagementLastArrowBtn() throws InterruptedException 
 	{
+		//fluentWait(PageRepositry.UserManagementNextArrowBtn);
 		click(PageRepositry.UserManagementNextArrowBtn);
 		Thread.sleep(20000);
 
@@ -143,10 +142,8 @@ public class User_UserManagment extends Base_Class
 	
 	public boolean ClickUserManagementPageAddUserBtn() throws InterruptedException 
 	{
-		
+		fluentWait("AddUser", PageRepositry.UserManagementPageAddUser);
 		click(PageRepositry.UserManagementPageAddUser);
-		Thread.sleep(10000);
-
 		return true;
 	}
 	public boolean AddNewUserPageElementsDisplayed() throws InterruptedException {
@@ -162,20 +159,30 @@ public class User_UserManagment extends Base_Class
 	        return true;
 	}
 	
+	
+	public boolean FetchTableHeaderName() throws InterruptedException {
+		List<WebElement> tds = driver.findElements(PageRepositry.tableHeaderName);
+
+    	for(WebElement td : tds){
+    	 String name = td.getText();
+    	 System.out.println(name);
+    	}
+    	ElementDisplayed(PageRepositry.ActivateGreenStatus);
+		ElementDisplayed(PageRepositry.tableHeaderName);
+		return true;
+    }
 	public boolean EnterAddNewUserName(String AddNewUserNameBtn) throws InterruptedException 
 	{
 	
 		input(PageRepositry.AddNewUserNameBtn,AddNewUserNameBtn );
-		Thread.sleep(1000);
 
 		return true;
 	}
-	
+	   
 	public boolean EnterAddNewUserEmail(String AddNewUserEmailBtn) throws InterruptedException 
 	{
 		
 		input(PageRepositry.AddNewUserEmailBtn, AddNewUserEmailBtn);
-		Thread.sleep(1000);
 
 		return true;
 	}
@@ -184,20 +191,17 @@ public class User_UserManagment extends Base_Class
 	{
 		
 		input(PageRepositry.AddNewUserPhoneNumberBtn , AddNewUserPhoneNumberBtn);
-		Thread.sleep(1000);
 
 		return true;
 	}
 	
 	public boolean SelectRoleDropdown(String value) throws InterruptedException {
 		SelectActiveDropdown(PageRepositry.AddNewUserRole, value);
-		Thread.sleep(10000);
 
 		return true;
 	}
 	public boolean SelectOrganizationTypeDropdown(String value) throws InterruptedException {
 		SelectActiveDropdown(PageRepositry.AddNewUserOrganizationType, value);
-		Thread.sleep(10000);
 
 		return true;
 	}
@@ -206,7 +210,6 @@ public class User_UserManagment extends Base_Class
 	{
 		
 		SelectActiveDropdown( PageRepositry.AddNewUserOrganizationType, value);
-		Thread.sleep(1000);
 
 		return true;
 	}
@@ -214,7 +217,6 @@ public class User_UserManagment extends Base_Class
 	{
 		
 		SelectActiveDropdown(PageRepositry.AddNewUserOrganizationType, value);
-		Thread.sleep(1000);
 
 		return true;
 	}
@@ -222,7 +224,6 @@ public class User_UserManagment extends Base_Class
 	{
 		
 		SelectActiveDropdown(PageRepositry.AddNewUserOrganizationType, value);
-		Thread.sleep(1000);
 
 		return true;
 	}
@@ -230,7 +231,6 @@ public class User_UserManagment extends Base_Class
 	{
 		
 		SelectActiveDropdown(PageRepositry.HeadOfficeDropdown, value);
-		Thread.sleep(1000);
 
 		return true;
 	}
@@ -266,6 +266,7 @@ public class User_UserManagment extends Base_Class
 	public boolean ClickAddNewUserSubmitBtn() throws InterruptedException 
 	{
 		
+		waitVisibility(PageRepositry.AddNewUserSubmitBtn);
 		click(PageRepositry.AddNewUserSubmitBtn);
 
 		return true;
@@ -298,8 +299,9 @@ public class User_UserManagment extends Base_Class
     
     public boolean ClickAddNewUserCloseBtn() throws InterruptedException 
 	{
-		click(PageRepositry.AddNewUserCloseBtn);
-		Thread.sleep(5000);
+    	waitVisibility(PageRepositry.AddNewUserCloseBtn);
+    	click(PageRepositry.AddNewUserCloseBtn);
+		Thread.sleep(20000);
 
 		return true;
 	}
@@ -335,18 +337,7 @@ public class User_UserManagment extends Base_Class
         ElementDisplayed(PageRepositry.EmptyHeadofficeErrorMsg);
         return true;
     }
-    public boolean ClickEditOption() throws InterruptedException {
-        click(PageRepositry.UserManagementPageThreeDotBtn);
-        click(PageRepositry.UserManagementPageEditOptn);
-        return true;
-    }
-    public boolean ClearEmailNumberField() throws InterruptedException {
-        click(PageRepositry.EdituserPageEmailField);
-        clear(PageRepositry.EdituserPageEmailField);
-        click(PageRepositry.EdituserPagePhoneNumberField);
-        clear(PageRepositry.EdituserPagePhoneNumberField);
-        return true;
-    }
+ 
     public boolean EnterEmailPhNumber(String EditPageEmail, String EditPagephNumber ) throws InterruptedException 
 	{
 	
@@ -355,9 +346,9 @@ public class User_UserManagment extends Base_Class
 		return true;
 	}
    
-    public boolean SuccessMessageUserCreation() throws InterruptedException 
+    public boolean SuccessMessage() throws InterruptedException 
    	{
-    	ElementDisplayed(PageRepositry.SuccessMessageUserCreation);
+    	ElementDisplayed(PageRepositry.SuccessMessage);
    		return true;
    	}
     public String FetchTableNameValue() throws InterruptedException {
@@ -368,6 +359,11 @@ public class User_UserManagment extends Base_Class
     public boolean ErrorMessageExistUserCreation() throws InterruptedException {
         ElementDisplayed(PageRepositry.ErrorMessageExistUserCreation);
         return true;
+    }
+    
+    public String GetUserNameandPassowrd() {
+    	String message = driver.findElement(PageRepositry.SuccessMessage).getText();
+    	return message;
     }
     public boolean ErrorMessageForZoneCO() throws InterruptedException {
         ElementDisplayed(PageRepositry.EmptyZoneCOErrorMsg);
@@ -383,14 +379,173 @@ public class User_UserManagment extends Base_Class
     }
     public boolean SelectAddNewUserZoneCO(String value) throws InterruptedException {
 		SelectActiveDropdown(PageRepositry.AddNewUserZoneCO, value);
-		Thread.sleep(5000);
 
 		return true;
 	}
     public boolean SelectAddNewUserRegion(String value) throws InterruptedException {
 		SelectActiveDropdown(PageRepositry.AddNewUserRegion, value);
-		Thread.sleep(5000);
+
+		return true;
+	}
+    public boolean SelectAddNewUserBranch(String value) throws InterruptedException {
+  		SelectActiveDropdown(PageRepositry.AddNewUserBranch, value);
+
+  		return true;
+  	}
+    public boolean ClickLogoutOption() throws InterruptedException {
+        click(PageRepositry.userDropDown);
+        click(PageRepositry.L_signout);
+        return true;
+    }
+    public boolean EnterLoginPageCredential(String username, String password ) throws InterruptedException 
+   	{
+   	
+   		input(PageRepositry.username,username );
+   		input(PageRepositry.password,password);
+   		return true;
+   	}
+    public boolean ClickLoginBtn() throws InterruptedException {
+        click(PageRepositry.SignIn);
+        return true;
+    }
+    public boolean ModuleSelectionEltDisplayed() throws InterruptedException 
+	{
+	
+		ElementDisplayed(PageRepositry.GoCollection);
+		ElementDisplayed(PageRepositry.RecoverySectionSetasDefault);
+		ElementDisplayed(PageRepositry.UserName);
+		ElementDisplayed(PageRepositry.UserId);
+		ElementDisplayed(PageRepositry.UserName);
+		return true;
+	}
+    
+    public boolean SetasDefaulNotSelected() {
+        return !driver.findElement(PageRepositry.SetasDefault).isSelected();
+     
+    }
+    public String FetchUserName() throws InterruptedException {
+        String Name = driver.findElement(PageRepositry.UserName).getText(); 
+        System.out.println(Name);
+        return Name; 
+    }
+    public String UserId() throws InterruptedException {
+        String Name = driver.findElement(PageRepositry.UserId).getText(); 
+        System.out.println(Name);
+        return Name; 
+    }
+    public boolean SelectUserManagementPageRole(String value) throws InterruptedException {
+		SelectActiveDropdown(PageRepositry.UserManagementPageRole, value);
+
+		return true;
+	}
+    
+    public boolean ClearUserManagementPageRole() throws InterruptedException {
+		click(PageRepositry.ClearUserManagementPageRole);
+
+		return true;
+	}
+    public boolean ClickUserManagementPageSearchBtn() throws InterruptedException {
+		click(PageRepositry.UserManagementPageSearch);
+		Thread.sleep(10000);
+
+		return true;
+	}
+    
+    public boolean FetchHeaderRole() throws InterruptedException {
+    	List<WebElement> tds = driver.findElements(PageRepositry.tableElts);
+
+    	for(WebElement td : tds){
+    	 String name = td.getText();
+    	 System.out.println(name);
+    	}
+    	ElementDisplayed(PageRepositry.tableRoleHeader);
+
+		return true;
+	}
+    public boolean EnterUsernameInUNPage(String UN) throws InterruptedException 
+	{
+    	input(PageRepositry.UserManagementPageUsername,UN);
+		return true;
+	}
+    
+    public boolean ClearUsernameInUNPage() throws InterruptedException 
+	{
+        clear(PageRepositry.UserManagementPageUsername);
+       
+		return true;
+	}
+    public boolean FetchTableUsername() throws InterruptedException {
+    	List<WebElement> tds = driver.findElements(PageRepositry.tableUsernameElts);
+
+    	for(WebElement td : tds){
+    	 String name = td.getText();
+    	 System.out.println(name);
+    	}
+    	ElementDisplayed(PageRepositry.ActivateGreenStatus);
+    	ElementDisplayed(PageRepositry.tableHeaderName);
+    	ElementDisplayed(PageRepositry.tableUsername);
+
+		return true;
+	}
+    public boolean StepsOnDeactivateOptn() throws InterruptedException {
+    	waitVisibility(PageRepositry.UserManagementPageThreeDotBtn);
+        click(PageRepositry.UserManagementPageThreeDotBtn);
+        Thread.sleep(3000);
+        waitVisibility(PageRepositry.activateDeactivateBtn);
+        click(PageRepositry.activateDeactivateBtn);
+        waitVisibility(PageRepositry.SuccessMessageUserCreation);
+        click(PageRepositry.UserManagementPageActiveCheck);
+        Thread.sleep(20000);
+        waitVisibility(PageRepositry.UserManagementPageSearch);
+        click(PageRepositry.UserManagementPageSearch);
+        Thread.sleep(10000);
+        return true;
+    }
+    public boolean DisplayDeactivateRedStatus() throws InterruptedException {
+    	ElementDisplayed(PageRepositry.DeactivateRedStatus);
+
+		return true;
+	}
+    public boolean StepsOnActivateOptn() throws InterruptedException {
+        click(PageRepositry.UserManagementPageThreeDotBtn);
+        Thread.sleep(3000);
+        click(PageRepositry.activateDeactivateBtn);
+        waitVisibility(PageRepositry.SuccessMessageUserCreation);
+        waitVisibility(PageRepositry.UserManagementPageActiveUnCheck);
+        click(PageRepositry.UserManagementPageActiveUnCheck);
+        Thread.sleep(10000);
+        click(PageRepositry.UserManagementPageSearch);
+        Thread.sleep(10000);
+        return true;
+    }
+    public boolean DisplayActivateGreenStatus() throws InterruptedException {
+    	ElementDisplayed(PageRepositry.ActivateGreenStatus);
+
+		return true;
+	}
+    public boolean ResetPassword() throws InterruptedException {
+    	click(PageRepositry.UserManagementPageThreeDotBtn);
+    	click(PageRepositry.ResetPassword);
+    	ElementDisplayed(PageRepositry.ResetPasswordMsg);
+
+		return true;
+	}
+    public boolean EditUserDetails() throws InterruptedException {
+    	click(PageRepositry.UserManagementPageThreeDotBtn);
+    	click(PageRepositry.EditBtn);
+    	ElementDisplayed(PageRepositry.EditPageName);
+    	ElementDisplayed(PageRepositry.EditPageEmail);
+    	ElementDisplayed(PageRepositry.EditPagePhNumber);
+    	ElementDisplayed(PageRepositry.EditPageRole);
+    	ElementDisplayed(PageRepositry.EditPageOrganizationType);
+    	ElementDisplayed(PageRepositry.EditPageHeadoffice);
+    	ElementDisplayed(PageRepositry.CloseBtn);
+    	ElementDisplayed(PageRepositry.UpdateBtn);
 
 		return true;
 	}
 }
+
+
+
+

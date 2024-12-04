@@ -1,23 +1,14 @@
-[INFO ] 2024-11-28 17:35:19.587 [main] Log - *** Running test method User_UserManagment...
-[INFO ] 2024-11-28 17:35:22.257 [main] Log - Driver has initialized successfully for chromebrowser
-[INFO ] 2024-11-28 17:35:32.345 [main] Log - Title is displayed : BeaconICnRM
-[INFO ] 2024-11-28 17:36:22.813 [main] Log - Login successful !
-[ERROR] 2024-11-28 17:37:28.087 [main] Log - *** Test execution User_UserManagment failed...
-[ERROR] 2024-11-28 17:37:28.087 [main] Log - Expected condition failed: waiting for element to be clickable: By.xpath: //button[text()='Go C[INFO ] 2024-11-28 17:37:32.259 [main] Log - All elements in UserManagementPage displayed : true
-[INFO ] 2024-11-28 17:37:32.313 [main] Log - IsActive Checkbox Selected by default : true
-[INFO ] 2024-11-28 17:37:34.461 [main] Log - Displayed UserManagement PreviousBtn : true
-[INFO ] 2024-11-28 17:37:34.592 [main] Log - Displayed UserManagement FirstPageBtn : true
-[INFO ] 2024-11-28 17:37:34.707 [main] Log - Displayed UserManagement SecondPageBtn : true
-[INFO ] 2024-11-28 17:37:34.811 [main] Log - Displayed UserManagement NextBtn : true
-[INFO ] 2024-11-28 17:37:34.934 [main] Log - Displayed UserManagement LastArrowBtn :true
-[INFO ] 2024-11-28 17:37:45.210 [main] Log - Clicked '2nd'page button in pagination :true
-[INFO ] 2024-11-28 17:38:05.561 [main] Log - Clicked on the '>>' button in paginationtrue
-[INFO ] 2024-11-28 17:38:15.914 [main] Log - Clicked on the'Previous' button in pagination :true
-[INFO ] 2024-11-28 17:38:28.008 [main] Log - Add New UserPage Elements Displayed :true
-[INFO ] 2024-11-28 17:38:29.202 [main] Log - Entered valid Name is showing : true
-[INFO ] 2024-11-28 17:38:30.373 [main] Log - Entered valid Email is showing : true
-[INFO ] 2024-11-28 17:38:31.602 [main] Log - Entered valid Phonenumber is showing : true
-[ERROR] 2024-11-28 17:40:31.972 [main] Log - *** Test execution User_UserManagment failed...
-[ERROR] 2024-11-28 17:40:31.973 [main] Log - Expected condition failed: waiting for presence of element located by: By.xpath: //*[text()='NewrolePlaywright']//parent::li (tried for 60 second(s) with 500 milliseconds interval)
-[INFO ] 2024-11-28 17:40:33.081 [main] Log - Logout is done
-[INFO ] 2024-11-28 17:40:33.462 [main] Log - *** Test Suite User_UserManagment ending ***
+[INFO ] 2024-12-04 12:56:01.144 [main] Log - *** Running test method User_UserManagment...
+[INFO ] 2024-12-04 12:56:03.108 [main] Log - Driver has initialized successfully for chromebrowser
+[INFO ] 2024-12-04 12:56:12.660 [main] Log - Title is displayed : BeaconICnRM
+[INFO ] 2024-12-04 12:57:09.225 [main] Log - Login successful !
+[INFO ] 2024-12-04 12:58:09.396 [main] Log - Clicked Go Collection
+[INFO ] 2024-12-04 12:58:19.932 [main] Log - clicked UserManagementMenu : true
+[INFO ] 2024-12-04 12:58:40.720 [main] Log - All elements in UserManagementPage displayed : true
+[INFO ] 2024-12-04 12:58:40.920 [main] Log - Table headers is displayed : true
+[INFO ] 2024-12-04 12:58:40.948 [main] Log - IsActive Checkbox Selected by default : true
+[INFO ] 2024-12-04 12:58:53.970 [main] Log - Successfully user found and clicked on the NewrolePlaywright value inside the dropdown 
+[INFO ] 2024-12-04 12:58:57.582 [main] Log - Successfully user found and clicked on the Branch value inside the dropdown 
+[INFO ] 2024-12-04 12:59:11.240 [main] Log - Successfully user found and clicked on the Mumbai value inside the dropdown 
+[INFO ] 2024-12-04 12:59:15.327 [main] Log - Successfully user found and clicked on the Ahmedabad value inside the dropdown 
+[INFO ] 2024-12-04 12:59:24.423 [main] Log - Successfully user found and clicked on the Indore value inside the dropdown 

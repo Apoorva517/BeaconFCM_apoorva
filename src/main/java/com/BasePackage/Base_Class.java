@@ -24,6 +24,9 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.ElementNotInteractableException;
+import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.WebDriverException;
 
 import com.Utility.Log;
 
@@ -94,6 +97,16 @@ public class Base_Class {
 
 	}
 	
+	public static void jsClick(By locator) {
+
+        WebElement element = driver.findElement(locator);
+
+        JavascriptExecutor js = driver;
+
+        js.executeScript("arguments[0].click();", element);
+
+ }
+	
 	public String writeDynamicEmail() {
 
         String allowedChars = "abcdefghijklmnopqrstuvwxyz" + "1234567890";
@@ -129,10 +142,10 @@ public class Base_Class {
 
  }
 
-	public static  void input(By element, String Value) throws InterruptedException {
+	public static void input(By element, String Value) throws InterruptedException {
 
 
-		WebDriverWait wait2 = new WebDriverWait(driver, 120);
+		WebDriverWait wait2 = new WebDriverWait(driver, 180);
 		wait2.until(ExpectedConditions.presenceOfElementLocated(element)).sendKeys(Value);
 
 
@@ -140,7 +153,7 @@ public class Base_Class {
 
 	public static  void click(By element) throws InterruptedException {
 
-		WebDriverWait wait = new WebDriverWait(driver, 120);
+		WebDriverWait wait = new WebDriverWait(driver, 180);
 		wait.until(ExpectedConditions.elementToBeClickable(element)).click();
 
 	}
@@ -160,8 +173,7 @@ public class Base_Class {
 		wait.until(ExpectedConditions.elementToBeClickable(element)).clear();
 		Thread.sleep(2000);
 	}
-
-
+   
 	public static void AcceptAlert()
 	{
 		driver.switchTo().alert().accept();
@@ -190,7 +202,7 @@ public class Base_Class {
 
 	public static boolean ElementDisplayed(By locator)
 	{   
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, 20000);
 		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 		WebElement element = driver.findElement(locator);
 		Boolean flag = element.isDisplayed();
@@ -246,6 +258,7 @@ public class Base_Class {
 	}
 
 
+
 	public static  void Hover(By element) throws InterruptedException {
 		WebElement element1 = driver.findElement(element);
 		Actions actions = new Actions(driver);
@@ -254,6 +267,50 @@ public class Base_Class {
 
 
 	}
+	
+	/*public void HandlingLoginPopup(By by, String value) throws InterruptedException {
+	{
+
+	try:
+	    yes_button = WebDriverWait(driver, 5).until(
+	        EC.presence_of_element_located((By.XPATH, "//button[contains(text(), 'Yes')]"));
+	    )
+	    
+	    if yes_button:
+	        print("Popup 'Already Logged In' detected. Clicking 'Yes'.");
+	        yes_button.click();
+	        time.sleep(3);
+			private static By username = By.xpath("//input[@placeholder='User Name']");
+			private static By password = By.xpath("//input[@placeholder='Password']");
+
+	except:
+	 
+	    try:
+	       
+	        username_field = WebDriverWait(driver, 5).until()
+	            EC.presence_of_element_located((By.NAME, "User Name"));  # Change as per your form's field names
+	)
+	        password_field = WebDriverWait(driver, 5).until(
+	            EC.presence_of_element_located((By.NAME, "Password"));  # Change as per your form's field names
+	        )
+	        
+	        //If login fields are found, enter credentials
+	        if username_field and password_field:
+	            print("Login form detected. Entering credentials.");
+	            username_field.send_keys("your_username");
+	            password_field.send_keys("your_password");
+	            
+	           // Find the login button and click it
+	            login_button = driver.find_element(By.XPATH, "//button[@type='submit']");  // Adjust XPath as needed
+	            login_button.click();
+	            
+	            // Wait for the login to process (or page to load)
+	            time.sleep(5);''
+	            
+	    except:
+	        print("No login form or 'Already Logged In' popup detected.");
+	    		
+	}*/
 
 	public void SelectActiveDropdown(By by, String value) throws InterruptedException {
 
@@ -262,7 +319,7 @@ public class Base_Class {
 			//Js.executeScript("arguments[0].click();", by);
             click(by);
 
-			Thread.sleep(2000); 
+			Thread.sleep(3000); 
 
 			By options = By.xpath("//*[text()='"+ value +"']//parent::li");
 
@@ -292,14 +349,60 @@ public class Base_Class {
 
 		}
 
-
-
 	}
+	
+	
 	
 	
 	public WebElement waitVisibility(By by) {
-		WebDriverWait wait = new WebDriverWait(driver, 120);
+		WebDriverWait wait = new WebDriverWait(driver, 120000);
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
 	}
+	
+
+	/*public class Common {
+		
+		 private static WebDriver driver; // Make WebDriver a global variable
+
+		    public static void setDriver(WebDriver webDriver) {
+		        driver = webDriver;
+		    }*/
+
+	    public static void fluentWait(String WebElementName, By element) {
+	        try {
+	            System.out.println("Fluent wait started for: " + WebElementName);
+	            Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+	                    .withTimeout(Duration.ofMinutes(10))
+	                    .ignoring(NullPointerException.class)
+	                    .ignoring(StaleElementReferenceException.class)
+	                    .ignoring(NoSuchElementException.class)
+	                    .ignoring(ElementNotInteractableException.class)
+	                    .ignoring(WebDriverException.class)
+	                    .pollingEvery(Duration.ofMillis(5));
+	            wait.until(ExpectedConditions.elementToBeClickable(element));
+	            System.out.println("Fluent wait ended element is clickable: " + WebElementName);
+	        } catch (Exception e) {
+	            System.out.println("Error during fluent wait: " + e.getMessage());
+	        }
+	    }
+	    
+	    
+	    public static void waitForSpinnerToDisappear(WebDriver driver, String WebElementName, By element) {
+	        // Define the FluentWait
+	        FluentWait<WebDriver> wait = new FluentWait<>(driver)
+	                .withTimeout(Duration.ofSeconds(30)) // Maximum wait time
+	                .pollingEvery(Duration.ofMillis(500)) // Polling interval
+	                .ignoring(Exception.class); // Ignore exceptions like NoSuchElementException
+
+	        // Wait until the spinner disappears
+	        wait.until(driverInstance -> {
+	            try {
+	                WebElement spinner = driverInstance.findElement(element);
+	                return !spinner.isDisplayed(); // Return true if spinner is not displayed
+	            } catch (Exception e) {
+	                return true; // Return true if spinner is not found
+	            }
+	        });
+	    }
 
 }
