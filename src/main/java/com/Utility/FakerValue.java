@@ -20,7 +20,12 @@ public class FakerValue {
 Faker fakedata = new Faker(new Locale("en-US"));
 FakeValuesService fakeservice = new FakeValuesService(new Locale("en-US"), new RandomService());
 public String getFirstName() {
-return fakedata.name().firstName().toString();
+	String firstName;
+	do {
+		firstName = fakedata.name().firstName().toString();
+	} while(firstName.length() <= 4);
+	
+	return firstName;
 }
 public String getLastname() {
 return fakedata.name().lastName().toString();

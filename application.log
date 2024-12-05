@@ -1,14 +1,16 @@
-[INFO ] 2024-12-04 12:56:01.144 [main] Log - *** Running test method User_UserManagment...
-[INFO ] 2024-12-04 12:56:03.108 [main] Log - Driver has initialized successfully for chromebrowser
-[INFO ] 2024-12-04 12:56:12.660 [main] Log - Title is displayed : BeaconICnRM
-[INFO ] 2024-12-04 12:57:09.225 [main] Log - Login successful !
-[INFO ] 2024-12-04 12:58:09.396 [main] Log - Clicked Go Collection
-[INFO ] 2024-12-04 12:58:19.932 [main] Log - clicked UserManagementMenu : true
-[INFO ] 2024-12-04 12:58:40.720 [main] Log - All elements in UserManagementPage displayed : true
-[INFO ] 2024-12-04 12:58:40.920 [main] Log - Table headers is displayed : true
-[INFO ] 2024-12-04 12:58:40.948 [main] Log - IsActive Checkbox Selected by default : true
-[INFO ] 2024-12-04 12:58:53.970 [main] Log - Successfully user found and clicked on the NewrolePlaywright value inside the dropdown 
-[INFO ] 2024-12-04 12:58:57.582 [main] Log - Successfully user found and clicked on the Branch value inside the dropdown 
-[INFO ] 2024-12-04 12:59:11.240 [main] Log - Successfully user found and clicked on the Mumbai value inside the dropdown 
-[INFO ] 2024-12-04 12:59:15.327 [main] Log - Successfully user found and clicked on the Ahmedabad value inside the dropdown 
-[INFO ] 2024-12-04 12:59:24.423 [main] Log - Successfully user found and clicked on the Indore value inside the dropdown 
+[INFO ] 2024-12-05 12:56:37.572 [main] Log - *** Running test method User_UserManagment...
+[INFO ] 2024-12-05 12:56:39.500 [main] Log - Driver has initialized successfully for chromebrowser
+[INFO ] 2024-12-05 12:56:49.180 [main] Log - Title is displayed : BeaconICnRM
+[INFO ] 2024-12-05 12:57:36.028 [main] Log - Login successful !
+[ERROR] 2024-12-05 13:00:31.294 [main] Log - *** Test execution User_UserManagment failed...
+[ERROR] 2024-12-05 13:00:31.295 [main] Log - no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.87)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SPBLRLAP-4743', ip: '192.168.1.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.87, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\Users\APOORV~1.KAR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58830}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d117016b480ebe02c9adcc426de45d4e
+*** Element info: {Using=xpath, value=//button[@class='btn btn-primary' and text()='Go Collection']}
+[INFO ] 2024-12-05 13:00:31.524 [main] Log - Logout is done
+[INFO ] 2024-12-05 13:00:31.773 [main] Log - *** Test Suite User_UserManagment ending ***

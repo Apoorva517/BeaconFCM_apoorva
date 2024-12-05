@@ -61,19 +61,18 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
 				context.setAttribute("fileName", "Login");
 				Base_Class.SetUp();
-				ExtentTestManager.getTest().log(Status.PASS,
-						"Application Login" + com.BasePackage.Base_Class.Pagetitle);
+				//ExtentTestManager.getTest().log(Status.PASS,
+						//"Application Login" + com.BasePackage.Base_Class.Pagetitle);
 				Log.info("Login successful !");
 			
 				TimeUnit.SECONDS.sleep(5);
-				ExtentTestManager.startTest(" User Management Page");
+				//ExtentTestManager.startTest(" User Management Page");
 				boolean flag1 = User_UserManagementPage.GoCollection();
-				TimeUnit.SECONDS.sleep(5);
-				ExtentTestManager.getTest().log(Status.PASS, "Clicked Go collection button : " + flag1);
+				//ExtentTestManager.getTest().log(Status.PASS, "Clicked Go collection button : " + flag1);
 				Log.info("Clicked Go Collection");
 				User_UserManagementPage.SelectSecurityManagementMenu();
 				boolean flag2 = User_UserManagementPage.SelectUserManagementMenu();
-				ExtentTestManager.getTest().log(Status.PASS, "Clicked SelectUserManagementMenu : " + flag2);
+				//ExtentTestManager.getTest().log(Status.PASS, "Clicked SelectUserManagementMenu : " + flag2);
 				Log.info("clicked UserManagementMenu : " + flag2);
 				
 				Thread.sleep(20000);
@@ -82,7 +81,7 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				ExtentTestManager.getTest().log(Status.PASS, "ElementEnabled " + flag3);
 				Log.info("All elements in UserManagementPage displayed : " + flag3);
 				boolean flag4=User_UserManagementPage.FetchTableHeaderName();
-				ExtentTestManager.getTest().log(Status.PASS, "Table headers is displayed " + flag4);
+				//ExtentTestManager.getTest().log(Status.PASS, "Table headers is displayed " + flag4);
 				Log.info("Table headers is displayed : " + flag4);
 				
 				ExtentTestManager.startTest("TestScenario02 :Checking IsActive Checkbox Selected by default ");
@@ -90,23 +89,23 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				ExtentTestManager.getTest().log(Status.PASS, "isIsActiveCheckboxSelected : " + flag5);
 				Log.info("IsActive Checkbox Selected by default : " + flag5);
 				
-			    /*ExtentTestManager.startTest("TestScenario03 :User search page - Pagination of Active users ");
+			    ExtentTestManager.startTest("TestScenario03 :User search page - Pagination of Active users ");
   			    Thread.sleep(1000);
 				boolean flag6 = User_UserManagementPage.DisplayUserManagementPreviousBtn();
-				ExtentTestManager.getTest().log(Status.PASS, "Displayed UserManagement PreviousBtn : " + flag6);
+				//ExtentTestManager.getTest().log(Status.PASS, "Displayed UserManagement PreviousBtn : " + flag6);
 				Log.info("Displayed UserManagement PreviousBtn : " + flag6);
 				boolean flag7 = User_UserManagementPage.DisplayUserManagementFirstPageBtn();
 				ExtentTestManager.getTest().log(Status.PASS, "Displayed UserManagement FirstPageBtn : " + flag7);
 				Log.info("Displayed UserManagement FirstPageBtn : " + flag7);
 				boolean flag8 = User_UserManagementPage.DisplayUserManagementSecondPageBtn();
-				ExtentTestManager.getTest().log(Status.PASS, "Displayed UserManagement SecondPageBtn : " + flag8);
+				//ExtentTestManager.getTest().log(Status.PASS, "Displayed UserManagement SecondPageBtn : " + flag8);
 				Log.info("Displayed UserManagement SecondPageBtn : " + flag8);
 				boolean flag9 = User_UserManagementPage.DisplayUserManagementNextBtn();
-				ExtentTestManager.getTest().log(Status.PASS, "Displayed UserManagement NextBtn : " + flag9);
+				//ExtentTestManager.getTest().log(Status.PASS, "Displayed UserManagement NextBtn : " + flag9);
 				Log.info("Displayed UserManagement NextBtn : " + flag9);
 				boolean flag10 = User_UserManagementPage.DisplayUserManagementLastArrowBtn();
-				ExtentTestManager.getTest().log(Status.PASS, "Displayed UserManagement LastArrowBtn : " + flag10);
-				Log.info("Displayed UserManagement LastArrowBtn :" + flag10);
+				ExtentTestManager.getTest().log(Status.PASS, "Displayed User search page - Pagination of Active users : " + flag10);
+				Log.info("Displayed User search page - Pagination of Active users :" + flag10);
 				
 				ExtentTestManager.startTest("TestScenario04 :User search page - Pagination of Active users - Last page button functionality and data checking ");
 				boolean flag11 = User_UserManagementPage.ClickUserManagementSecondPageBtn();
@@ -128,7 +127,7 @@ public class AllScenarios_UserManagementModule extends Base_Class {
   			    Thread.sleep(1000);
   			    boolean flag14 = User_UserManagementPage.AddNewUserPageElementsDisplayed();
 				ExtentTestManager.getTest().log(Status.PASS, "Add New UserPage Elements Displayed or not: " + flag14);
-				Log.info("Add New UserPage Elements Displayed :" + flag14);*/
+				Log.info("Add New UserPage Elements Displayed :" + flag14);
 				
 				String AddNewUserNameBtn = testdata.get("Name").toString();
 				String AddNewUserEmailBtn = testdata.get("Email").toString();
@@ -143,7 +142,6 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				String InvalidEmailIdWithoutDomain = testdata.get("EmailWithoutDomain").toString();
 				String InvalidPhoneNumberWithLetters = testdata.get("NumberWithLetters").toString();
 				String InvalidPhoneNumberWithEightDigits = testdata.get("NumberEightDigits").toString();
-				String NameWithAlphabeticInput = testdata.get("AlphabeticInputName").toString();
 				String NamewithNumericInput = testdata.get("NumericInputName").toString();
 				String NamewithAlphaNumericInput = testdata.get("AlphaNumericInputName").toString();
 				String AddNewUserZoneCO = testdata.get("ZoneCO").toString();
@@ -155,7 +153,7 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				String UserManagementPageRole= testdata.get("UserManagementPageRole").toString(); 
 				String UsernameInUNPage = testdata.get("UsernameInUNPage").toString();  
 				
-				/*ExtentTestManager.startTest("TestScenario08 :Add new user page - Organization Type Selection as Head office - Display Head Office Dropdown ");
+				ExtentTestManager.startTest("TestScenario08 :Add new user page - Organization Type Selection as Head office - Display Head Office Dropdown ");
 				boolean EnterName = User_UserManagementPage.EnterAddNewUserName(AddNewUserNameBtn);
 				ExtentTestManager.getTest().log(Status.PASS, "Entered valid Name" + " is displayed : " + EnterName);
                 Log.info("Entered valid Name is showing : " + EnterName);
@@ -183,44 +181,42 @@ public class AllScenarios_UserManagementModule extends Base_Class {
                 Log.info("Head office dropdown is selected : " + SelectOrganizationtype);
                 
                 ExtentTestManager.startTest("TestScenario09 :Add new user page - Organization Type Selection as Zone/Co - Display Head office and Zone/CO drop down fields ");
-				TimeUnit.SECONDS.sleep(5);
 				boolean flag16 = User_UserManagementPage.DisplayAddNewUserHeadofficeBtn();
-				ExtentTestManager.getTest().log(Status.PASS, "Displayed Add New User Headoffice option : " + flag16);
+				//ExtentTestManager.getTest().log(Status.PASS, "Displayed Add New User Headoffice option : " + flag16);
 				Log.info("Displayed Add New User Headoffice option : " + flag16);
                 User_UserManagementPage.SelectOrganizationTypeDropdown2(AddNewUserOrganizationType2);
+                TimeUnit.SECONDS.sleep(2);
 				boolean flag18 = User_UserManagementPage.DisplayAddNewUserHeadofficeBtn();
-				ExtentTestManager.getTest().log(Status.PASS, "Displayed AddNewUser HeadofficeField : " + flag18);
+				//ExtentTestManager.getTest().log(Status.PASS, "Displayed AddNewUser HeadofficeField : " + flag18);
 				Log.info("Displayed AddNewUser HeadofficeField : " + flag18);
 				boolean flag19 = User_UserManagementPage.DisplayAddNewUserZoneCOBtn();
 				ExtentTestManager.getTest().log(Status.PASS, "Display AddNewUser ZoneCOField : " + flag19);
 				Log.info("Displayed AddNewUser ZoneCOField : " + flag19);
 				
 				ExtentTestManager.startTest("TestScenario10 :Add new user page - Organization Type Selection as Region - Display Head office, Zone/CO and Region drop down fields");
-				TimeUnit.SECONDS.sleep(3);
                 User_UserManagementPage.SelectOrganizationTypeDropdown3(AddNewUserOrganizationType3);
-                TimeUnit.SECONDS.sleep(5);
+                TimeUnit.SECONDS.sleep(2);
 				boolean flag20 = User_UserManagementPage.DisplayAddNewUserHeadofficeBtn();
-				ExtentTestManager.getTest().log(Status.PASS, "Displayed AddNewUser HeadofficeField : " + flag20);
+				//ExtentTestManager.getTest().log(Status.PASS, "Displayed AddNewUser HeadofficeField : " + flag20);
 				Log.info("Displayed AddNewUser HeadofficeField : " + flag20);
 				boolean flag21 = User_UserManagementPage.DisplayAddNewUserZoneCOBtn();
-				ExtentTestManager.getTest().log(Status.PASS, "Display AddNewUser ZoneCOField : " + flag21);
+				//ExtentTestManager.getTest().log(Status.PASS, "Display AddNewUser ZoneCOField : " + flag21);
 				Log.info("Displayed AddNewUser ZoneCOField : " + flag21);
 				boolean flag22 = User_UserManagementPage.DisplayAddNewUserRegionBtn();
 				ExtentTestManager.getTest().log(Status.PASS, "Display AddNewUser RegionField : " + flag22);
 				Log.info("Displayed AddNewUser RegionField : " + flag22);
 				
 				ExtentTestManager.startTest("TestScenario11 :Add new user page - Organization Type Selection as Branch - Display Head office, Zone/CO, Region and Branch drop down fields");
-				TimeUnit.SECONDS.sleep(3);
                 User_UserManagementPage.SelectOrganizationTypeDropdown4(AddNewUserOrganizationType4);
-                TimeUnit.SECONDS.sleep(5);
+                TimeUnit.SECONDS.sleep(2);
 				boolean flag23 = User_UserManagementPage.DisplayAddNewUserHeadofficeBtn();
-				ExtentTestManager.getTest().log(Status.PASS, "Displayed AddNewUser HeadofficeField : " + flag23);
+				//ExtentTestManager.getTest().log(Status.PASS, "Displayed AddNewUser HeadofficeField : " + flag23);
 				Log.info("Displayed AddNewUser HeadofficeField : " + flag23);
 				boolean flag24 = User_UserManagementPage.DisplayAddNewUserZoneCOBtn();
-				ExtentTestManager.getTest().log(Status.PASS, "Display AddNewUser ZoneCOField : " + flag24);
+				//ExtentTestManager.getTest().log(Status.PASS, "Display AddNewUser ZoneCOField : " + flag24);
 				Log.info("Displayed AddNewUser ZoneCOField : " + flag24);
 				boolean flag25 = User_UserManagementPage.DisplayAddNewUserRegionBtn();
-				ExtentTestManager.getTest().log(Status.PASS, "Display AddNewUser RegionField : " + flag25);
+				//ExtentTestManager.getTest().log(Status.PASS, "Display AddNewUser RegionField : " + flag25);
 				Log.info("Displayed AddNewUser RegionField : " + flag25);
 				boolean flag26 = User_UserManagementPage.DisplayAddNewUserRegionBtn();
 				ExtentTestManager.getTest().log(Status.PASS, "Display AddNewUser BranchField : " + flag26);
@@ -237,7 +233,6 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				boolean flag28 = User_UserManagementPage.ErrormessageforAdduserPage();
 				ExtentTestManager.getTest().log(Status.PASS, "Error message for AdduserPage displayed : " + flag28);
 				Log.info("Error message for AdduserPage displayed : " + flag28);
-				Thread.sleep(20000);
 				
 				ExtentTestManager.startTest("TestScenario13 :Add new user page - Enter and select inputs for all fields except Name Field and click on submit button");
 				User_UserManagementPage.ClickAddNewUserCloseBtn();
@@ -252,7 +247,6 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				boolean flag29  = User_UserManagementPage.ErrormessageforNameField();
 				ExtentTestManager.getTest().log(Status.PASS, "Error message for NameField" + " is displayed : " + flag29);
 				Log.info("Error message for NameField displayed : " + flag29);
-				Thread.sleep(20000);
 				
 		        ExtentTestManager.startTest("TestScenario14 :Add new user page - Enter and select inputs for all fields except Email Field and click on submit button");
 				User_UserManagementPage.ClickAddNewUserCloseBtn();
@@ -281,7 +275,6 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				boolean flag31  = User_UserManagementPage.ErrormessageforPhoneNumberField();
 				ExtentTestManager.getTest().log(Status.PASS, "Error message for PhoneNumberField" + " is displayed : " + flag31);
 				Log.info("Error message for PhoneNumberField displayed : " + flag31);
-				Thread.sleep(20000);
 				
 				ExtentTestManager.startTest("TestScenario16 :Add new user page - Enter and select inputs for all fields except role drop down and click on submit button");
 				User_UserManagementPage.ClickAddNewUserCloseBtn();
@@ -296,13 +289,10 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				boolean flag32  = User_UserManagementPage.ErrormessageforRoleField();
 				ExtentTestManager.getTest().log(Status.PASS, "Error message for RoleField" + " is displayed : " + flag32);
 				Log.info("Error message for RoleField displayed : " + flag32);
-				Thread.sleep(20000);
 				
 				ExtentTestManager.startTest("TestScenario17 :Add new user page - Enter and select inputs for all fields except organization type drop down and click on submit button");
 				User_UserManagementPage.ClickAddNewUserCloseBtn();
-				TimeUnit.SECONDS.sleep(3);
 				User_UserManagementPage.ClickUserManagementPageAddUserBtn();
-				TimeUnit.SECONDS.sleep(3);
 				User_UserManagementPage.EnterAddNewUserName(AddNewUserNameBtn);
 				User_UserManagementPage.EnterAddNewUserEmail(AddNewUserEmailBtn);
 				User_UserManagementPage.EnterAddNewUserPhoneNumber(AddNewUserPhoneNumberBtn);
@@ -312,7 +302,7 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				boolean flag33  = User_UserManagementPage.ErrormessageforOrganizationTypeField();
 				ExtentTestManager.getTest().log(Status.PASS, "Error message for OrganizationTypeField" + " is displayed : " + flag33);
 				Log.info("Error message for OrganizationTypeField displayed : " + flag33);
-				Thread.sleep(20000);
+				
 				
 				ExtentTestManager.startTest("TestScenario18 :Add new user page - Invalid Email Format-missing '@'");
 				User_UserManagementPage.ClickAddNewUserCloseBtn();
@@ -328,7 +318,7 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				boolean flag34  = User_UserManagementPage.ErrormessageforInvalidEmailId();
 				ExtentTestManager.getTest().log(Status.PASS, "Error message for Invalid Email Id" + " is displayed : " + flag34);
 				Log.info("Error message for Invalid Email Id is displayed : " + flag34);
-				Thread.sleep(20000);
+				Thread.sleep(10000);
 				
 				ExtentTestManager.startTest("TestScenario18 :Add new user page - Invalid Email Format- missing 'domain'");
 				User_UserManagementPage.ClickAddNewUserCloseBtn();
@@ -339,12 +329,13 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				User_UserManagementPage.SelectRoleDropdown(AddNewUserRole);
 				User_UserManagementPage.SelectOrganizationTypeDropdown(AddNewUserOrganizationType);
                 User_UserManagementPage.SelectHeadOfficeDropdown(AddNewUserHeadOffice);
-                TimeUnit.SECONDS.sleep(3);
+                TimeUnit.SECONDS.sleep(2);
                 User_UserManagementPage.ClickAddNewUserSubmitBtn();
 				boolean flag35  = User_UserManagementPage.ErrormessageforInvalidEmailId();
 				ExtentTestManager.getTest().log(Status.PASS, "Error message for Invalid Email Id" + " is displayed : " + flag35);
 				Log.info("Error message for Invalid Email Id is displayed : " + flag35);
-				Thread.sleep(20000);
+				Thread.sleep(10000);
+			
 				
 				ExtentTestManager.startTest("TestScenario19 :Add new user page -Invalid Phone Number Format- with letters");
 				User_UserManagementPage.ClickAddNewUserCloseBtn();
@@ -355,12 +346,12 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				User_UserManagementPage.SelectRoleDropdown(AddNewUserRole);
 				User_UserManagementPage.SelectOrganizationTypeDropdown(AddNewUserOrganizationType);
                 User_UserManagementPage.SelectHeadOfficeDropdown(AddNewUserHeadOffice);
-                TimeUnit.SECONDS.sleep(3);
+                TimeUnit.SECONDS.sleep(2);
                 User_UserManagementPage.ClickAddNewUserSubmitBtn();
 				boolean flag36  = User_UserManagementPage.ClickAddNewUserSubmitBtn();
 				ExtentTestManager.getTest().log(Status.PASS, "Error message for Invalid PhoneNumber with letters" + " is displayed : " + flag36);
 				Log.info("Error message for Invalid PhoneNumber with letters is displayed : " + flag36);
-				Thread.sleep(20000);
+				Thread.sleep(10000);
 				
 				ExtentTestManager.startTest("TestScenario19 :Add new user page -Invalid Phone Number Format-8 digits");
 				User_UserManagementPage.ClickAddNewUserCloseBtn();
@@ -371,12 +362,12 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				User_UserManagementPage.SelectRoleDropdown(AddNewUserRole);
 				User_UserManagementPage.SelectOrganizationTypeDropdown(AddNewUserOrganizationType);
                 User_UserManagementPage.SelectHeadOfficeDropdown(AddNewUserHeadOffice);
-                TimeUnit.SECONDS.sleep(3);
+                TimeUnit.SECONDS.sleep(2);
                 User_UserManagementPage.ClickAddNewUserSubmitBtn();
 				boolean flag37  = User_UserManagementPage.ErrormessageforInvalidPhoneNumber();
 				ExtentTestManager.getTest().log(Status.PASS, "Error message for Invalid PhoneNumber with 8 digits" + " is displayed : " + flag37);
 				Log.info("Error message for Invalid PhoneNumber with 8 digits is displayed : " + flag37);
-				Thread.sleep(20000)
+				Thread.sleep(10000);
 				
 				
 				ExtentTestManager.startTest("TestScenario20 :Add new user - Name Field - ECP Validations(Alphabetic inputs)");
@@ -388,11 +379,11 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				User_UserManagementPage.SelectRoleDropdown(AddNewUserRole);
 				User_UserManagementPage.SelectOrganizationTypeDropdown(AddNewUserOrganizationType);
                 User_UserManagementPage.SelectHeadOfficeDropdown(AddNewUserHeadOffice);
-                TimeUnit.SECONDS.sleep(5);
+                TimeUnit.SECONDS.sleep(2);
 				boolean flag38  = User_UserManagementPage.ClickAddNewUserSubmitBtn();
 				ExtentTestManager.getTest().log(Status.PASS, "User is created with Alphabetic inputs" + " is displayed : " + flag38);
 				Log.info("User created with Alphabetic inputs successfully: " + flag38);
-				Thread.sleep(10000); 
+				Thread.sleep(10000);
 				
 				ExtentTestManager.startTest("TestScenario20 :Add new user - Name Field - ECP Validations(numeric inputs)");
 				User_UserManagementPage.ClickUserManagementPageAddUserBtn();
@@ -402,7 +393,7 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				User_UserManagementPage.SelectRoleDropdown(AddNewUserRole);
 				User_UserManagementPage.SelectOrganizationTypeDropdown(AddNewUserOrganizationType);
                 User_UserManagementPage.SelectHeadOfficeDropdown(AddNewUserHeadOffice);
-                TimeUnit.SECONDS.sleep(5);
+                TimeUnit.SECONDS.sleep(2);
                 User_UserManagementPage.ClickAddNewUserSubmitBtn();
 				boolean flag39  = User_UserManagementPage.ErrormessageforInvalidName();
 				ExtentTestManager.getTest().log(Status.PASS, "Error message Invalid Name for numeric inputs" + " is displayed : " + flag39);
@@ -418,31 +409,28 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				User_UserManagementPage.SelectRoleDropdown(AddNewUserRole);
 				User_UserManagementPage.SelectOrganizationTypeDropdown(AddNewUserOrganizationType);
                 User_UserManagementPage.SelectHeadOfficeDropdown(AddNewUserHeadOffice);
-                TimeUnit.SECONDS.sleep(5);
+                TimeUnit.SECONDS.sleep(2);
                 User_UserManagementPage.ClickAddNewUserSubmitBtn();
 				boolean flag40  = User_UserManagementPage.ErrormessageforInvalidName();
 				ExtentTestManager.getTest().log(Status.PASS, "Error message Invalid Name for alphanumeric inputs" + " is displayed : " + flag40);
 				Log.info("Error message Invalid Name for alphanumeric inputs is displayed: " + flag40);
-				Thread.sleep(10000); 
-								
+				Thread.sleep(10000);			
 				
 				ExtentTestManager.startTest("TestScenario21 :Create Head Office User - No Head Office Selected - Error message validation");
 				User_UserManagementPage.ClickAddNewUserCloseBtn();
 				User_UserManagementPage.ClickUserManagementPageAddUserBtn();
 				User_UserManagementPage.EnterAddNewUserName(AddNewUserNameBtn);
-				TimeUnit.SECONDS.sleep(2);
+				TimeUnit.SECONDS.sleep(1);
 				User_UserManagementPage.EnterAddNewUserEmail(AddNewUserEmailBtn);
-				TimeUnit.SECONDS.sleep(2);
+				TimeUnit.SECONDS.sleep(1);
 				User_UserManagementPage.EnterAddNewUserPhoneNumber(AddNewUserPhoneNumberBtn);
 				User_UserManagementPage.SelectRoleDropdown(AddNewUserRole);
 				User_UserManagementPage.SelectOrganizationTypeDropdown(AddNewUserOrganizationType);
-				TimeUnit.SECONDS.sleep(5);
                 User_UserManagementPage.ClickAddNewUserSubmitBtn();
 				boolean flag41  = User_UserManagementPage.ErrormessageforEmptyHeadoffice();
 				ExtentTestManager.getTest().log(Status.PASS, "Error message for Empty HeadOffice" + " is displayed : " + flag41);
 				Log.info("Error message for Empty HeadOffice is displayed: " + flag41);
-				Thread.sleep(10000); 
-				
+				Thread.sleep(10000);
 				
 				ExtentTestManager.startTest("TestScenario22 :Create Head Office User - Valid Inputs - Successful user creation ");
 				User_UserManagementPage.ClickAddNewUserCloseBtn();
@@ -452,7 +440,7 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				User_UserManagementPage.EnterAddNewUserPhoneNumber(newData.getPhone());
 				User_UserManagementPage.SelectRoleDropdown(AddNewUserRole);
 				User_UserManagementPage.SelectOrganizationTypeDropdown(AddNewUserOrganizationType);
-				TimeUnit.SECONDS.sleep(5);
+				TimeUnit.SECONDS.sleep(2);
 				User_UserManagementPage.SelectHeadOfficeDropdown(AddNewUserHeadOffice);
 				TimeUnit.SECONDS.sleep(3);
                 User_UserManagementPage.ClickAddNewUserSubmitBtn();
@@ -461,8 +449,7 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				Log.info("Success message for user creation is displayed: " + flag43);
 				assertTrue("The table name value does not match the expected button name", 
 				           User_UserManagementPage.FetchTableNameValue().equals(username));
-				String message = User_UserManagementPage.GetUserNameandPassowrd();
-				Thread.sleep(10000); 
+				String message = User_UserManagementPage.GetUserNameandPassowrd(); 
 				
 				ExtentTestManager.startTest("TestScenario23 :Add new user - User already exists case");
 				User_UserManagementPage.ClickUserManagementPageAddUserBtn();
@@ -509,12 +496,11 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				User_UserManagementPage.SelectOrganizationTypeDropdown2(AddNewUserOrganizationType2);
 				TimeUnit.SECONDS.sleep(3);
 				User_UserManagementPage.SelectHeadOfficeDropdown(AddNewUserHeadOffice);
-				TimeUnit.SECONDS.sleep(3);
+				TimeUnit.SECONDS.sleep(2);
                 User_UserManagementPage.ClickAddNewUserSubmitBtn();
                 boolean flag45  = User_UserManagementPage.ErrorMessageForZoneCO();
 				ExtentTestManager.getTest().log(Status.PASS, "Error message Zone/CO Required" + " is displayed : " + flag45);
 				Log.info("Error message Zone/CO Required is displayed: " + flag45);
-				Thread.sleep(10000); 
 				
 				ExtentTestManager.startTest("TestScenario26 :Create Zone/CO User - Valid Inputs - Successful user creation");
 				User_UserManagementPage.ClickAddNewUserCloseBtn();
@@ -572,7 +558,6 @@ public class AllScenarios_UserManagementModule extends Base_Class {
                 boolean flag48  = User_UserManagementPage.ErrorMessageForRegion();
 				ExtentTestManager.getTest().log(Status.PASS, "Error message Region Required" + " is displayed : " + flag48);
 				Log.info("Error message Region Required is displayed: " + flag48);
-				Thread.sleep(10000); 
 			
 				ExtentTestManager.startTest("TestScenario29 :Create Region User - Valid Inputs - Successful user creation");
 				User_UserManagementPage.ClickAddNewUserCloseBtn(); 
@@ -634,11 +619,11 @@ public class AllScenarios_UserManagementModule extends Base_Class {
                 boolean flag51  = User_UserManagementPage.ErrorMessageForBranch();
 				ExtentTestManager.getTest().log(Status.PASS, "Error message Branch Required" + " is displayed : " + flag51);
 				Log.info("Error message Branch Required is displayed: " + flag51);
-				Thread.sleep(10000);*/
+				Thread.sleep(10000);
 				
 	
 				ExtentTestManager.startTest("TestScenario32 :Create Branch User - Valid Inputs - Successful user creation");
-				//User_UserManagementPage.ClickAddNewUserCloseBtn();
+				User_UserManagementPage.ClickAddNewUserCloseBtn();
 				User_UserManagementPage.ClickUserManagementPageAddUserBtn();
 				User_UserManagementPage.EnterAddNewUserName(username);
 				User_UserManagementPage.EnterAddNewUserEmail(newData.getEmail());
@@ -647,11 +632,11 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				User_UserManagementPage.SelectOrganizationTypeDropdown4(AddNewUserOrganizationType4);
 				User_UserManagementPage.SelectHeadOfficeDropdown(AddNewUserHeadOffice);
 				User_UserManagementPage.SelectAddNewUserZoneCO(AddNewUserZoneCO); 
-				TimeUnit.SECONDS.sleep(5);
+				TimeUnit.SECONDS.sleep(3);
 				User_UserManagementPage.SelectAddNewUserRegion(AddNewUserRegion);
-				TimeUnit.SECONDS.sleep(5);
+				TimeUnit.SECONDS.sleep(4);
 				User_UserManagementPage.SelectAddNewUserBranch(AddNewUserBranch);
-				TimeUnit.SECONDS.sleep(5);
+				TimeUnit.SECONDS.sleep(4);
                 User_UserManagementPage.ClickAddNewUserSubmitBtn();
                 boolean flag52  = User_UserManagementPage.SuccessMessage();
                 String Branchmessage = User_UserManagementPage.GetUserNameandPassowrd();
@@ -713,7 +698,7 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				User_UserManagementPage.ClickUserManagementPageSearchBtn();
 				Thread.sleep(10000);
 				boolean flag57  = User_UserManagementPage.StepsOnDeactivateOptn(); 
-				ExtentTestManager.getTest().log(Status.PASS, "Success Status changed message" + " is displayed : " + flag57);
+				//ExtentTestManager.getTest().log(Status.PASS, "Success Status changed message" + " is displayed : " + flag57);
 				Log.info("Success Status changed message is displayed: " + flag57);
                 boolean flag58  = User_UserManagementPage.DisplayDeactivateRedStatus(); ;
 				ExtentTestManager.getTest().log(Status.PASS, "Record deactivated, Red cross" + " is displayed : " + flag58);
@@ -726,7 +711,7 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				User_UserManagementPage.ClickUserManagementPageSearchBtn();
 				Thread.sleep(10000);
 				boolean flag59  = User_UserManagementPage.StepsOnActivateOptn(); 
-				ExtentTestManager.getTest().log(Status.PASS, "Success Status changed message" + " is displayed : " + flag59);
+				//ExtentTestManager.getTest().log(Status.PASS, "Success Status changed message" + " is displayed : " + flag59);
 				Log.info("Success Status changed message is displayed: " + flag59);
                 boolean flag60  = User_UserManagementPage.DisplayActivateGreenStatus(); ;
 				ExtentTestManager.getTest().log(Status.PASS, "Record Activated, Green cross" + " is displayed : " + flag60);
@@ -750,13 +735,13 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				
                	 
 			// Logout  
-			ExtentTestManager.startTest("Application Logout Initiated.");
+			//ExtentTestManager.startTest("Application Logout Initiated.");
 			context.setAttribute("fileName", "Logout");
 			click(userDropDown);
 			click(L_signout);
 			Thread.sleep(2000);
 			driver.quit();
-			ExtentTestManager.getTest().log(Status.PASS, "Application Logout");
+			//ExtentTestManager.getTest().log(Status.PASS, "Application Logout");
 			Log.info("Logout is done!");
 
 			// EndTest
@@ -838,7 +823,3 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 	}
 
 }
-
-
-
-

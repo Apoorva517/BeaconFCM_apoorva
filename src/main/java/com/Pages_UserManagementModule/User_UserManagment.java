@@ -144,6 +144,7 @@ public class User_UserManagment extends Base_Class
 	{
 		fluentWait("AddUser", PageRepositry.UserManagementPageAddUser);
 		click(PageRepositry.UserManagementPageAddUser);
+		Thread.sleep(10000);
 		return true;
 	}
 	public boolean AddNewUserPageElementsDisplayed() throws InterruptedException {
@@ -266,10 +267,9 @@ public class User_UserManagment extends Base_Class
 	public boolean ClickAddNewUserSubmitBtn() throws InterruptedException 
 	{
 		
-		waitVisibility(PageRepositry.AddNewUserSubmitBtn);
+		fluentWait("Submit Btn", PageRepositry.AddNewUserSubmitBtn);
 		click(PageRepositry.AddNewUserSubmitBtn);
-
-		return true;
+        return true;
 	}
 	
 	public boolean ClearAddNewUserElements() throws InterruptedException 
@@ -299,9 +299,9 @@ public class User_UserManagment extends Base_Class
     
     public boolean ClickAddNewUserCloseBtn() throws InterruptedException 
 	{
-    	waitVisibility(PageRepositry.AddNewUserCloseBtn);
+    	fluentWait("CloseBtn", PageRepositry.AddNewUserCloseBtn);
     	click(PageRepositry.AddNewUserCloseBtn);
-		Thread.sleep(20000);
+		Thread.sleep(10000);
 
 		return true;
 	}
@@ -488,15 +488,13 @@ public class User_UserManagment extends Base_Class
 		return true;
 	}
     public boolean StepsOnDeactivateOptn() throws InterruptedException {
-    	waitVisibility(PageRepositry.UserManagementPageThreeDotBtn);
         click(PageRepositry.UserManagementPageThreeDotBtn);
-        Thread.sleep(3000);
-        waitVisibility(PageRepositry.activateDeactivateBtn);
+        Thread.sleep(2000);
         click(PageRepositry.activateDeactivateBtn);
-        waitVisibility(PageRepositry.SuccessMessageUserCreation);
+        Thread.sleep(2000);
+        ElementDisplayed(PageRepositry.SuccessMessageUserCreation);
         click(PageRepositry.UserManagementPageActiveCheck);
-        Thread.sleep(20000);
-        waitVisibility(PageRepositry.UserManagementPageSearch);
+        Thread.sleep(10000);
         click(PageRepositry.UserManagementPageSearch);
         Thread.sleep(10000);
         return true;
@@ -507,10 +505,11 @@ public class User_UserManagment extends Base_Class
 		return true;
 	}
     public boolean StepsOnActivateOptn() throws InterruptedException {
-        click(PageRepositry.UserManagementPageThreeDotBtn);
-        Thread.sleep(3000);
-        click(PageRepositry.activateDeactivateBtn);
-        waitVisibility(PageRepositry.SuccessMessageUserCreation);
+    	 click(PageRepositry.UserManagementPageThreeDotBtn);
+         Thread.sleep(2000);
+         click(PageRepositry.activateDeactivateBtn);
+         Thread.sleep(2000);
+         ElementDisplayed(PageRepositry.SuccessMessageUserCreation);
         waitVisibility(PageRepositry.UserManagementPageActiveUnCheck);
         click(PageRepositry.UserManagementPageActiveUnCheck);
         Thread.sleep(10000);
@@ -545,7 +544,3 @@ public class User_UserManagment extends Base_Class
 		return true;
 	}
 }
-
-
-
-

@@ -41,9 +41,9 @@ public class Base_Class {
 	}
 
 
-	private static By L_username = By.xpath("//input[@placeholder='User Name']");
-	private static By L_password = By.xpath("//input[@placeholder='Password']");
-	private static  By L_SignIn = By.xpath("//button[text()='LOGIN']");
+	public static By L_username = By.xpath("//input[@placeholder='User Name']");
+	public static By L_password = By.xpath("//input[@placeholder='Password']");
+	public static  By L_SignIn = By.xpath("//button[text()='LOGIN']");
 
 	public static String Pagetitle;
 
