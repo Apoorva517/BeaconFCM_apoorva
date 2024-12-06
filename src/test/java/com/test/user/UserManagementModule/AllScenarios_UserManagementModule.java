@@ -35,8 +35,6 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 	com.Utility.ScreenShot screenShot;
 	User_UserManagment User_UserManagementPage;
 	
-
-
 	private static By userDropDown = By.xpath("//button[@class='btn dropdown-toggle']");
 	private static By L_signout = By.xpath("//a[text()='Logout']");
 	
@@ -54,16 +52,20 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 	public void RUNALL(Map<Object, Object> testdata, ITestContext context) throws IOException, InterruptedException {
 
 		try {
+			//testdata.get("URL").toString();
 
 			if (testdata.get("Run").toString().equalsIgnoreCase("Yes")) {
 				
 				ExtentTestManager.startTest(testdata.get("TestScenario").toString());
 				Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
 				context.setAttribute("fileName", "Login");
+				//String URL= testdata.get("URL").toString();
 				Base_Class.SetUp();
 				//ExtentTestManager.getTest().log(Status.PASS,
 						//"Application Login" + com.BasePackage.Base_Class.Pagetitle);
 				Log.info("Login successful !");
+				
+				
 			
 				TimeUnit.SECONDS.sleep(5);
 				//ExtentTestManager.startTest(" User Management Page");
@@ -420,12 +422,11 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				User_UserManagementPage.ClickAddNewUserCloseBtn();
 				User_UserManagementPage.ClickUserManagementPageAddUserBtn();
 				User_UserManagementPage.EnterAddNewUserName(AddNewUserNameBtn);
-				TimeUnit.SECONDS.sleep(1);
 				User_UserManagementPage.EnterAddNewUserEmail(AddNewUserEmailBtn);
-				TimeUnit.SECONDS.sleep(1);
 				User_UserManagementPage.EnterAddNewUserPhoneNumber(AddNewUserPhoneNumberBtn);
 				User_UserManagementPage.SelectRoleDropdown(AddNewUserRole);
 				User_UserManagementPage.SelectOrganizationTypeDropdown(AddNewUserOrganizationType);
+				TimeUnit.SECONDS.sleep(6);
                 User_UserManagementPage.ClickAddNewUserSubmitBtn();
 				boolean flag41  = User_UserManagementPage.ErrormessageforEmptyHeadoffice();
 				ExtentTestManager.getTest().log(Status.PASS, "Error message for Empty HeadOffice" + " is displayed : " + flag41);
@@ -693,6 +694,7 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				Log.info("Error message No records to display is displayed: " + flag56);
 				
 				ExtentTestManager.startTest("TestScenario37 :User search page - Activate/Deactivate selection of an Active User ");
+				User_UserManagementPage.ClearUsernameInUNPage(); 
 				User_UserManagementPage.EnterUsernameInUNPage(UsernameInUNPage);
 				Thread.sleep(2000);
 				User_UserManagementPage.ClickUserManagementPageSearchBtn();

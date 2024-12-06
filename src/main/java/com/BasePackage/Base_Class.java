@@ -44,6 +44,7 @@ public class Base_Class {
 	public static By L_username = By.xpath("//input[@placeholder='User Name']");
 	public static By L_password = By.xpath("//input[@placeholder='Password']");
 	public static  By L_SignIn = By.xpath("//button[text()='LOGIN']");
+	
 
 	public static String Pagetitle;
 
@@ -57,9 +58,6 @@ public class Base_Class {
 	public  void SetUp() throws IOException, InterruptedException {
 
 		String Browser = configloader().getProperty("Browser");
-		String Url = configloader().getProperty("URL");
-		String UserName = configloader().getProperty("UserName");
-		String Password = configloader().getProperty("Password");
 		switch (Browser.toUpperCase()) {
 
 		case "CHROME":
@@ -82,19 +80,34 @@ public class Base_Class {
 
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-
+		
 		Log.info("Driver has initialized successfully for "+Browser+"browser");
-		driver.get(Url);
+		if(configloader().getProperty("appManager").equals("Collection")) {
+			driver.get(configloader().getProperty("URL_Collection"));
+			String UserName = configloader().getProperty("CollectionUserName");
+			String Password = configloader().getProperty("CollectionPassword");
+			loginStep(UserName, Password);
+			
+		} else {
+			driver.get(configloader().getProperty("URL"));
+			String UserName = configloader().getProperty("UserName");
+			String Password = configloader().getProperty("Password");
+			loginStep(UserName, Password);
+		}
+		
+
+	}
+	
+	public static void loginStep(String username, String password) throws IOException, InterruptedException {
 		driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
 		Thread.sleep(6000);
 		Pagetitle = driver.getTitle();
 		Log.info("Title is displayed : "+Pagetitle);
-		input(L_username, UserName);
-		input(L_password, Password);
+		input(L_username, username);
+		input(L_password, password);
 		click(L_SignIn);
 		Thread.sleep(4000);
-
 	}
 	
 	public static void jsClick(By locator) {
@@ -405,4 +418,5 @@ public class Base_Class {
 	        });
 	    }
 
+	    
 }
