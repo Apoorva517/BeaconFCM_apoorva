@@ -2,6 +2,8 @@ package com.Pages_UserManagementModule;
 
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.*;
@@ -141,7 +143,7 @@ public class User_UserManagment extends Base_Class
 	{
 		fluentWait("AddUser", PageRepositry.UserManagementPageAddUser);
 		click(PageRepositry.UserManagementPageAddUser);
-		Thread.sleep(10000);
+		Thread.sleep(30000);
 		return true;
 	}
 	public boolean AddNewUserPageElementsDisplayed() throws InterruptedException {
@@ -297,9 +299,9 @@ public class User_UserManagment extends Base_Class
     public boolean ClickAddNewUserCloseBtn() throws InterruptedException 
 	{
     	fluentWait("CloseBtn", PageRepositry.AddNewUserCloseBtn);
+    	//Thread.sleep(20000);
     	click(PageRepositry.AddNewUserCloseBtn);
-		Thread.sleep(10000);
-
+		TimeUnit.SECONDS.sleep(5);
 		return true;
 	}
     public boolean ErrormessageforEmailField() throws InterruptedException {
@@ -540,4 +542,5 @@ public class User_UserManagment extends Base_Class
 
 		return true;
 	}
+    
 }

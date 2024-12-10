@@ -10,6 +10,8 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
 import org.apache.commons.lang3.RandomStringUtils;
+
+import org.apache.commons.text.RandomStringGenerator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -55,7 +57,7 @@ public class Base_Class {
 		return properties;
 	}
 
-	public  void SetUp() throws IOException, InterruptedException {
+	public  void SetUp(String User) throws IOException, InterruptedException {
 
 		String Browser = configloader().getProperty("Browser");
 		switch (Browser.toUpperCase()) {
@@ -79,21 +81,27 @@ public class Base_Class {
 		}
 
 		driver.manage().window().maximize();
-		driver.manage().deleteAllCookies();
-		
+		//driver.manage().deleteAllCookies();
+		String Url=configloader().getProperty(User+"URL");
+		driver.get(configloader().getProperty(User+"URL"));
 		Log.info("Driver has initialized successfully for "+Browser+"browser");
-		if(configloader().getProperty("appManager").equals("Collection")) {
-			driver.get(configloader().getProperty("URL_Collection"));
-			String UserName = configloader().getProperty("CollectionUserName");
-			String Password = configloader().getProperty("CollectionPassword");
-			loginStep(UserName, Password);
+		String UserName=null;
+		String Password=null;
+		if(Url.contains("collection")) {
+			
+			 UserName = configloader().getProperty("CollectionUserName");
+			 Password = configloader().getProperty("CollectionPassword");
+//			loginStep(UserName, Password);
 			
 		} else {
-			driver.get(configloader().getProperty("URL"));
-			String UserName = configloader().getProperty("UserName");
-			String Password = configloader().getProperty("Password");
-			loginStep(UserName, Password);
+//			driver.get(configloader().getProperty(User+"URL"));
+			 UserName = configloader().getProperty("UserName");
+			 Password = configloader().getProperty("Password");
+			
 		}
+		System.out.println("Username:-"+UserName);
+		System.out.println("Password:-"+Password);
+		loginStep(UserName, Password);
 		
 
 	}
@@ -137,6 +145,8 @@ public class Base_Class {
         return email;      
 
          }
+	
+	
 
  public static String generatePhoneNumber() {
 
@@ -154,6 +164,40 @@ public class Base_Class {
         return phoneNumber;
 
  }
+ 
+//Method to generate a random word with only special characters
+ public static String generateRandomSpecialWord(int length) {
+     // Define the special characters
+     String specialCharacters = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+     StringBuilder randomWord = new StringBuilder();
+    
+     Random random = new Random();
+    
+     // Generate the random word by choosing from special characters
+     for (int i = 0; i < length; i++) {
+         int index = random.nextInt(specialCharacters.length());
+         randomWord.append(specialCharacters.charAt(index));
+     }
+    
+     return randomWord.toString();
+ }
+
+ public static String generateRandomNumber() {
+
+     Random rand = new Random();
+
+     String NeededLengthNumber = "7";
+
+     for (int i = 0; i < 4; i++)
+
+     {
+ 
+    	 NeededLengthNumber += rand.nextInt(10);
+     }
+
+     return NeededLengthNumber;
+
+}
 
 	public static void input(By element, String Value) throws InterruptedException {
 
@@ -270,14 +314,10 @@ public class Base_Class {
 		return flag;
 	}
 
-
-
 	public static  void Hover(By element) throws InterruptedException {
 		WebElement element1 = driver.findElement(element);
 		Actions actions = new Actions(driver);
 		actions.moveToElement(element1).perform();
-
-
 
 	}
 	
@@ -364,8 +404,10 @@ public class Base_Class {
 
 	}
 	
-	
-	
+	public void waitSpinner(By by) {
+	     WebDriverWait wait = new WebDriverWait(driver, 120000); 
+	     wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(("//div[@class='spinner']) [1]")))); 
+	}
 	
 	public WebElement waitVisibility(By by) {
 		WebDriverWait wait = new WebDriverWait(driver, 120000);
@@ -391,7 +433,8 @@ public class Base_Class {
 	                    .ignoring(NoSuchElementException.class)
 	                    .ignoring(ElementNotInteractableException.class)
 	                    .ignoring(WebDriverException.class)
-	                    .pollingEvery(Duration.ofMillis(5));
+	                    .pollingEvery(Duration.ofMillis(5));	            
+	            wait.until(ExpectedConditions.visibilityOfElementLocated(element));
 	            wait.until(ExpectedConditions.elementToBeClickable(element));
 	            System.out.println("Fluent wait ended element is clickable: " + WebElementName);
 	        } catch (Exception e) {
@@ -418,5 +461,49 @@ public class Base_Class {
 	        });
 	    }
 
+	    public String GetElementText(By locator) throws InterruptedException {    	 
+
+            String stxt = null;
+
+            waitVisibility(locator);
+
+            WebElement element = driver.findElement(locator);
+
+            if (element.isDisplayed()) {
+
+                   stxt = element.getText();
+
+                   Log.info("System able to found the element :" + locator);
+
+            } else {
+
+                   Log.error("System not able to found the element :" + locator);
+
+            }
+
+            return stxt;
+
+   
+     }
+	    
+	    public String generateRandomText4() {
+
+            // Create a generator using Apache Commons Text
+
+            RandomStringGenerator generator = new RandomStringGenerator.Builder()
+
+                         .withinRange('a', 'z')
+
+                         .build();
+
+            // Generate a random word of length 8
+
+            String randomWord = generator.generate(4);
+
+            System.out.println("Random Word: " + randomWord);
+
+            return randomWord;
+
+     }
 	    
 }

@@ -1,4 +1,27 @@
-[INFO ] 2024-12-06 12:46:11.516 [main] Log - *** Running test method User_UserManagment...
-[INFO ] 2024-12-06 12:46:13.623 [main] Log - Driver has initialized successfully for chromebrowser
-[INFO ] 2024-12-06 12:46:21.402 [main] Log - Title is displayed : BeaconICnRM
-[INFO ] 2024-12-06 12:46:54.239 [main] Log - Login successful !
+[INFO ] 2024-12-10 12:37:59.425 [main] Log - *** Running test method TC_ProcessSheet_CollectionAgency...
+[INFO ] 2024-12-10 12:38:27.036 [main] Log - Driver has initialized successfully for chromebrowser
+[INFO ] 2024-12-10 12:38:33.097 [main] Log - Title is displayed : BeaconICnRM
+[INFO ] 2024-12-10 12:38:41.321 [main] Log - Login successful !
+[ERROR] 2024-12-10 12:43:30.233 [main] Log - *** Test execution TC_ProcessSheet_CollectionAgency failed...
+[ERROR] 2024-12-10 12:43:30.234 [main] Log - Expected condition failed: waiting for element to be clickable: By.xpath: (//a[@data-bs-toggle='tooltip']) [2] (tried for 180 second(s) with 500 milliseconds interval)
+[INFO ] 2024-12-10 12:43:30.511 [main] Log - Logout is done
+[INFO ] 2024-12-10 12:43:30.925 [main] Log - *** Test Suite TC_ProcessSheet_CollectionAgency ending ***
+ 12:40:13.175 [main] Log - New Role with Valid Date is displayed:true
+[INFO ] 2024-12-10 12:40:37.495 [main] Log - Existing Role is displayed:true
+[INFO ] 2024-12-10 12:40:37.709 [main] Log - Edit Option is displayed:true
+[INFO ] 2024-12-10 12:40:59.700 [main] Log - Updated Role Name Success message is displayed:true
+[INFO ] 2024-12-10 12:41:37.696 [main] Log - Alphanumeric Role Name is displayed:true
+[INFO ] 2024-12-10 12:41:42.009 [main] Log - System able to found the element :By.xpath: (//table[@class='rz-grid-table rz-grid-table-fixed']//tbody//tr//td[@rowspan='1']//span[@class='rz-cell-data'])[1]
+[INFO ] 2024-12-10 12:41:44.134 [main] Log - System able to found the element :By.xpath: (//table[@class='rz-grid-table rz-grid-table-fixed']//tbody//tr//td[@rowspan='1']//span[@class='rz-cell-data'])[3]
+[INFO ] 2024-12-10 12:41:46.274 [main] Log - System able to found the element :By.xpath: (//table[@class='rz-grid-table rz-grid-table-fixed']//tbody//tr//td[@rowspan='1']//span[@class='rz-cell-data'])[5]
+[INFO ] 2024-12-10 12:41:48.385 [main] Log - System able to found the element :By.xpath: (//table[@class='rz-grid-table rz-grid-table-fixed']//tbody//tr//td[@rowspan='1']//span[@class='rz-cell-data'])[7]
+[INFO ] 2024-12-10 12:41:50.587 [main] Log - System able to found the element :By.xpath: (//table[@class='rz-grid-table rz-grid-table-fixed']//tbody//tr//td[@rowspan='1']//span[@class='rz-cell-data'])[9]
+[INFO ] 2024-12-10 12:41:52.744 [main] Log - System able to found the element :By.xpath: (//table[@class='rz-grid-table rz-grid-table-fixed']//tbody//tr//td[@rowspan='1']//span[@class='rz-cell-data'])[11]
+[INFO ] 2024-12-10 12:41:54.869 [main] Log - System able to found the element :By.xpath: (//table[@class='rz-grid-table rz-grid-table-fixed']//tbody//tr//td[@rowspan='1']//span[@class='rz-cell-data'])[13]
+[INFO ] 2024-12-10 12:41:57.011 [main] Log - System able to found the element :By.xpath: (//table[@class='rz-grid-table rz-grid-table-fixed']//tbody//tr//td[@rowspan='1']//span[@class='rz-cell-data'])[15]
+[INFO ] 2024-12-10 12:41:59.171 [main] Log - System able to found the element :By.xpath: (//table[@class='rz-grid-table rz-grid-table-fixed']//tbody//tr//td[@rowspan='1']//span[@class='rz-cell-data'])[17]
+[INFO ] 2024-12-10 12:42:01.285 [main] Log - System able to found the element :By.xpath: (//table[@class='rz-grid-table rz-grid-table-fixed']//tbody//tr//td[@rowspan='1']//span[@class='rz-cell-data'])[19]
+[INFO ] 2024-12-10 12:42:03.295 [main] Log - Empty Roles Search:true
+[INFO ] 2024-12-10 12:42:13.732 [main] Log - No Records to display:true
+[INFO ] 2024-12-10 12:42:16.415 [main] Log - Logout is done!
+[INFO ] 2024-12-10 12:42:16.813 [main] Log - *** Test Suite TC_ProcessSheet_CollectionAgency ending ***

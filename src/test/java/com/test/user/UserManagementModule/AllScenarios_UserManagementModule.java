@@ -60,7 +60,7 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
 				context.setAttribute("fileName", "Login");
 				//String URL= testdata.get("URL").toString();
-				Base_Class.SetUp();
+				Base_Class.SetUp("UserManagement");
 				//ExtentTestManager.getTest().log(Status.PASS,
 						//"Application Login" + com.BasePackage.Base_Class.Pagetitle);
 				Log.info("Login successful !");
@@ -253,6 +253,7 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 		        ExtentTestManager.startTest("TestScenario14 :Add new user page - Enter and select inputs for all fields except Email Field and click on submit button");
 				User_UserManagementPage.ClickAddNewUserCloseBtn();
 				User_UserManagementPage.ClickUserManagementPageAddUserBtn();
+				Thread.sleep(30000);
 				User_UserManagementPage.EnterAddNewUserName(AddNewUserNameBtn);
 				User_UserManagementPage.EnterAddNewUserPhoneNumber(AddNewUserPhoneNumberBtn);
 				User_UserManagementPage.SelectRoleDropdown(AddNewUserRole);
@@ -426,7 +427,7 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				User_UserManagementPage.EnterAddNewUserPhoneNumber(AddNewUserPhoneNumberBtn);
 				User_UserManagementPage.SelectRoleDropdown(AddNewUserRole);
 				User_UserManagementPage.SelectOrganizationTypeDropdown(AddNewUserOrganizationType);
-				TimeUnit.SECONDS.sleep(6);
+				TimeUnit.SECONDS.sleep(4);
                 User_UserManagementPage.ClickAddNewUserSubmitBtn();
 				boolean flag41  = User_UserManagementPage.ErrormessageforEmptyHeadoffice();
 				ExtentTestManager.getTest().log(Status.PASS, "Error message for Empty HeadOffice" + " is displayed : " + flag41);
@@ -443,7 +444,7 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				User_UserManagementPage.SelectOrganizationTypeDropdown(AddNewUserOrganizationType);
 				TimeUnit.SECONDS.sleep(2);
 				User_UserManagementPage.SelectHeadOfficeDropdown(AddNewUserHeadOffice);
-				TimeUnit.SECONDS.sleep(3);
+				TimeUnit.SECONDS.sleep(2);
                 User_UserManagementPage.ClickAddNewUserSubmitBtn();
                 boolean flag43  = User_UserManagementPage.SuccessMessage();
 				ExtentTestManager.getTest().log(Status.PASS, "Success message for user creation" + " is displayed : " + flag43);
@@ -459,9 +460,9 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				User_UserManagementPage.EnterAddNewUserPhoneNumber(AddNewUserPhoneNumberBtn);
 				User_UserManagementPage.SelectRoleDropdown(AddNewUserRole);
 				User_UserManagementPage.SelectOrganizationTypeDropdown(AddNewUserOrganizationType);
-				TimeUnit.SECONDS.sleep(3);
+				TimeUnit.SECONDS.sleep(2);
 				User_UserManagementPage.SelectHeadOfficeDropdown(AddNewUserHeadOffice);
-				TimeUnit.SECONDS.sleep(3);
+				TimeUnit.SECONDS.sleep(2);
                 User_UserManagementPage.ClickAddNewUserSubmitBtn();
                 boolean flag42  = User_UserManagementPage.ErrorMessageExistUserCreation();
 				ExtentTestManager.getTest().log(Status.PASS, "Error message on creating existing user" + " is displayed : " + flag42);
@@ -495,7 +496,7 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				User_UserManagementPage.EnterAddNewUserPhoneNumber(AddNewUserPhoneNumberBtn);
 				User_UserManagementPage.SelectRoleDropdown(AddNewUserRole);
 				User_UserManagementPage.SelectOrganizationTypeDropdown2(AddNewUserOrganizationType2);
-				TimeUnit.SECONDS.sleep(3);
+				TimeUnit.SECONDS.sleep(2);
 				User_UserManagementPage.SelectHeadOfficeDropdown(AddNewUserHeadOffice);
 				TimeUnit.SECONDS.sleep(2);
                 User_UserManagementPage.ClickAddNewUserSubmitBtn();
@@ -511,9 +512,9 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				User_UserManagementPage.EnterAddNewUserPhoneNumber(newData.getPhone());
 				User_UserManagementPage.SelectRoleDropdown(AddNewUserRole);
 				User_UserManagementPage.SelectOrganizationTypeDropdown2(AddNewUserOrganizationType2); 
-				TimeUnit.SECONDS.sleep(3);
+				TimeUnit.SECONDS.sleep(2);
 				User_UserManagementPage.SelectHeadOfficeDropdown(AddNewUserHeadOffice);
-				TimeUnit.SECONDS.sleep(3);
+				TimeUnit.SECONDS.sleep(2);
 				User_UserManagementPage.SelectAddNewUserZoneCO(AddNewUserZoneCO);
                 User_UserManagementPage.ClickAddNewUserSubmitBtn();
                 boolean flag46  = User_UserManagementPage.SuccessMessage();
@@ -550,11 +551,11 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				User_UserManagementPage.EnterAddNewUserPhoneNumber(AddNewUserPhoneNumberBtn);
 				User_UserManagementPage.SelectRoleDropdown(AddNewUserRole);
 				User_UserManagementPage.SelectOrganizationTypeDropdown3(AddNewUserOrganizationType3);
-				TimeUnit.SECONDS.sleep(3);
+				TimeUnit.SECONDS.sleep(2);
 				User_UserManagementPage.SelectHeadOfficeDropdown(AddNewUserHeadOffice);
-				TimeUnit.SECONDS.sleep(3);
+				TimeUnit.SECONDS.sleep(2);
 				User_UserManagementPage.SelectAddNewUserZoneCO(AddNewUserZoneCO);
-				TimeUnit.SECONDS.sleep(3);
+				TimeUnit.SECONDS.sleep(2);
                 User_UserManagementPage.ClickAddNewUserSubmitBtn();
                 boolean flag48  = User_UserManagementPage.ErrorMessageForRegion();
 				ExtentTestManager.getTest().log(Status.PASS, "Error message Region Required" + " is displayed : " + flag48);
@@ -568,11 +569,11 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				User_UserManagementPage.EnterAddNewUserPhoneNumber(newData.getPhone());
 				User_UserManagementPage.SelectRoleDropdown(AddNewUserRole);
 				User_UserManagementPage.SelectOrganizationTypeDropdown3(AddNewUserOrganizationType3);
-				TimeUnit.SECONDS.sleep(3);
+				TimeUnit.SECONDS.sleep(2);
 				User_UserManagementPage.SelectHeadOfficeDropdown(AddNewUserHeadOffice);
-				TimeUnit.SECONDS.sleep(3);
+				TimeUnit.SECONDS.sleep(2);
 				User_UserManagementPage.SelectAddNewUserZoneCO(AddNewUserZoneCO);
-				TimeUnit.SECONDS.sleep(3);
+				TimeUnit.SECONDS.sleep(2);
 				User_UserManagementPage.SelectAddNewUserRegion(AddNewUserRegion);
                 User_UserManagementPage.ClickAddNewUserSubmitBtn();
                 boolean flag49  = User_UserManagementPage.SuccessMessage();
@@ -609,13 +610,13 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				User_UserManagementPage.EnterAddNewUserPhoneNumber(AddNewUserPhoneNumberBtn);
 				User_UserManagementPage.SelectRoleDropdown(AddNewUserRole);
 				User_UserManagementPage.SelectOrganizationTypeDropdown4(AddNewUserOrganizationType4);
-				TimeUnit.SECONDS.sleep(3);
+				TimeUnit.SECONDS.sleep(2);
 				User_UserManagementPage.SelectHeadOfficeDropdown(AddNewUserHeadOffice);
-				TimeUnit.SECONDS.sleep(3);
+				TimeUnit.SECONDS.sleep(2);
 				User_UserManagementPage.SelectAddNewUserZoneCO(AddNewUserZoneCO);
-				TimeUnit.SECONDS.sleep(3);
+				TimeUnit.SECONDS.sleep(2);
 				User_UserManagementPage.SelectAddNewUserRegion(AddNewUserRegion);
-				TimeUnit.SECONDS.sleep(3);
+				TimeUnit.SECONDS.sleep(2);
                 User_UserManagementPage.ClickAddNewUserSubmitBtn();
                 boolean flag51  = User_UserManagementPage.ErrorMessageForBranch();
 				ExtentTestManager.getTest().log(Status.PASS, "Error message Branch Required" + " is displayed : " + flag51);
@@ -633,11 +634,11 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 				User_UserManagementPage.SelectOrganizationTypeDropdown4(AddNewUserOrganizationType4);
 				User_UserManagementPage.SelectHeadOfficeDropdown(AddNewUserHeadOffice);
 				User_UserManagementPage.SelectAddNewUserZoneCO(AddNewUserZoneCO); 
-				TimeUnit.SECONDS.sleep(3);
+				TimeUnit.SECONDS.sleep(2);
 				User_UserManagementPage.SelectAddNewUserRegion(AddNewUserRegion);
-				TimeUnit.SECONDS.sleep(4);
+				TimeUnit.SECONDS.sleep(3);
 				User_UserManagementPage.SelectAddNewUserBranch(AddNewUserBranch);
-				TimeUnit.SECONDS.sleep(4);
+				TimeUnit.SECONDS.sleep(3);
                 User_UserManagementPage.ClickAddNewUserSubmitBtn();
                 boolean flag52  = User_UserManagementPage.SuccessMessage();
                 String Branchmessage = User_UserManagementPage.GetUserNameandPassowrd();
@@ -823,5 +824,6 @@ public class AllScenarios_UserManagementModule extends Base_Class {
 		}
 		return objectarry;
 	}
+	
 
 }
