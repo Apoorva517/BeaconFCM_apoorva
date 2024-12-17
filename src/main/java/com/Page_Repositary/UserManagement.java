@@ -8,7 +8,7 @@ import com.google.common.base.Function;
 
 public class UserManagement
 {
-	public static By GoCollection= By.xpath("//button[@class='btn btn-primary' and text()='Go Collection']");
+	public static By GoCollection= By.xpath("//button[text()='Go Collection']");
 	public By SecurityManagementMenu= By.xpath("//span[text()= 'Security Management']");
 	public By UserManagementMenu= By.xpath("//a[@title='User Management']");
 	public static By UserManagementPageUsername= By.xpath("(//input[@class='searchinput form-control'])[1]");
@@ -23,7 +23,7 @@ public class UserManagement
 	public By UserManagementFirstPageBtn= By.xpath("//li[@class='page-item  active']");
 	public By UserManagementSecondPageBtn= By.xpath("(//li/span[text()='2'])[3]");
 	public By UserManagementThirdPageBtn= By.xpath("//li/span[text()='3']");
-	public By UserManagementNextBtn= By.xpath("//li/span[text()='Next']");
+	public By UserManagementNextBtn= By.xpath("(//span[@class='page-link']) [4]");
 	public By UserManagementNextArrowBtn= By.xpath("//li/span[text()='>>']");
 	public By UserManagementPreviousArrowBtn= By.xpath("//li/span[text()='<<']"); 
 	public By AddNewUserNameBtn= By.xpath("//input[@name='Name']");
@@ -79,8 +79,8 @@ public class UserManagement
 	public By DeactivateRedStatus = By.xpath("//i[@style='color:red']");
 	public By ActivateGreenStatus = By.xpath("//i[@style='color:green']");
 	public By ResetPasswordOptn = By.xpath("//button[text()='Reset Password']");
-	public By UserManagementPageActiveUnCheck = By.xpath("(//div[@class='rz-chkbox-box'])[1]"); 
-	public By UserManagementPageActiveCheck = By.xpath("//span[@class='rz-chkbox-icon rzi rzi-check']");
+	public By UserManagementPageActiveUnCheck = By.xpath("//div[@class='rz-chkbox-box rz-state-active']");
+	public By UserManagementPageActiveCheck = By.xpath("//div[@class='rz-chkbox-box']");
 	public By ResetPassword = By.xpath("//button[text()='Reset Password']");
 	public By ResetPasswordMsg = By.xpath("//strong[contains(text(), 'The password has been reset successfully')]");
 	public By EditBtn = By.xpath("(//button[text()='Edit']) [1]");
@@ -95,7 +95,20 @@ public class UserManagement
 	public By tableElts = By.xpath("//span[text()='Admin']/../../td");
 	public By tableUsernameElts = By.xpath("//span[text()='Renuka']/../../td");
 	public By ClearUserManagementPageRole = By.xpath("//i[@class='rz-dropdown-clear-icon rzi rzi-times']");
+	public By AddUserSpinner =By.xpath("//*[contains(@class,'mycard-header')]//*[@class='spinner']");
+	public By UserManagementSpinner = By.xpath("(//*[contains(@class,card-header)]//*[@class='spinner']) [1]");
+	public By loginSelectionSpinner = By.xpath("//div[@class='spinner']");
+	public By RoleFirstOption = By.xpath("(//li[@aria-label='>!@']) [1]");
+	public By OrganisationFirstOption = By.xpath("//div[@class=\"col-sm-12 col-md-4 col-lg-3 formcol\"]//label[text()=\"Organization Type\"]");
+	public By HeadOfficeOption = By.xpath("//span[contains(.,'Head office')]");
+	public By HeadOffice = By.xpath("(//label[contains(.,'Head office')]) [2]");
+	public By ZoneCO = By.xpath("(//label[contains(.,'Zone/CO')]) [2]");
+	public By Region = By.xpath("(//label[contains(.,'Region')]) [2]");
+	public By Branch = By.xpath("(//label[contains(.,'Branch')]) [2]");
+	public By UserPrevious = By.xpath("(//li[@class='page-item disabled ']) [1]");
+	public By moduleSelectionSpinner = By.cssSelector("div[id='dvbody'] div[class='spinner']");
 	
-		
+	
+	
 }
 	

@@ -18,6 +18,9 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.BasePackage.Base_Class;
+import com.BasePackage.Collection_Class;
+import com.BasePackage.Common;
+import com.BasePackage.Login_Class;
 import com.Page_Repositary.UserManagement;
 import com.Pages_UserManagementModule.Collection_CollectionAgencyRoleManagementModule;
 import com.Pages_UserManagementModule.User_UserManagment;
@@ -38,6 +41,7 @@ public class  AllScenarios_CollectionAgencyRoleMangement extends Base_Class {
 	TestListener TestListener;
 	com.Utility.ScreenShot screenShot;
 	Collection_CollectionAgencyRoleManagementModule collectionAgency;
+	Collection_Class CollectionAppLogin;
 	
 
 
@@ -46,6 +50,7 @@ public class  AllScenarios_CollectionAgencyRoleMangement extends Base_Class {
 	
 	@BeforeSuite
 	public void reference() {
+		CollectionAppLogin = new Collection_Class();
 		ExcelReader = new com.Utility.ExcelReader("CollectionAgency");
 		log = new Log();
 		TestListener = new TestListener();
@@ -53,6 +58,7 @@ public class  AllScenarios_CollectionAgencyRoleMangement extends Base_Class {
 		Base_Class = new Base_Class();
 		collectionAgency= new Collection_CollectionAgencyRoleManagementModule();
 	}
+	
 
 	@Test(dataProvider = "TestData")
 	public void RUNALL(Map<Object, Object> testdata, ITestContext context) throws IOException, InterruptedException {
@@ -64,7 +70,7 @@ public class  AllScenarios_CollectionAgencyRoleMangement extends Base_Class {
 				ExtentTestManager.startTest(testdata.get("TestScenario").toString());
 				Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
 				context.setAttribute("fileName", "Login");
-				Base_Class.SetUp("Collection");
+				//Base_Class.SetUp("Collection");
 				//ExtentTestManager.getTest().log(Status.PASS,
 						//"Application Login" + com.BasePackage.Base_Class.Pagetitle);
 				Log.info("Login successful !");
@@ -107,12 +113,10 @@ public class  AllScenarios_CollectionAgencyRoleMangement extends Base_Class {
 				ExtentTestManager.getTest().log(Status.PASS, "Validation for Empty Role Name" + " is displayed : " + flag4);
 				Log.info("Validation for Empty Role Name is displayed:" + flag4);
 				
-				
 				ExtentTestManager.startTest("TestScenario04 :Cancel Role Addition");
 				boolean flag5  = collectionAgency.ClickCancelRole();
 				ExtentTestManager.getTest().log(Status.PASS, "Cancel Role Addition" + " is successful : " + flag5);
 				Log.info("Cancel Role Addition is successful:" + flag5);
-				Thread.sleep(15000);
 				
 				ExtentTestManager.startTest("TestScenario05 :Add New Role with Valid Data");
 				//String RoleNames="Role"+generateRandomText4();
@@ -213,6 +217,9 @@ public class  AllScenarios_CollectionAgencyRoleMangement extends Base_Class {
 
 			// Logout
 			context.setAttribute("fileName", "Logout");
+			click(userDropDown);
+			click(L_signout);
+			Thread.sleep(2000);
 			driver.quit();
 			ExtentTestManager.getTest().log(Status.PASS, "Application Logout");
 			Log.info("Logout is done");
@@ -264,6 +271,7 @@ public class  AllScenarios_CollectionAgencyRoleMangement extends Base_Class {
 		}
 		return objectarry;
 	}
+	
 	
 
 	

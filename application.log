@@ -1,27 +1,57 @@
-[INFO ] 2024-12-10 12:37:59.425 [main] Log - *** Running test method TC_ProcessSheet_CollectionAgency...
-[INFO ] 2024-12-10 12:38:27.036 [main] Log - Driver has initialized successfully for chromebrowser
-[INFO ] 2024-12-10 12:38:33.097 [main] Log - Title is displayed : BeaconICnRM
-[INFO ] 2024-12-10 12:38:41.321 [main] Log - Login successful !
-[ERROR] 2024-12-10 12:43:30.233 [main] Log - *** Test execution TC_ProcessSheet_CollectionAgency failed...
-[ERROR] 2024-12-10 12:43:30.234 [main] Log - Expected condition failed: waiting for element to be clickable: By.xpath: (//a[@data-bs-toggle='tooltip']) [2] (tried for 180 second(s) with 500 milliseconds interval)
-[INFO ] 2024-12-10 12:43:30.511 [main] Log - Logout is done
-[INFO ] 2024-12-10 12:43:30.925 [main] Log - *** Test Suite TC_ProcessSheet_CollectionAgency ending ***
- 12:40:13.175 [main] Log - New Role with Valid Date is displayed:true
-[INFO ] 2024-12-10 12:40:37.495 [main] Log - Existing Role is displayed:true
-[INFO ] 2024-12-10 12:40:37.709 [main] Log - Edit Option is displayed:true
-[INFO ] 2024-12-10 12:40:59.700 [main] Log - Updated Role Name Success message is displayed:true
-[INFO ] 2024-12-10 12:41:37.696 [main] Log - Alphanumeric Role Name is displayed:true
-[INFO ] 2024-12-10 12:41:42.009 [main] Log - System able to found the element :By.xpath: (//table[@class='rz-grid-table rz-grid-table-fixed']//tbody//tr//td[@rowspan='1']//span[@class='rz-cell-data'])[1]
-[INFO ] 2024-12-10 12:41:44.134 [main] Log - System able to found the element :By.xpath: (//table[@class='rz-grid-table rz-grid-table-fixed']//tbody//tr//td[@rowspan='1']//span[@class='rz-cell-data'])[3]
-[INFO ] 2024-12-10 12:41:46.274 [main] Log - System able to found the element :By.xpath: (//table[@class='rz-grid-table rz-grid-table-fixed']//tbody//tr//td[@rowspan='1']//span[@class='rz-cell-data'])[5]
-[INFO ] 2024-12-10 12:41:48.385 [main] Log - System able to found the element :By.xpath: (//table[@class='rz-grid-table rz-grid-table-fixed']//tbody//tr//td[@rowspan='1']//span[@class='rz-cell-data'])[7]
-[INFO ] 2024-12-10 12:41:50.587 [main] Log - System able to found the element :By.xpath: (//table[@class='rz-grid-table rz-grid-table-fixed']//tbody//tr//td[@rowspan='1']//span[@class='rz-cell-data'])[9]
-[INFO ] 2024-12-10 12:41:52.744 [main] Log - System able to found the element :By.xpath: (//table[@class='rz-grid-table rz-grid-table-fixed']//tbody//tr//td[@rowspan='1']//span[@class='rz-cell-data'])[11]
-[INFO ] 2024-12-10 12:41:54.869 [main] Log - System able to found the element :By.xpath: (//table[@class='rz-grid-table rz-grid-table-fixed']//tbody//tr//td[@rowspan='1']//span[@class='rz-cell-data'])[13]
-[INFO ] 2024-12-10 12:41:57.011 [main] Log - System able to found the element :By.xpath: (//table[@class='rz-grid-table rz-grid-table-fixed']//tbody//tr//td[@rowspan='1']//span[@class='rz-cell-data'])[15]
-[INFO ] 2024-12-10 12:41:59.171 [main] Log - System able to found the element :By.xpath: (//table[@class='rz-grid-table rz-grid-table-fixed']//tbody//tr//td[@rowspan='1']//span[@class='rz-cell-data'])[17]
-[INFO ] 2024-12-10 12:42:01.285 [main] Log - System able to found the element :By.xpath: (//table[@class='rz-grid-table rz-grid-table-fixed']//tbody//tr//td[@rowspan='1']//span[@class='rz-cell-data'])[19]
-[INFO ] 2024-12-10 12:42:03.295 [main] Log - Empty Roles Search:true
-[INFO ] 2024-12-10 12:42:13.732 [main] Log - No Records to display:true
-[INFO ] 2024-12-10 12:42:16.415 [main] Log - Logout is done!
-[INFO ] 2024-12-10 12:42:16.813 [main] Log - *** Test Suite TC_ProcessSheet_CollectionAgency ending ***
+[INFO ] 2024-12-17 13:16:40.176 [main] Log - *** Running test method User_UserManagment...
+[INFO ] 2024-12-17 13:16:42.403 [main] Log - Driver has initialized successfully for chrome browser
+[INFO ] 2024-12-17 13:17:47.845 [main] Log - Title is displayed: BeaconICnRM
+[INFO ] 2024-12-17 13:17:48.198 [main] Log - Entered IBU0001195 in user name field
+[INFO ] 2024-12-17 13:17:48.339 [main] Log - Entered test@123 in password field
+[INFO ] 2024-12-17 13:17:48.472 [main] Log - Clicked on login button
+[INFO ] 2024-12-17 13:17:55.517 [main] Log - Entered IBU0001195 in user name field
+[INFO ] 2024-12-17 13:17:55.629 [main] Log - Entered test@123 in password field
+[INFO ] 2024-12-17 13:17:55.735 [main] Log - Clicked on login button
+[INFO ] 2024-12-17 13:17:55.735 [main] Log - Clicked on already login yes button and logged in again with valid credentials
+[INFO ] 2024-12-17 13:17:56.737 [main] Log - Module selection page not appeared
+[INFO ] 2024-12-17 13:18:24.300 [main] Log - UserID in Dashboard: IBU0001195
+[INFO ] 2024-12-17 13:18:24.866 [main] Log - Org Name: Ahmedabad, Org Type Name: Zone/CO
+[INFO ] 2024-12-17 13:18:30.076 [main] Log - Login successful !
+[INFO ] 2024-12-17 13:18:30.478 [main] Log - clicked UserManagementMenu : true
+[INFO ] 2024-12-17 13:18:40.975 [main] Log - All elements in UserManagementPage displayed : true
+[INFO ] 2024-12-17 13:18:41.109 [main] Log - Table headers is displayed : true
+[INFO ] 2024-12-17 13:18:41.135 [main] Log - IsActive Checkbox Selected by default : true
+[INFO ] 2024-12-17 13:18:41.183 [main] Log - Displayed UserManagement PreviousBtn : true
+[INFO ] 2024-12-17 13:18:41.230 [main] Log - Displayed UserManagement FirstPageBtn : true
+[INFO ] 2024-12-17 13:18:41.274 [main] Log - Displayed UserManagement SecondPageBtn : true
+[INFO ] 2024-12-17 13:18:41.323 [main] Log - Displayed UserManagement NextBtn : true
+[INFO ] 2024-12-17 13:18:41.368 [main] Log - Displayed User search page - Pagination of Active users :true
+[INFO ] 2024-12-17 13:18:52.271 [main] Log - Clicked '2nd'page button in pagination :true
+[INFO ] 2024-12-17 13:19:01.763 [main] Log - Clicked on the '>>' button in paginationtrue
+[INFO ] 2024-12-17 13:19:14.090 [main] Log - Clicked on the'Previous' button in pagination :true
+[INFO ] 2024-12-17 13:19:23.503 [main] Log - Add New UserPage Elements Displayed :true
+[INFO ] 2024-12-17 13:19:24.531 [main] Log - Entered valid Name is showing : true
+[INFO ] 2024-12-17 13:19:25.621 [main] Log - Entered valid Email is showing : true
+[INFO ] 2024-12-17 13:19:25.809 [main] Log - Entered valid Phonenumber is showing : true
+[INFO ] 2024-12-17 13:19:29.601 [main] Log - Successfully user found and clicked on the NewrolePlaywright value inside the dropdown 
+[INFO ] 2024-12-17 13:19:29.601 [main] Log - Selected valid Testrole : true
+[INFO ] 2024-12-17 13:19:33.110 [main] Log - Successfully user found and clicked on the Head office value inside the dropdown 
+[INFO ] 2024-12-17 13:19:33.142 [main] Log - Head office dropdown is selected : true
+[INFO ] 2024-12-17 13:19:43.252 [main] Log - Displayed Add New User Headoffice option : true
+[INFO ] 2024-12-17 13:19:46.777 [main] Log - Successfully user found and clicked on the Zone/CO value inside the dropdown 
+[INFO ] 2024-12-17 13:19:46.841 [main] Log - Displayed AddNewUser HeadofficeField : true
+[INFO ] 2024-12-17 13:19:46.888 [main] Log - Displayed AddNewUser ZoneCOField : true
+[INFO ] 2024-12-17 13:19:50.423 [main] Log - Successfully user found and clicked on the Region value inside the dropdown 
+[INFO ] 2024-12-17 13:19:50.488 [main] Log - Displayed AddNewUser HeadofficeField : true
+[INFO ] 2024-12-17 13:19:50.536 [main] Log - Displayed AddNewUser ZoneCOField : true
+[INFO ] 2024-12-17 13:19:59.487 [main] Log - Displayed AddNewUser RegionField : true
+[INFO ] 2024-12-17 13:20:03.061 [main] Log - Successfully user found and clicked on the Branch value inside the dropdown 
+[INFO ] 2024-12-17 13:20:03.109 [main] Log - Displayed AddNewUser HeadofficeField : true
+[INFO ] 2024-12-17 13:20:03.147 [main] Log - Displayed AddNewUser ZoneCOField : true
+[INFO ] 2024-12-17 13:20:03.185 [main] Log - Displayed AddNewUser RegionField : true
+[INFO ] 2024-12-17 13:20:11.101 [main] Log - Displayed AddNewUser BranchField : true
+[INFO ] 2024-12-17 13:20:42.957 [main] Log - Clicked AddNewUser SubmitBtn : true
+[INFO ] 2024-12-17 13:20:43.311 [main] Log - Error message for AdduserPage displayed : true
+[INFO ] 2024-12-17 13:21:18.513 [main] Log - Successfully user found and clicked on the NewrolePlaywright value inside the dropdown 
+[INFO ] 2024-12-17 13:21:21.961 [main] Log - Successfully user found and clicked on the Head office value inside the dropdown 
+[INFO ] 2024-12-17 13:21:36.513 [main] Log - Successfully user found and clicked on the Mumbai value inside the dropdown 
+[INFO ] 2024-12-17 13:21:46.854 [main] Log - Error message for NameField displayed : true
+[INFO ] 2024-12-17 13:22:22.744 [main] Log - Successfully user found and clicked on the NewrolePlaywright value inside the dropdown 
+[INFO ] 2024-12-17 13:22:26.201 [main] Log - Successfully user found and clicked on the Head office value inside the dropdown 
+[INFO ] 2024-12-17 13:22:39.758 [main] Log - Successfully user found and clicked on the Mumbai value inside the dropdown 
+[INFO ] 2024-12-17 13:22:50.119 [main] Log - Error message for EmailField displayed : true

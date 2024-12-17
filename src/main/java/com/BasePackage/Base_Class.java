@@ -29,10 +29,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriverException;
-
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import com.Page_Repositary.LoginPageRepo;
 import com.Utility.Log;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.webdriver.WebDriverBrowser;
 
 public class Base_Class {
 
@@ -65,7 +69,7 @@ public class Base_Class {
 		case "CHROME":
 
 			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--disable-extensions");
+			//options.addArguments("--disable-extensions");
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver(options);		
 			break;
@@ -198,6 +202,13 @@ public class Base_Class {
      return NeededLengthNumber;
 
 }
+ 
+ 
+ public static void ElementToBeVisible(By element) throws InterruptedException{
+	 WebDriverWait wait = new WebDriverWait(driver,200);
+	 wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(element));
+ }
+ 
 
 	public static void input(By element, String Value) throws InterruptedException {
 
@@ -259,7 +270,7 @@ public class Base_Class {
 
 	public static boolean ElementDisplayed(By locator)
 	{   
-		WebDriverWait wait = new WebDriverWait(driver, 20000);
+		WebDriverWait wait = new WebDriverWait(driver, 60000);
 		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 		WebElement element = driver.findElement(locator);
 		Boolean flag = element.isDisplayed();
@@ -272,6 +283,7 @@ public class Base_Class {
 		Boolean flag = element.isEnabled();
 		return flag;
 	}
+
 
 	public static void UploadFile(By locator, String path)
 	{
@@ -299,6 +311,7 @@ public class Base_Class {
 		Boolean flag = element.isEnabled();
 		return flag;
 	}
+    
 
 	public static boolean CheckElementDisable(By locator)
 	{  
@@ -319,6 +332,11 @@ public class Base_Class {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(element1).perform();
 
+	}
+	
+	public WebElement waitVisibility(By by) {
+		WebDriverWait wait = new WebDriverWait(driver, 12000);
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
 	}
 	
 	/*public void HandlingLoginPopup(By by, String value) throws InterruptedException {
@@ -404,17 +422,6 @@ public class Base_Class {
 
 	}
 	
-	public void waitSpinner(By by) {
-	     WebDriverWait wait = new WebDriverWait(driver, 120000); 
-	     wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(("//div[@class='spinner']) [1]")))); 
-	}
-	
-	public WebElement waitVisibility(By by) {
-		WebDriverWait wait = new WebDriverWait(driver, 120000);
-		return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
-	}
-	
-
 	/*public class Common {
 		
 		 private static WebDriver driver; // Make WebDriver a global variable
@@ -446,7 +453,7 @@ public class Base_Class {
 	    public static void waitForSpinnerToDisappear(WebDriver driver, String WebElementName, By element) {
 	        // Define the FluentWait
 	        FluentWait<WebDriver> wait = new FluentWait<>(driver)
-	                .withTimeout(Duration.ofSeconds(30)) // Maximum wait time
+	                .withTimeout(Duration.ofSeconds(120)) // Maximum wait time
 	                .pollingEvery(Duration.ofMillis(500)) // Polling interval
 	                .ignoring(Exception.class); // Ignore exceptions like NoSuchElementException
 
@@ -503,7 +510,100 @@ public class Base_Class {
             System.out.println("Random Word: " + randomWord);
 
             return randomWord;
+            
 
      }
-	    
+
+		public void SetUp() throws IOException, InterruptedException {
+			
+			String Browser = configloader().getProperty("Browser");
+			String Url = configloader().getProperty("URL");
+			
+			switch (Browser.toUpperCase()) {
+
+			case "CHROME":
+				ChromeOptions options = new ChromeOptions();
+				options.addArguments("--disable-extensions");
+				WebDriverManager.chromedriver().setup();
+				driver = new ChromeDriver(options);
+				break;
+			case "FIREFOX":
+				WebDriverManager.firefoxdriver().setup();
+				driver = new FirefoxDriver();			
+				break;
+			default:
+				System.err.println("The Driver is not defined");
+			}
+			
+			driver.manage().window().maximize();
+			driver.manage().deleteAllCookies();
+			Log.info("Driver has initialized successfully for "+Browser+" browser");
+			driver.get(Url);
+	        Common.setDriver(driver);
+	        Common.fluentWait("LoginHyperlink2Banner",LoginPageRepo.LoginHyperlink2Banner);
+	        
+			Thread.sleep(9000);
+			Pagetitle = driver.getTitle();
+			Log.info("Title is displayed : "+Pagetitle);
+		}
+
+		public static Connection OracleDBConnection() throws IOException {
+			
+			Connection connection = null;
+	        try {
+	        	String DB_URL = configloader().getProperty("DatabaseURL");
+	        	String DB_UserName = configloader().getProperty("DB_UserName");
+	        	String DB_Password = configloader().getProperty("DB_Password");
+	        	
+	            // JDBC URL for Oracle database
+	            String URL = "jdbc:oracle:thin:@"+ DB_URL.trim();
+	            String username = DB_UserName.trim();
+	            String password = DB_Password.trim();
+	            // Establish connection
+	            System.out.println("URL="+URL);
+	            System.out.println("username="+username);
+	            System.out.println("password="+password);
+	            connection = DriverManager.getConnection(URL, username, password);
+	            
+	            if (connection != null) {
+	                System.out.println("Connected to the database!");
+	            } else {
+	                System.out.println("Failed to make connection!");
+	            }
+	        } catch (SQLException e) {
+	            System.err.println("Connection failed!");
+	            e.printStackTrace();
+	        } 
+			return connection;
+			
+		}
+		
+		public static void ForLoopClick(By ClickElement) {
+			
+			try {
+				for(int i=0; i<60; i++) {
+					try {
+						WebElement element = driver.findElement(ClickElement);
+						if (element.isDisplayed() == true) {
+							element.click();
+							element.click();
+							System.out.println("ForLoopWaitPlusClick: Element clicked");
+							break;
+						} else {
+							System.out.println("Element to be click is not found");
+						}
+					}catch (Exception e1) {
+						System.out.println("Catch exception");
+					}
+				}
+			} catch(Exception e) {
+				System.out.println("Error occurred: " + e);
+			}
+		  
+		}
+	
+		
 }
+    
+		
+	 

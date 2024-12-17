@@ -26,7 +26,9 @@ public class CollectionAgency {
 	public By NoRecordsMsg = By.xpath("//span[text()= 'No records to display.']");
 	public By closeIcon = By.xpath("//span[@class= 'rzi rzi-times']");
 	public By tableColumn = By.xpath("//span[@title= 'Gordon']");
+	public By waitSpinner = By.xpath("(//div[@class='spinner']) [1]");
 
+	
 	
 	
 	
