@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-17T12:39:13 IST" name="Default suite" finished-at="2024-12-17T13:11:00 IST" duration-ms="1907572">
+  <suite started-at="2024-12-18T10:49:16 IST" name="Default suite" finished-at="2024-12-18T11:22:28 IST" duration-ms="1992015">
     <groups>
     </groups>
-    <test started-at="2024-12-17T12:39:13 IST" name="Default test" finished-at="2024-12-17T13:11:00 IST" duration-ms="1907572">
+    <test started-at="2024-12-18T10:49:16 IST" name="Default test" finished-at="2024-12-18T11:22:28 IST" duration-ms="1992015">
       <class name="com.test.user.UserManagementModule.AllScenarios_UserManagementModule">
-        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.user.UserManagementModule.AllScenarios_UserManagementModule@3fc2959f]" started-at="2024-12-17T12:39:12 IST" name="reference" finished-at="2024-12-17T12:39:13 IST" duration-ms="472" status="PASS">
+        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.user.UserManagementModule.AllScenarios_UserManagementModule@3fc2959f]" started-at="2024-12-18T10:49:15 IST" name="reference" finished-at="2024-12-18T10:49:16 IST" duration-ms="475" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reference -->
-        <test-method signature="RUNALL(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.user.UserManagementModule.AllScenarios_UserManagementModule@3fc2959f]" started-at="2024-12-17T12:39:14 IST" name="RUNALL" data-provider="TestData" finished-at="2024-12-17T13:11:00 IST" duration-ms="1906889" status="PASS">
+        <test-method signature="RUNALL(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.user.UserManagementModule.AllScenarios_UserManagementModule@3fc2959f]" started-at="2024-12-18T10:49:17 IST" name="RUNALL" data-provider="TestData" finished-at="2024-12-18T11:22:28 IST" duration-ms="1991099" status="PASS">
           <params>
             <param index="0">
               <value>

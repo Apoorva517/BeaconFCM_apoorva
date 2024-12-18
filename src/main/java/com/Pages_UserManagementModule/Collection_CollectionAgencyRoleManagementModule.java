@@ -51,7 +51,7 @@ public class Collection_CollectionAgencyRoleManagementModule extends Base_Class 
 	}
 		
 	public boolean RolePermissionSave() throws InterruptedException {
-		waitVisibility(PageRepositry.DispositionCheckbox);
+		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.waitSpinner);
 		click(PageRepositry.RolePermissionSave);
 		Thread.sleep(1000);
 		return true;
@@ -63,7 +63,7 @@ public class Collection_CollectionAgencyRoleManagementModule extends Base_Class 
 	public boolean ClickCancelRole() throws InterruptedException {
 		click(PageRepositry.CancelRole);
 		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.waitSpinner);
-		//Thread.sleep(10000);
+		fluentWait()
 		return true;
 	}
 	

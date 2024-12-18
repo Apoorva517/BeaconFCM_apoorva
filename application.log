@@ -1,57 +1,154 @@
-[INFO ] 2024-12-17 13:16:40.176 [main] Log - *** Running test method User_UserManagment...
-[INFO ] 2024-12-17 13:16:42.403 [main] Log - Driver has initialized successfully for chrome browser
-[INFO ] 2024-12-17 13:17:47.845 [main] Log - Title is displayed: BeaconICnRM
-[INFO ] 2024-12-17 13:17:48.198 [main] Log - Entered IBU0001195 in user name field
-[INFO ] 2024-12-17 13:17:48.339 [main] Log - Entered test@123 in password field
-[INFO ] 2024-12-17 13:17:48.472 [main] Log - Clicked on login button
-[INFO ] 2024-12-17 13:17:55.517 [main] Log - Entered IBU0001195 in user name field
-[INFO ] 2024-12-17 13:17:55.629 [main] Log - Entered test@123 in password field
-[INFO ] 2024-12-17 13:17:55.735 [main] Log - Clicked on login button
-[INFO ] 2024-12-17 13:17:55.735 [main] Log - Clicked on already login yes button and logged in again with valid credentials
-[INFO ] 2024-12-17 13:17:56.737 [main] Log - Module selection page not appeared
-[INFO ] 2024-12-17 13:18:24.300 [main] Log - UserID in Dashboard: IBU0001195
-[INFO ] 2024-12-17 13:18:24.866 [main] Log - Org Name: Ahmedabad, Org Type Name: Zone/CO
-[INFO ] 2024-12-17 13:18:30.076 [main] Log - Login successful !
-[INFO ] 2024-12-17 13:18:30.478 [main] Log - clicked UserManagementMenu : true
-[INFO ] 2024-12-17 13:18:40.975 [main] Log - All elements in UserManagementPage displayed : true
-[INFO ] 2024-12-17 13:18:41.109 [main] Log - Table headers is displayed : true
-[INFO ] 2024-12-17 13:18:41.135 [main] Log - IsActive Checkbox Selected by default : true
-[INFO ] 2024-12-17 13:18:41.183 [main] Log - Displayed UserManagement PreviousBtn : true
-[INFO ] 2024-12-17 13:18:41.230 [main] Log - Displayed UserManagement FirstPageBtn : true
-[INFO ] 2024-12-17 13:18:41.274 [main] Log - Displayed UserManagement SecondPageBtn : true
-[INFO ] 2024-12-17 13:18:41.323 [main] Log - Displayed UserManagement NextBtn : true
-[INFO ] 2024-12-17 13:18:41.368 [main] Log - Displayed User search page - Pagination of Active users :true
-[INFO ] 2024-12-17 13:18:52.271 [main] Log - Clicked '2nd'page button in pagination :true
-[INFO ] 2024-12-17 13:19:01.763 [main] Log - Clicked on the '>>' button in paginationtrue
-[INFO ] 2024-12-17 13:19:14.090 [main] Log - Clicked on the'Previous' button in pagination :true
-[INFO ] 2024-12-17 13:19:23.503 [main] Log - Add New UserPage Elements Displayed :true
-[INFO ] 2024-12-17 13:19:24.531 [main] Log - Entered valid Name is showing : true
-[INFO ] 2024-12-17 13:19:25.621 [main] Log - Entered valid Email is showing : true
-[INFO ] 2024-12-17 13:19:25.809 [main] Log - Entered valid Phonenumber is showing : true
-[INFO ] 2024-12-17 13:19:29.601 [main] Log - Successfully user found and clicked on the NewrolePlaywright value inside the dropdown 
-[INFO ] 2024-12-17 13:19:29.601 [main] Log - Selected valid Testrole : true
-[INFO ] 2024-12-17 13:19:33.110 [main] Log - Successfully user found and clicked on the Head office value inside the dropdown 
-[INFO ] 2024-12-17 13:19:33.142 [main] Log - Head office dropdown is selected : true
-[INFO ] 2024-12-17 13:19:43.252 [main] Log - Displayed Add New User Headoffice option : true
-[INFO ] 2024-12-17 13:19:46.777 [main] Log - Successfully user found and clicked on the Zone/CO value inside the dropdown 
-[INFO ] 2024-12-17 13:19:46.841 [main] Log - Displayed AddNewUser HeadofficeField : true
-[INFO ] 2024-12-17 13:19:46.888 [main] Log - Displayed AddNewUser ZoneCOField : true
-[INFO ] 2024-12-17 13:19:50.423 [main] Log - Successfully user found and clicked on the Region value inside the dropdown 
-[INFO ] 2024-12-17 13:19:50.488 [main] Log - Displayed AddNewUser HeadofficeField : true
-[INFO ] 2024-12-17 13:19:50.536 [main] Log - Displayed AddNewUser ZoneCOField : true
-[INFO ] 2024-12-17 13:19:59.487 [main] Log - Displayed AddNewUser RegionField : true
-[INFO ] 2024-12-17 13:20:03.061 [main] Log - Successfully user found and clicked on the Branch value inside the dropdown 
-[INFO ] 2024-12-17 13:20:03.109 [main] Log - Displayed AddNewUser HeadofficeField : true
-[INFO ] 2024-12-17 13:20:03.147 [main] Log - Displayed AddNewUser ZoneCOField : true
-[INFO ] 2024-12-17 13:20:03.185 [main] Log - Displayed AddNewUser RegionField : true
-[INFO ] 2024-12-17 13:20:11.101 [main] Log - Displayed AddNewUser BranchField : true
-[INFO ] 2024-12-17 13:20:42.957 [main] Log - Clicked AddNewUser SubmitBtn : true
-[INFO ] 2024-12-17 13:20:43.311 [main] Log - Error message for AdduserPage displayed : true
-[INFO ] 2024-12-17 13:21:18.513 [main] Log - Successfully user found and clicked on the NewrolePlaywright value inside the dropdown 
-[INFO ] 2024-12-17 13:21:21.961 [main] Log - Successfully user found and clicked on the Head office value inside the dropdown 
-[INFO ] 2024-12-17 13:21:36.513 [main] Log - Successfully user found and clicked on the Mumbai value inside the dropdown 
-[INFO ] 2024-12-17 13:21:46.854 [main] Log - Error message for NameField displayed : true
-[INFO ] 2024-12-17 13:22:22.744 [main] Log - Successfully user found and clicked on the NewrolePlaywright value inside the dropdown 
-[INFO ] 2024-12-17 13:22:26.201 [main] Log - Successfully user found and clicked on the Head office value inside the dropdown 
-[INFO ] 2024-12-17 13:22:39.758 [main] Log - Successfully user found and clicked on the Mumbai value inside the dropdown 
-[INFO ] 2024-12-17 13:22:50.119 [main] Log - Error message for EmailField displayed : true
+[INFO ] 2024-12-18 10:49:17.460 [main] Log - *** Running test method User_UserManagment...
+[INFO ] 2024-12-18 10:49:21.406 [main] Log - Driver has initialized successfully for chrome browser
+[INFO ] 2024-12-18 10:50:20.866 [main] Log - Title is displayed: BeaconICnRM
+[INFO ] 2024-12-18 10:50:21.234 [main] Log - Entered IBU0001195 in user name field
+[INFO ] 2024-12-18 10:50:21.360 [main] Log - Entered test@123 in password field
+[INFO ] 2024-12-18 10:50:21.472 [main] Log - Clicked on login button
+[INFO ] 2024-12-18 10:50:28.199 [main] Log - Entered IBU0001195 in user name field
+[INFO ] 2024-12-18 10:50:28.281 [main] Log - Entered test@123 in password field
+[INFO ] 2024-12-18 10:50:28.365 [main] Log - Clicked on login button
+[INFO ] 2024-12-18 10:50:28.366 [main] Log - Clicked on already login yes button and logged in again with valid credentials
+[INFO ] 2024-12-18 10:50:29.786 [main] Log - Module selection page not appeared
+[INFO ] 2024-12-18 10:50:57.571 [main] Log - UserID in Dashboard: IBU0001195
+[INFO ] 2024-12-18 10:50:58.139 [main] Log - Org Name: Ahmedabad, Org Type Name: Zone/CO
+[INFO ] 2024-12-18 10:51:05.683 [main] Log - Login successful !
+[INFO ] 2024-12-18 10:51:05.980 [main] Log - clicked UserManagementMenu : true
+[INFO ] 2024-12-18 10:51:11.912 [main] Log - All elements in UserManagementPage displayed : true
+[INFO ] 2024-12-18 10:51:12.049 [main] Log - Table headers is displayed : true
+[INFO ] 2024-12-18 10:51:12.074 [main] Log - IsActive Checkbox Selected by default : true
+[INFO ] 2024-12-18 10:51:12.127 [main] Log - Displayed UserManagement PreviousBtn : true
+[INFO ] 2024-12-18 10:51:12.172 [main] Log - Displayed UserManagement FirstPageBtn : true
+[INFO ] 2024-12-18 10:51:12.220 [main] Log - Displayed UserManagement SecondPageBtn : true
+[INFO ] 2024-12-18 10:51:12.281 [main] Log - Displayed UserManagement NextBtn : true
+[INFO ] 2024-12-18 10:51:12.328 [main] Log - Displayed User search page - Pagination of Active users :true
+[INFO ] 2024-12-18 10:51:25.686 [main] Log - Clicked '2nd'page button in pagination :true
+[INFO ] 2024-12-18 10:51:40.829 [main] Log - Clicked on the '>>' button in paginationtrue
+[INFO ] 2024-12-18 10:51:52.428 [main] Log - Clicked on the'Previous' button in pagination :true
+[INFO ] 2024-12-18 10:51:58.309 [main] Log - Add New UserPage Elements Displayed :true
+[INFO ] 2024-12-18 10:51:59.715 [main] Log - Entered valid Name is showing : true
+[INFO ] 2024-12-18 10:52:00.594 [main] Log - Entered valid Email is showing : true
+[INFO ] 2024-12-18 10:52:00.761 [main] Log - Entered valid Phonenumber is showing : true
+[INFO ] 2024-12-18 10:52:04.500 [main] Log - Successfully user found and clicked on the NewrolePlaywright value inside the dropdown 
+[INFO ] 2024-12-18 10:52:04.501 [main] Log - Selected valid Testrole : true
+[INFO ] 2024-12-18 10:52:07.981 [main] Log - Successfully user found and clicked on the Head office value inside the dropdown 
+[INFO ] 2024-12-18 10:52:07.994 [main] Log - Head office dropdown is selected : true
+[INFO ] 2024-12-18 10:52:18.793 [main] Log - Displayed Add New User Headoffice option : true
+[INFO ] 2024-12-18 10:52:22.226 [main] Log - Successfully user found and clicked on the Zone/CO value inside the dropdown 
+[INFO ] 2024-12-18 10:52:22.275 [main] Log - Displayed AddNewUser HeadofficeField : true
+[INFO ] 2024-12-18 10:52:22.310 [main] Log - Displayed AddNewUser ZoneCOField : true
+[INFO ] 2024-12-18 10:52:25.709 [main] Log - Successfully user found and clicked on the Region value inside the dropdown 
+[INFO ] 2024-12-18 10:52:25.754 [main] Log - Displayed AddNewUser HeadofficeField : true
+[INFO ] 2024-12-18 10:52:25.783 [main] Log - Displayed AddNewUser ZoneCOField : true
+[INFO ] 2024-12-18 10:52:31.116 [main] Log - Displayed AddNewUser RegionField : true
+[INFO ] 2024-12-18 10:52:34.550 [main] Log - Successfully user found and clicked on the Branch value inside the dropdown 
+[INFO ] 2024-12-18 10:52:34.594 [main] Log - Displayed AddNewUser HeadofficeField : true
+[INFO ] 2024-12-18 10:52:34.625 [main] Log - Displayed AddNewUser ZoneCOField : true
+[INFO ] 2024-12-18 10:52:34.655 [main] Log - Displayed AddNewUser RegionField : true
+[INFO ] 2024-12-18 10:52:35.226 [main] Log - Displayed AddNewUser BranchField : true
+[INFO ] 2024-12-18 10:53:05.241 [main] Log - Clicked AddNewUser SubmitBtn : true
+[INFO ] 2024-12-18 10:53:05.462 [main] Log - Error message for AdduserPage displayed : true
+[INFO ] 2024-12-18 10:53:37.350 [main] Log - Successfully user found and clicked on the NewrolePlaywright value inside the dropdown 
+[INFO ] 2024-12-18 10:53:40.751 [main] Log - Successfully user found and clicked on the Head office value inside the dropdown 
+[INFO ] 2024-12-18 10:53:54.271 [main] Log - Successfully user found and clicked on the Mumbai value inside the dropdown 
+[INFO ] 2024-12-18 10:53:58.943 [main] Log - Error message for NameField displayed : true
+[INFO ] 2024-12-18 10:54:30.816 [main] Log - Successfully user found and clicked on the NewrolePlaywright value inside the dropdown 
+[INFO ] 2024-12-18 10:54:34.278 [main] Log - Successfully user found and clicked on the Head office value inside the dropdown 
+[INFO ] 2024-12-18 10:54:47.809 [main] Log - Successfully user found and clicked on the Mumbai value inside the dropdown 
+[INFO ] 2024-12-18 10:54:52.949 [main] Log - Error message for EmailField displayed : true
+[INFO ] 2024-12-18 10:55:24.709 [main] Log - Successfully user found and clicked on the NewrolePlaywright value inside the dropdown 
+[INFO ] 2024-12-18 10:55:28.196 [main] Log - Successfully user found and clicked on the Head office value inside the dropdown 
+[INFO ] 2024-12-18 10:55:42.809 [main] Log - Successfully user found and clicked on the Mumbai value inside the dropdown 
+[INFO ] 2024-12-18 10:55:47.398 [main] Log - Error message for PhoneNumberField displayed : true
+[INFO ] 2024-12-18 10:56:06.938 [main] Log - Successfully user found and clicked on the Head office value inside the dropdown 
+[INFO ] 2024-12-18 10:56:21.622 [main] Log - Successfully user found and clicked on the Mumbai value inside the dropdown 
+[INFO ] 2024-12-18 10:56:26.878 [main] Log - Error message for RoleField displayed : true
+[INFO ] 2024-12-18 10:56:59.343 [main] Log - Successfully user found and clicked on the NewrolePlaywright value inside the dropdown 
+[INFO ] 2024-12-18 10:56:59.659 [main] Log - Error message for OrganizationTypeField displayed : true
+[INFO ] 2024-12-18 10:57:45.208 [main] Log - Successfully user found and clicked on the NewrolePlaywright value inside the dropdown 
+[INFO ] 2024-12-18 10:57:48.701 [main] Log - Successfully user found and clicked on the Head office value inside the dropdown 
+[INFO ] 2024-12-18 10:58:03.229 [main] Log - Successfully user found and clicked on the Mumbai value inside the dropdown 
+[INFO ] 2024-12-18 10:58:09.017 [main] Log - Error message for Invalid Email Id is displayed : true
+[INFO ] 2024-12-18 10:58:53.058 [main] Log - Successfully user found and clicked on the NewrolePlaywright value inside the dropdown 
+[INFO ] 2024-12-18 10:58:56.485 [main] Log - Successfully user found and clicked on the Head office value inside the dropdown 
+[INFO ] 2024-12-18 10:59:07.896 [main] Log - Successfully user found and clicked on the Mumbai value inside the dropdown 
+[INFO ] 2024-12-18 10:59:10.302 [main] Log - Error message for Invalid Email Id is displayed : true
+[INFO ] 2024-12-18 10:59:43.019 [main] Log - Successfully user found and clicked on the NewrolePlaywright value inside the dropdown 
+[INFO ] 2024-12-18 10:59:46.468 [main] Log - Successfully user found and clicked on the Head office value inside the dropdown 
+[INFO ] 2024-12-18 11:00:02.107 [main] Log - Successfully user found and clicked on the Mumbai value inside the dropdown 
+[INFO ] 2024-12-18 11:00:06.889 [main] Log - Error message for Invalid PhoneNumber with letters is displayed : true
+[INFO ] 2024-12-18 11:00:51.116 [main] Log - Successfully user found and clicked on the NewrolePlaywright value inside the dropdown 
+[INFO ] 2024-12-18 11:00:54.614 [main] Log - Successfully user found and clicked on the Head office value inside the dropdown 
+[INFO ] 2024-12-18 11:01:08.655 [main] Log - Successfully user found and clicked on the Mumbai value inside the dropdown 
+[INFO ] 2024-12-18 11:01:11.678 [main] Log - Error message for Invalid PhoneNumber with 8 digits is displayed : true
+[INFO ] 2024-12-18 11:01:38.647 [main] Log - Successfully user found and clicked on the NewrolePlaywright value inside the dropdown 
+[INFO ] 2024-12-18 11:01:42.040 [main] Log - Successfully user found and clicked on the Head office value inside the dropdown 
+[INFO ] 2024-12-18 11:01:53.953 [main] Log - Successfully user found and clicked on the Mumbai value inside the dropdown 
+[INFO ] 2024-12-18 11:02:10.599 [main] Log - User created with Alphabetic inputs successfully: true
+[INFO ] 2024-12-18 11:02:27.255 [main] Log - Successfully user found and clicked on the NewrolePlaywright value inside the dropdown 
+[INFO ] 2024-12-18 11:02:30.777 [main] Log - Successfully user found and clicked on the Head office value inside the dropdown 
+[INFO ] 2024-12-18 11:02:44.294 [main] Log - Successfully user found and clicked on the Mumbai value inside the dropdown 
+[INFO ] 2024-12-18 11:02:47.224 [main] Log - Error message Invalid Name for numeric inputs is displayed: true
+[INFO ] 2024-12-18 11:03:28.519 [main] Log - Successfully user found and clicked on the NewrolePlaywright value inside the dropdown 
+[INFO ] 2024-12-18 11:03:32.001 [main] Log - Successfully user found and clicked on the Head office value inside the dropdown 
+[INFO ] 2024-12-18 11:03:46.061 [main] Log - Successfully user found and clicked on the Mumbai value inside the dropdown 
+[INFO ] 2024-12-18 11:04:03.067 [main] Log - Error message Invalid Name for alphanumeric inputs is displayed: true
+[INFO ] 2024-12-18 11:04:35.791 [main] Log - Successfully user found and clicked on the NewrolePlaywright value inside the dropdown 
+[INFO ] 2024-12-18 11:04:39.202 [main] Log - Successfully user found and clicked on the Head office value inside the dropdown 
+[INFO ] 2024-12-18 11:04:50.370 [main] Log - Error message for Empty HeadOffice is displayed: true
+[INFO ] 2024-12-18 11:05:22.454 [main] Log - Successfully user found and clicked on the NewrolePlaywright value inside the dropdown 
+[INFO ] 2024-12-18 11:05:25.950 [main] Log - Successfully user found and clicked on the Head office value inside the dropdown 
+[INFO ] 2024-12-18 11:05:40.714 [main] Log - Successfully user found and clicked on the Mumbai value inside the dropdown 
+[INFO ] 2024-12-18 11:05:59.238 [main] Log - Success message for user creation is displayed: true
+[INFO ] 2024-12-18 11:06:09.340 [main] Log - Successfully user found and clicked on the NewrolePlaywright value inside the dropdown 
+[INFO ] 2024-12-18 11:06:12.749 [main] Log - Successfully user found and clicked on the Head office value inside the dropdown 
+[INFO ] 2024-12-18 11:06:25.832 [main] Log - Successfully user found and clicked on the Mumbai value inside the dropdown 
+[INFO ] 2024-12-18 11:06:42.233 [main] Log - Error message on creating existing user is displayed: true
+[INFO ] 2024-12-18 11:07:05.739 [main] Log - Successfully redirect to module selection page with Headoffice credentials true
+[INFO ] 2024-12-18 11:08:31.273 [main] Log - Successfully user found and clicked on the NewrolePlaywright value inside the dropdown 
+[INFO ] 2024-12-18 11:08:34.671 [main] Log - Successfully user found and clicked on the Zone/CO value inside the dropdown 
+[INFO ] 2024-12-18 11:08:53.673 [main] Log - Successfully user found and clicked on the Mumbai value inside the dropdown 
+[INFO ] 2024-12-18 11:08:56.003 [main] Log - Error message Zone/CO Required is displayed: true
+[INFO ] 2024-12-18 11:09:47.565 [main] Log - Successfully user found and clicked on the NewrolePlaywright value inside the dropdown 
+[INFO ] 2024-12-18 11:09:50.971 [main] Log - Successfully user found and clicked on the Zone/CO value inside the dropdown 
+[INFO ] 2024-12-18 11:10:05.131 [main] Log - Successfully user found and clicked on the Mumbai value inside the dropdown 
+[INFO ] 2024-12-18 11:10:10.970 [main] Log - Successfully user found and clicked on the Ahmedabad value inside the dropdown 
+[INFO ] 2024-12-18 11:10:43.029 [main] Log - Success message for user creation is displayed with Zone/CO inputs: true
+[INFO ] 2024-12-18 11:11:09.643 [main] Log - Successfully redirect to module selection page with ZoneCO credentialstrue
+[INFO ] 2024-12-18 11:12:08.355 [main] Log - Successfully user found and clicked on the NewrolePlaywright value inside the dropdown 
+[INFO ] 2024-12-18 11:12:11.758 [main] Log - Successfully user found and clicked on the Region value inside the dropdown 
+[INFO ] 2024-12-18 11:12:28.814 [main] Log - Successfully user found and clicked on the Mumbai value inside the dropdown 
+[INFO ] 2024-12-18 11:12:34.596 [main] Log - Successfully user found and clicked on the Ahmedabad value inside the dropdown 
+[INFO ] 2024-12-18 11:12:39.945 [main] Log - Error message Region Required is displayed: true
+[INFO ] 2024-12-18 11:12:57.315 [main] Log - Successfully user found and clicked on the NewrolePlaywright value inside the dropdown 
+[INFO ] 2024-12-18 11:13:00.752 [main] Log - Successfully user found and clicked on the Region value inside the dropdown 
+[INFO ] 2024-12-18 11:13:05.033 [main] Log - Successfully user found and clicked on the Mumbai value inside the dropdown 
+[INFO ] 2024-12-18 11:13:16.257 [main] Log - Successfully user found and clicked on the Ahmedabad value inside the dropdown 
+[INFO ] 2024-12-18 11:13:25.179 [main] Log - Successfully user found and clicked on the Indore value inside the dropdown 
+[INFO ] 2024-12-18 11:13:59.103 [main] Log - Success message for user creation is displayed with Region inputs: true
+[INFO ] 2024-12-18 11:14:07.112 [main] Log - Successfully redirect to module selection page with Region credentials true
+[INFO ] 2024-12-18 11:14:54.613 [main] Log - Successfully user found and clicked on the NewrolePlaywright value inside the dropdown 
+[INFO ] 2024-12-18 11:14:58.069 [main] Log - Successfully user found and clicked on the Branch value inside the dropdown 
+[INFO ] 2024-12-18 11:15:13.075 [main] Log - Successfully user found and clicked on the Mumbai value inside the dropdown 
+[INFO ] 2024-12-18 11:15:21.209 [main] Log - Successfully user found and clicked on the Ahmedabad value inside the dropdown 
+[INFO ] 2024-12-18 11:15:30.566 [main] Log - Successfully user found and clicked on the Indore value inside the dropdown 
+[INFO ] 2024-12-18 11:15:35.859 [main] Log - Error message Branch Required is displayed: true
+[INFO ] 2024-12-18 11:16:13.583 [main] Log - Successfully user found and clicked on the NewrolePlaywright value inside the dropdown 
+[INFO ] 2024-12-18 11:16:17.002 [main] Log - Successfully user found and clicked on the Branch value inside the dropdown 
+[INFO ] 2024-12-18 11:16:28.501 [main] Log - Successfully user found and clicked on the Mumbai value inside the dropdown 
+[INFO ] 2024-12-18 11:16:36.801 [main] Log - Successfully user found and clicked on the Ahmedabad value inside the dropdown 
+[INFO ] 2024-12-18 11:16:45.777 [main] Log - Successfully user found and clicked on the Indore value inside the dropdown 
+[INFO ] 2024-12-18 11:16:55.134 [main] Log - Successfully user found and clicked on the Indore I value inside the dropdown 
+[INFO ] 2024-12-18 11:17:43.917 [main] Log - Success message for user creation is displayed with Branch inputs: true
+[INFO ] 2024-12-18 11:17:52.090 [main] Log - Successfully redirect to module selection page with Branch credentials :true
+[INFO ] 2024-12-18 11:18:50.384 [main] Log - User search page - Valid Username row is displayedtrue
+[INFO ] 2024-12-18 11:18:57.269 [main] Log - Successfully user found and clicked on the Admin value inside the dropdown 
+[INFO ] 2024-12-18 11:19:09.483 [main] Log - User search page - Role DropDown Selection is displayedtrue
+[INFO ] 2024-12-18 11:19:25.697 [main] Log - Error message No records to display is displayed: true
+[INFO ] 2024-12-18 11:20:21.435 [main] Log - Success Status changed message is displayed: true
+[INFO ] 2024-12-18 11:20:33.306 [main] Log - Record deactivated, Red cross is displayed: true
+[INFO ] 2024-12-18 11:21:04.466 [main] Log - Success Status changed message is displayed: true
+[INFO ] 2024-12-18 11:21:14.852 [main] Log - Record Activated, Green cross is displayed: true
+[INFO ] 2024-12-18 11:21:50.302 [main] Log - Reset Password changed Status message is displayed: true
+[INFO ] 2024-12-18 11:22:25.329 [main] Log - Edit User Details elements is displayed:true
+[INFO ] 2024-12-18 11:22:28.097 [main] Log - Logout is done!
+[INFO ] 2024-12-18 11:22:28.416 [main] Log - *** Test Suite User_UserManagment ending ***

@@ -23,7 +23,7 @@ public class User_UserManagment extends Base_Class
 	{
 		//Thread.sleep(10000);
 		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.loginSelectionSpinner);
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 		fluentWait("GoCollection", PageRepositry.GoCollection);
 		click(PageRepositry.GoCollection);
 		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.moduleSelectionSpinner);
@@ -69,7 +69,6 @@ public class User_UserManagment extends Base_Class
 	{
 		click(PageRepositry.UserManagementPageSearch);
 		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.UserManagementSpinner);
-		Thread.sleep(10000);
 		fluentWait("Previous button", PageRepositry.UserPrevious);
 		return true;
 	}
@@ -143,9 +142,8 @@ public class User_UserManagment extends Base_Class
 	{
 		click(PageRepositry.UserManagementPageAddUser);
 		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.AddUserSpinner);
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		click(PageRepositry.AddNewUserOrganizationType);
-		Thread.sleep(3000);
 		fluentWait("OrganisationFirstOption", PageRepositry.HeadOfficeOption);
 		click(PageRepositry.AddNewUserOrganizationType);
 		return true;
@@ -235,8 +233,8 @@ public class User_UserManagment extends Base_Class
 	{
 		
 		SelectActiveDropdown(PageRepositry.HeadOfficeDropdown, value);
+		Thread.sleep(2000);
 		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.AddUserSpinner);
-		Thread.sleep(10000);
 		return true;
 	}
 		
@@ -269,10 +267,10 @@ public class User_UserManagment extends Base_Class
 	}
 	
 	public boolean ClickAddNewUserSubmitBtn() throws InterruptedException 
-	{
+	{ 
+              
 		click(PageRepositry.AddNewUserSubmitBtn);
 		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.AddUserSpinner);
-		
         return true;
 	}
 	
@@ -307,7 +305,6 @@ public class User_UserManagment extends Base_Class
     	fluentWait("Close Btn",PageRepositry.AddNewUserCloseBtn);
     	click(PageRepositry.AddNewUserCloseBtn);
     	Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.UserManagementSpinner);
-    	fluentWait("Next button", PageRepositry.UserManagementNextBtn);
 		return true;
 	}
     public boolean ErrormessageforEmailField() throws InterruptedException {
@@ -383,22 +380,31 @@ public class User_UserManagment extends Base_Class
         return true;
     }
     public boolean SelectAddNewUserZoneCO(String value) throws InterruptedException {
+    	click(PageRepositry.AddNewUserZoneCO);
+    	fluentWait("Ahmedabad", PageRepositry.Ahmedabad);
+    	click(PageRepositry.AddNewUserZoneCO);
 		SelectActiveDropdown(PageRepositry.AddNewUserZoneCO, value);
 		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.AddUserSpinner);
-        Thread.sleep(000);
+		Thread.sleep(5000);
 		return true;
 	}
     public boolean SelectAddNewUserRegion(String value) throws InterruptedException {
+    	click(PageRepositry.AddNewUserRegion);
+    	fluentWait("Indore", PageRepositry.Indore);
+    	click(PageRepositry.AddNewUserRegion);
 		SelectActiveDropdown(PageRepositry.AddNewUserRegion, value);
 		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.AddUserSpinner);
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 
 		return true;
 	}
     public boolean SelectAddNewUserBranch(String value) throws InterruptedException {
+    	click(PageRepositry.AddNewUserBranch);
+    	fluentWait("Indore I", PageRepositry.IndoreI);
+    	click(PageRepositry.AddNewUserBranch);
   		SelectActiveDropdown(PageRepositry.AddNewUserBranch, value);
   		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.AddUserSpinner);
-        Thread.sleep(10000);
+        //Thread.sleep(10000);
   		return true;
   	}
     public boolean ClickLogoutOption() throws InterruptedException {
@@ -455,7 +461,8 @@ public class User_UserManagment extends Base_Class
     public boolean ClickUserManagementPageSearchBtn() throws InterruptedException {
 		click(PageRepositry.UserManagementPageSearch);
 		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.UserManagementSpinner);
-		Thread.sleep(2000);
+		fluentWait("Previous button", PageRepositry.UserPrevious);
+		Thread.sleep(6000);
 		return true;
 	}
     
@@ -499,17 +506,17 @@ public class User_UserManagment extends Base_Class
         click(PageRepositry.UserManagementPageThreeDotBtn);
         Thread.sleep(1000);
         click(PageRepositry.activateDeactivateBtn);
-        //Thread.sleep(2000);
         ElementDisplayed(PageRepositry.SuccessMessageUserCreation);
         Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.UserManagementSpinner);
-        Thread.sleep(8000);
+        fluentWait("Previous button", PageRepositry.UserPrevious);
+        Thread.sleep(5000);
         return true;
     }
     public boolean DisplayDeactivateRedStatus() throws InterruptedException {
     	 click(PageRepositry.UserManagementPageActiveUnCheck);
     	 click(PageRepositry.UserManagementPageSearch);
          Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.UserManagementSpinner);
-         Thread.sleep(5000);
+         Thread.sleep(2000);
     	 ElementDisplayed(PageRepositry.DeactivateRedStatus);
 		 return true;
 	}
@@ -517,11 +524,10 @@ public class User_UserManagment extends Base_Class
     	 click(PageRepositry.UserManagementPageThreeDotBtn);
          Thread.sleep(1000);
          click(PageRepositry.activateDeactivateBtn);
-         Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.UserManagementSpinner);
-         Thread.sleep(2000);
          ElementDisplayed(PageRepositry.SuccessMessageUserCreation);
          Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.UserManagementSpinner);
-         Thread.sleep(8000);
+         fluentWait("Previous button", PageRepositry.UserPrevious);
+         Thread.sleep(5000);
          return true;
     }
     public boolean DisplayActivateGreenStatus() throws InterruptedException {
@@ -537,7 +543,7 @@ public class User_UserManagment extends Base_Class
     	click(PageRepositry.ResetPassword);
     	Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.UserManagementSpinner);
     	ElementDisplayed(PageRepositry.ResetPasswordMsg);
-    	Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.UserManagementSpinner);
+    	fluentWait("ResetPasswordMsg", PageRepositry.ResetPasswordMsg);
     	Thread.sleep(2000);
 		return true;
 	}
@@ -545,7 +551,7 @@ public class User_UserManagment extends Base_Class
     	click(PageRepositry.UserManagementPageThreeDotBtn);
     	click(PageRepositry.EditBtn);
     	Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.UserManagementSpinner);
-    	Thread.sleep(3000);
+    	Thread.sleep(2000);
     	ElementDisplayed(PageRepositry.EditPageName);
     	ElementDisplayed(PageRepositry.EditPageEmail);
     	ElementDisplayed(PageRepositry.EditPagePhNumber);

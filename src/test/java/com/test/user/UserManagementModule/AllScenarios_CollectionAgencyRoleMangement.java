@@ -70,7 +70,7 @@ public class  AllScenarios_CollectionAgencyRoleMangement extends Base_Class {
 				ExtentTestManager.startTest(testdata.get("TestScenario").toString());
 				Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
 				context.setAttribute("fileName", "Login");
-				//Base_Class.SetUp("Collection");
+				Base_Class.SetUp("Collection");
 				//ExtentTestManager.getTest().log(Status.PASS,
 						//"Application Login" + com.BasePackage.Base_Class.Pagetitle);
 				Log.info("Login successful !");
@@ -117,6 +117,7 @@ public class  AllScenarios_CollectionAgencyRoleMangement extends Base_Class {
 				boolean flag5  = collectionAgency.ClickCancelRole();
 				ExtentTestManager.getTest().log(Status.PASS, "Cancel Role Addition" + " is successful : " + flag5);
 				Log.info("Cancel Role Addition is successful:" + flag5);
+	
 				
 				ExtentTestManager.startTest("TestScenario05 :Add New Role with Valid Data");
 				//String RoleNames="Role"+generateRandomText4();

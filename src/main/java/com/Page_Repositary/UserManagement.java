@@ -107,6 +107,14 @@ public class UserManagement
 	public By Branch = By.xpath("(//label[contains(.,'Branch')]) [2]");
 	public By UserPrevious = By.xpath("(//li[@class='page-item disabled ']) [1]");
 	public By moduleSelectionSpinner = By.cssSelector("div[id='dvbody'] div[class='spinner']");
+	public By IndoreI = By.xpath("//span[text()='Indore I']");
+	public By Branchdropdown = By.xpath("(//label[text()='Branch']) [2]");
+	public By Regiondropdown = By.xpath("(//label[text()='Region']) [3]");
+	public By Indore = By.xpath("//span[text()='Indore']");
+	public By ZoneCodropdown = By.xpath("(//label[@class='rz-dropdown-label rz-inputtext  rz-placeholder']) [2]");
+	public By Ahmedabad = By.xpath("//li/span[text()='Ahmedabad']");
+	public By AhmedabadValue = By.xpath("//li/span[text()='Ahmedabad']");
+	public By OrganizationType = By.xpath("(//label[@class='rz-dropdown-label rz-inputtext ']) [2]");
 	
 	
 	
