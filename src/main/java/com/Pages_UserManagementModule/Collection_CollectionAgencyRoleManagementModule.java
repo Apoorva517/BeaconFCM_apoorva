@@ -18,6 +18,8 @@ public class Collection_CollectionAgencyRoleManagementModule extends Base_Class 
 		click(PageRepositry.SecurityManagementMenu);
 		click(PageRepositry.RoleManagementOption);
 		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.waitSpinner);
+		fluentWait("Next Btn", PageRepositry.NextBtn);
+		Thread.sleep(5000);
 		return true;
 	}
 	public boolean RoleNameSearchField() throws InterruptedException {
@@ -29,6 +31,8 @@ public class Collection_CollectionAgencyRoleManagementModule extends Base_Class 
 	public boolean clickRoleSearchField() throws InterruptedException {
 		click( PageRepositry.SearchBtn);
 		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.waitSpinner);
+		fluentWait("Next Btn", PageRepositry.NextBtn);
+		Thread.sleep(5000);
 		return true;
 		
 	}
@@ -42,8 +46,13 @@ public class Collection_CollectionAgencyRoleManagementModule extends Base_Class 
 	public boolean RolePermissionPopup() throws InterruptedException {
 		click(PageRepositry.AddNewRoleBtn);
 		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.waitSpinner);
-		waitVisibility(PageRepositry.checkbox);
-		//Thread.sleep(5000);
+		click(PageRepositry.CloseBtn);
+		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.waitSpinner);
+		fluentWait("Next Btn", PageRepositry.NextBtn);
+		Thread.sleep(5000);
+		click(PageRepositry.AddNewRoleBtn);
+		fluentWait("checkbox", PageRepositry.checkbox);
+		Thread.sleep(3000);
 		click(PageRepositry.checkbox);
 		//Thread.sleep(2000);
 		return true;
@@ -51,19 +60,23 @@ public class Collection_CollectionAgencyRoleManagementModule extends Base_Class 
 	}
 		
 	public boolean RolePermissionSave() throws InterruptedException {
+		
 		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.waitSpinner);
 		click(PageRepositry.RolePermissionSave);
-		Thread.sleep(1000);
+		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.waitSpinner);
+		Thread.sleep(2000);
 		return true;
 	}
 	public boolean RoleNameErrorMsg() throws InterruptedException {
 		ElementDisplayed(PageRepositry.RoleNameErrorMsg);
+		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.waitSpinner);
 		return true;	
 	}
 	public boolean ClickCancelRole() throws InterruptedException {
 		click(PageRepositry.CancelRole);
 		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.waitSpinner);
-		fluentWait()
+		fluentWait("Next Btn", PageRepositry.NextBtn);
+		Thread.sleep(5000);
 		return true;
 	}
 	
@@ -80,11 +93,16 @@ public class Collection_CollectionAgencyRoleManagementModule extends Base_Class 
 	public boolean AddNewRoleName(String Name) throws InterruptedException {
 		click(PageRepositry.AddNewRoleBtn);
 		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.waitSpinner);
-		//Thread.sleep(10000);
+		click(PageRepositry.CloseBtn);
+		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.waitSpinner);
+		fluentWait("Next Btn", PageRepositry.NextBtn);
+		Thread.sleep(5000);
+		click(PageRepositry.AddNewRoleBtn);
+		fluentWait("checkbox", PageRepositry.checkbox);
+		Thread.sleep(3000);
 		input(PageRepositry.RoleName, Name);
 		return true;
 	}
-	
 	
 	public boolean ClickCheckbox() throws InterruptedException {
 		click(PageRepositry.checkbox);
@@ -94,6 +112,8 @@ public class Collection_CollectionAgencyRoleManagementModule extends Base_Class 
 	public boolean RoleNameSuccessMsg() throws InterruptedException {
 		ElementDisplayed(PageRepositry.RoleNameSuccessMsg);
 		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.waitSpinner);
+		fluentWait("Next Btn", PageRepositry.NextBtn);
+		Thread.sleep(5000);
 		return true;
 	}
 	
@@ -108,7 +128,7 @@ public class Collection_CollectionAgencyRoleManagementModule extends Base_Class 
 		Thread.sleep(1000);
 		ElementDisplayed(PageRepositry.ThreedotButton);
 		ElementDisplayed(PageRepositry.ActionColumn);
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		return true;
 	}
 	public boolean DisplayEditOption() throws InterruptedException {
@@ -120,7 +140,8 @@ public class Collection_CollectionAgencyRoleManagementModule extends Base_Class 
 	public boolean EditRole() throws InterruptedException {
 		click(PageRepositry.EditBtn);
 		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.waitSpinner);
-		//Thread.sleep(5000);
+		fluentWait("checkbox", PageRepositry.checkbox);
+		Thread.sleep(3000);
 		click(PageRepositry.checkbox);
 		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.waitSpinner);
 		click(PageRepositry.DispositionCheckbox);
@@ -136,6 +157,8 @@ public class Collection_CollectionAgencyRoleManagementModule extends Base_Class 
 	public boolean clickSearchButton() throws InterruptedException {
 		click(PageRepositry.SearchBtn);
 		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.waitSpinner);
+		fluentWait("Next Btn", PageRepositry.NextBtn);
+		Thread.sleep(5000);
 		return true;
 	}
 	public boolean inputRoleNameSearchField(String SearchRoleName) throws InterruptedException {

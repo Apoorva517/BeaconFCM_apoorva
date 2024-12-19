@@ -27,6 +27,8 @@ public class CollectionAgency {
 	public By closeIcon = By.xpath("//span[@class= 'rzi rzi-times']");
 	public By tableColumn = By.xpath("//span[@title= 'Gordon']");
 	public By waitSpinner = By.xpath("(//div[@class='spinner']) [1]");
+	public By NextBtn = By.xpath("//li/span[text()='Next']");
+	public By CloseBtn = By.xpath("//span[@class='rzi rzi-times']");
 
 	
 	

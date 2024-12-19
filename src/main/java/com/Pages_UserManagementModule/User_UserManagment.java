@@ -12,6 +12,8 @@ import com.BasePackage.Base_Class;
 import com.BasePackage.Common;
 import com.BasePackage.Base_Class;
 import com.Page_Repositary.UserManagement;
+import com.aventstack.extentreports.Status;
+import com.extentReports.ExtentTestManager;
 
 
 public class User_UserManagment extends Base_Class
@@ -23,10 +25,9 @@ public class User_UserManagment extends Base_Class
 	{
 		//Thread.sleep(10000);
 		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.loginSelectionSpinner);
-		Thread.sleep(5000);
 		fluentWait("GoCollection", PageRepositry.GoCollection);
+		Thread.sleep(5000);
 		click(PageRepositry.GoCollection);
-		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.moduleSelectionSpinner);
 		Thread.sleep(1000);
 		return true;
 	}
@@ -34,6 +35,7 @@ public class User_UserManagment extends Base_Class
 	public boolean SelectSecurityManagementMenu() throws InterruptedException 
 	{
 		
+		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.moduleSelectionSpinner);
 		click(PageRepositry.SecurityManagementMenu);
 		return true;
 	}
@@ -41,6 +43,7 @@ public class User_UserManagment extends Base_Class
 	{
 		
 		click(PageRepositry.UserManagementMenu);
+		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.moduleSelectionSpinner);
 		return true;
 	}
 	
@@ -57,8 +60,19 @@ public class User_UserManagment extends Base_Class
 	        ElementDisplayed(PageRepositry.UserManagementPageSearch);
 	        ElementDisplayed(PageRepositry.UserManagementPageAddUser);
 
-	    return true; 
+	        return true; 
 	}
+	public boolean FetchTableHeaderName() throws InterruptedException {
+		List<WebElement> tds = driver.findElements(PageRepositry.tableHeaderName);
+
+    	for(WebElement td : tds){
+    	 String name = td.getText();
+    	 System.out.println(name);
+    	}
+    	ElementDisplayed(PageRepositry.ActivateGreenStatus);
+		ElementDisplayed(PageRepositry.tableHeaderName);
+		return true;
+    }
 	public boolean UsernameInput(String username) throws InterruptedException 
 	{
 		input(PageRepositry.UserManagementPageUsername,username);
@@ -82,6 +96,7 @@ public class User_UserManagment extends Base_Class
 	
 	public boolean isIsActiveCheckboxSelected() {
 		driver.findElement(PageRepositry.UserManagementPageIsActive).isSelected();
+		  ExtentTestManager.getTest().log(Status.PASS, "1. Check the default state of 'Is Active' checkbox");
         return true;
     }
 	public boolean DisplayUserManagementPreviousBtn() throws InterruptedException {
@@ -109,6 +124,16 @@ public class User_UserManagment extends Base_Class
 	
 	public boolean DisplayUserManagementLastArrowBtn() throws InterruptedException {
         ElementDisplayed(PageRepositry.UserManagementNextArrowBtn);
+        Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.UserManagementSpinner);
+        ExtentTestManager.getTest().log(Status.PASS, "Observe the pagination showing under active users grid");
+        return true;
+
+    }
+	
+	public boolean ClickUserManagementLastArrowBtn() throws InterruptedException {
+        ElementDisplayed(PageRepositry.UserManagementNextArrowBtn);
+        Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.UserManagementSpinner);
+        ExtentTestManager.getTest().log(Status.PASS, "Click on the '>>' button in pagination showing under active users grid");
         return true;
 
     }
@@ -117,15 +142,7 @@ public class User_UserManagment extends Base_Class
 	{
 		click(PageRepositry.UserManagementSecondPageBtn);
 		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.UserManagementSpinner);
-
-		return true;
-	}
-	
-	public boolean ClickUserManagementLastArrowBtn() throws InterruptedException 
-	{
-		click(PageRepositry.UserManagementNextArrowBtn);
-		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.UserManagementSpinner);
-
+		ExtentTestManager.getTest().log(Status.PASS, "Click on the '2' button in pagination showing under active users grid");
 		return true;
 	}
 	
@@ -134,7 +151,7 @@ public class User_UserManagment extends Base_Class
 		
 		click(PageRepositry.UserManagementPreviousArrowBtn);
 		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.UserManagementSpinner);
-
+		ExtentTestManager.getTest().log(Status.PASS, "Click on the 'Previous' button in pagination showing under active users grid");
 		return true;
 	}
 	
@@ -146,6 +163,8 @@ public class User_UserManagment extends Base_Class
 		click(PageRepositry.AddNewUserOrganizationType);
 		fluentWait("OrganisationFirstOption", PageRepositry.HeadOfficeOption);
 		click(PageRepositry.AddNewUserOrganizationType);
+		ExtentTestManager.getTest().log(Status.INFO, " Click on Add User button");
+
 		return true;
 	}
 	public boolean AddNewUserPageElementsDisplayed() throws InterruptedException {
@@ -158,26 +177,14 @@ public class User_UserManagment extends Base_Class
 	        ElementDisplayed(PageRepositry.AddNewUserOrganizationType);
 	        ElementDisplayed(PageRepositry.AddNewUserCloseBtn);
 	        ElementDisplayed(PageRepositry.AddNewUserSubmitBtn);
+	        ExtentTestManager.getTest().log(Status.INFO, " All elements of Add new user page displayed");
 	        return true;
 	}
-	
-	
-	public boolean FetchTableHeaderName() throws InterruptedException {
-		List<WebElement> tds = driver.findElements(PageRepositry.tableHeaderName);
 
-    	for(WebElement td : tds){
-    	 String name = td.getText();
-    	 System.out.println(name);
-    	}
-    	ElementDisplayed(PageRepositry.ActivateGreenStatus);
-		ElementDisplayed(PageRepositry.tableHeaderName);
-		return true;
-    }
 	public boolean EnterAddNewUserName(String AddNewUserNameBtn) throws InterruptedException 
 	{
 	
 		input(PageRepositry.AddNewUserNameBtn,AddNewUserNameBtn );
-
 		return true;
 	}
 	   
@@ -185,7 +192,7 @@ public class User_UserManagment extends Base_Class
 	{
 		
 		input(PageRepositry.AddNewUserEmailBtn, AddNewUserEmailBtn);
-
+		
 		return true;
 	}
 	
@@ -193,6 +200,7 @@ public class User_UserManagment extends Base_Class
 	{
 		
 		input(PageRepositry.AddNewUserPhoneNumberBtn , AddNewUserPhoneNumberBtn);
+		
 		return true;
 	}
 	
@@ -237,18 +245,17 @@ public class User_UserManagment extends Base_Class
 		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.AddUserSpinner);
 		return true;
 	}
-		
+	
 	public boolean DisplayAddNewUserHeadofficeBtn() throws InterruptedException {
-	  
-	    
-	        ElementDisplayed(PageRepositry.AddNewUserHeadofficeBtn);
-	        return true;
+	       ElementDisplayed(PageRepositry.AddNewUserHeadofficeBtn);
+	       
+	       return true;
 	}
 	
 	public boolean DisplayAddNewUserZoneCOBtn() throws InterruptedException {
 	 
 	    
-	        ElementDisplayed(PageRepositry.AddNewUserHeadofficeBtn);
+	        ElementDisplayed(PageRepositry.AddNewUserZoneCOBtn);
 	        return true;
 	}
 	
@@ -256,6 +263,7 @@ public class User_UserManagment extends Base_Class
 	{
 		
 		   ElementDisplayed(PageRepositry.AddNewUserRegionBtn);
+		   
 		   return true;
 	}
 	
@@ -263,6 +271,7 @@ public class User_UserManagment extends Base_Class
 	{
 		
 		   ElementDisplayed(PageRepositry.AddNewUserBranchOption);
+		 
 		   return true;
 	}
 	
@@ -292,6 +301,7 @@ public class User_UserManagment extends Base_Class
 	        ElementDisplayed(PageRepositry.phonenumberErrorMessage);
 	        ElementDisplayed(PageRepositry.roleErrorMessage);
 	        ElementDisplayed(PageRepositry.OrganizationTypeErrorMessage);
+	        
 	        return true;
 	}
 
@@ -305,6 +315,7 @@ public class User_UserManagment extends Base_Class
     	fluentWait("Close Btn",PageRepositry.AddNewUserCloseBtn);
     	click(PageRepositry.AddNewUserCloseBtn);
     	Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.UserManagementSpinner);
+    	ExtentTestManager.getTest().log(Status.INFO, " Close button is clicked");
 		return true;
 	}
     public boolean ErrormessageforEmailField() throws InterruptedException {
@@ -339,14 +350,6 @@ public class User_UserManagment extends Base_Class
         ElementDisplayed(PageRepositry.EmptyHeadofficeErrorMsg);
         return true;
     }
- 
-    public boolean EnterEmailPhNumber(String EditPageEmail, String EditPagephNumber ) throws InterruptedException 
-	{
-	
-		input(PageRepositry.EdituserPageEmailField,EditPageEmail );
-		input(PageRepositry.EdituserPagePhoneNumberField,EditPagephNumber);
-		return true;
-	}
    
     public boolean SuccessMessage() throws InterruptedException 
    	{
@@ -356,6 +359,7 @@ public class User_UserManagment extends Base_Class
     public String FetchTableNameValue() throws InterruptedException {
         String Name = driver.findElement(PageRepositry.TableNameValue).getText(); // Assign value to 'Name'
         System.out.println(Name); // Print value to console, if necessary
+        ExtentTestManager.getTest().log(Status.INFO, "Fetch table header value");
         return Name; // Return the fetched value
     }
     public boolean ErrorMessageExistUserCreation() throws InterruptedException {
@@ -365,6 +369,7 @@ public class User_UserManagment extends Base_Class
     
     public String GetUserNameandPassowrd() {
     	String message = driver.findElement(PageRepositry.SuccessMessage).getText();
+    	ExtentTestManager.getTest().log(Status.INFO, "Getting username and password");
     	return message;
     }
     public boolean ErrorMessageForZoneCO() throws InterruptedException {
@@ -505,8 +510,11 @@ public class User_UserManagment extends Base_Class
     public boolean StepsOnDeactivateOptn() throws InterruptedException {
         click(PageRepositry.UserManagementPageThreeDotBtn);
         Thread.sleep(1000);
+        ExtentTestManager.getTest().log(Status.PASS, "2. Click on three-dot menu in ACTION column");
         click(PageRepositry.activateDeactivateBtn);
+        ExtentTestManager.getTest().log(Status.PASS, "3. Select Activate/De-activate");
         ElementDisplayed(PageRepositry.SuccessMessageUserCreation);
+        ExtentTestManager.getTest().log(Status.INFO, "SuccessMessage");
         Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.UserManagementSpinner);
         fluentWait("Previous button", PageRepositry.UserPrevious);
         Thread.sleep(5000);
@@ -518,13 +526,17 @@ public class User_UserManagment extends Base_Class
          Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.UserManagementSpinner);
          Thread.sleep(2000);
     	 ElementDisplayed(PageRepositry.DeactivateRedStatus);
+    	 ExtentTestManager.getTest().log(Status.PASS, "Red Status is displayed");
 		 return true;
 	}
     public boolean StepsOnActivateOptn() throws InterruptedException {
     	 click(PageRepositry.UserManagementPageThreeDotBtn);
          Thread.sleep(1000);
+         ExtentTestManager.getTest().log(Status.PASS, "2. Click on three-dot menu in ACTION column");
          click(PageRepositry.activateDeactivateBtn);
+         ExtentTestManager.getTest().log(Status.PASS, "3. Select Activate/De-activate");
          ElementDisplayed(PageRepositry.SuccessMessageUserCreation);
+         ExtentTestManager.getTest().log(Status.INFO, "SuccessMessage");
          Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.UserManagementSpinner);
          fluentWait("Previous button", PageRepositry.UserPrevious);
          Thread.sleep(5000);
@@ -535,21 +547,25 @@ public class User_UserManagment extends Base_Class
     	 click(PageRepositry.UserManagementPageSearch);
     	 Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.UserManagementSpinner);
     	 ElementDisplayed(PageRepositry.ActivateGreenStatus);
-
+    	 ExtentTestManager.getTest().log(Status.PASS, "Green Status is displayed");
 		 return true;
 	}
     public boolean ResetPassword() throws InterruptedException {
     	click(PageRepositry.UserManagementPageThreeDotBtn);
+    	ExtentTestManager.getTest().log(Status.PASS, "2. Click on three-dot menu in ACTION column");
     	click(PageRepositry.ResetPassword);
     	Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.UserManagementSpinner);
     	ElementDisplayed(PageRepositry.ResetPasswordMsg);
     	fluentWait("ResetPasswordMsg", PageRepositry.ResetPasswordMsg);
+    	ExtentTestManager.getTest().log(Status.PASS, "3. Select Reset Password");
     	Thread.sleep(2000);
 		return true;
 	}
     public boolean EditUserDetails() throws InterruptedException {
     	click(PageRepositry.UserManagementPageThreeDotBtn);
+    	ExtentTestManager.getTest().log(Status.PASS, "2. Click on three-dot menu in ACTION column");
     	click(PageRepositry.EditBtn);
+    	ExtentTestManager.getTest().log(Status.PASS, "3. Select Edit");
     	Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.UserManagementSpinner);
     	Thread.sleep(2000);
     	ElementDisplayed(PageRepositry.EditPageName);
@@ -564,19 +580,9 @@ public class User_UserManagment extends Base_Class
 		return true;
 	}
     
-
-    public void waitSpinnerUser() {
-	     WebDriverWait wait = new WebDriverWait(driver, 60); 
-	     wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[contains(@class,'mycard-header')]//*[@class='spinner']"))); 
-	}
 	public void AddNewUserSpinner() {
 	     WebDriverWait wait = new WebDriverWait(driver, 30); 
 	     wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("(//*[contains(@class,card-header)]//*[@class='spinner']) [1]"))); 
-	}
-
-	public void moduleSelectionSpinner() {
-	     WebDriverWait wait = new WebDriverWait(driver, 60); 
-	     wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("(//div[@class='spinner']"))); 
 	}
 	
 	

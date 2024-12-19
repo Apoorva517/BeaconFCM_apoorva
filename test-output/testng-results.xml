@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-18T10:49:16 IST" name="Default suite" finished-at="2024-12-18T11:22:28 IST" duration-ms="1992015">
+  <suite started-at="2024-12-19T11:37:33 IST" name="Default suite" finished-at="2024-12-19T12:09:06 IST" duration-ms="1892669">
     <groups>
     </groups>
-    <test started-at="2024-12-18T10:49:16 IST" name="Default test" finished-at="2024-12-18T11:22:28 IST" duration-ms="1992015">
+    <test started-at="2024-12-19T11:37:33 IST" name="Default test" finished-at="2024-12-19T12:09:06 IST" duration-ms="1892669">
       <class name="com.test.user.UserManagementModule.AllScenarios_UserManagementModule">
-        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.user.UserManagementModule.AllScenarios_UserManagementModule@3fc2959f]" started-at="2024-12-18T10:49:15 IST" name="reference" finished-at="2024-12-18T10:49:16 IST" duration-ms="475" status="PASS">
+        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.user.UserManagementModule.AllScenarios_UserManagementModule@3fc2959f]" started-at="2024-12-19T11:37:33 IST" name="reference" finished-at="2024-12-19T11:37:33 IST" duration-ms="485" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reference -->
-        <test-method signature="RUNALL(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.user.UserManagementModule.AllScenarios_UserManagementModule@3fc2959f]" started-at="2024-12-18T10:49:17 IST" name="RUNALL" data-provider="TestData" finished-at="2024-12-18T11:22:28 IST" duration-ms="1991099" status="PASS">
+        <test-method signature="RUNALL(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.user.UserManagementModule.AllScenarios_UserManagementModule@3fc2959f]" started-at="2024-12-19T11:37:34 IST" name="RUNALL" data-provider="TestData" finished-at="2024-12-19T12:09:06 IST" duration-ms="1892008" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -20,7 +20,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@4e8e8621]]>
+                <![CDATA[org.testng.TestRunner@783efb48]]>
               </value>
             </param>
           </params>
