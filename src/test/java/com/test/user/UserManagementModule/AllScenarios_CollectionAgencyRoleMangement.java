@@ -161,12 +161,9 @@ public class  AllScenarios_CollectionAgencyRoleMangement extends Base_Class {
 				collectionAgency.RolePermissionSave();
 				ExtentTestManager.getTest().log(Status.PASS, "3. Click Save button.");
 				boolean flag9  = collectionAgency.UpdateRoleSuccessMsg();
-				//Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.waitSpinner);
-				//fluentWait("Next Btn", PageRepositry.NextBtn);
 				Thread.sleep(3000);
 				ExtentTestManager.getTest().log(Status.PASS, "Success message \"Records updated successfully\" is displayed : " + flag9);
 				Log.info("Updated Role Name Success message is displayed:" + flag9);
-				//Thread.sleep(10000);
 				
 				ExtentTestManager.startTest("Role Name Field - ECP Validations");
 				Random rand = new Random();
