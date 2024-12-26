@@ -36,7 +36,7 @@ public class UserManagement
 	public By AddNewUserHeadofficeBtn =  By.xpath("//label[@class='rz-dropdown-label rz-inputtext  rz-placeholder']");	
 	public By AddNewUserZoneCOBtn =  By.xpath("//label[@class='rz-dropdown-label rz-inputtext  rz-placeholder']");
 	public By AddNewUserRegionBtn =  By.xpath("(//label[contains(.,'Region')]/following-sibling::div)[2]");
-	public By AddNewUserBranchOption=  By.xpath("(//label[contains(.,'Branch')]/following-sibling::div) [2]");
+	public By AddNewUserBranchOption=  By.xpath("(//label[contains(.,'Branch')]/followi(//label[contains(.,'Branch')]/following-sibling::div) [2]ng-sibling::div) [2]");
 	public By NameErrorMessage=  By.xpath("//*[@class='my-form-group form-group']//div[.='Name is required']");
 	public By EmailErrorMessage=  By.xpath("//*[@class='my-form-group form-group']//div[.='Email is required']");
 	public By phonenumberErrorMessage=  By.xpath("//*[@class='my-form-group form-group']//div[.='Phone number is required']");

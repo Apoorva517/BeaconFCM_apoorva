@@ -29,11 +29,15 @@ public class CollectionAgency {
 	public By waitSpinner = By.xpath("(//div[@class='spinner']) [1]");
 	public By NextBtn = By.xpath("//li/span[text()='Next']");
 	public By CloseBtn = By.xpath("//span[@class='rzi rzi-times']");
+	public By AgentAccountAllocationCheckbox = By.xpath("//input[@type='checkbox' and @id='20']");
+	public By AddNewAgentCheckbox = By.xpath("//input[@type='checkbox' and @id='16']");
+	public By AgentListCheckbox = By.xpath("//input[@type='checkbox' and @id='17']");
+	public By UploadInvoiceCheckbox = By.xpath("//input[@type='checkbox' and @id='26']");
+	public By DispositionFunctionalityCheckbox = By.xpath("//input[@type='checkbox' and @id='18']");
+	public By AllocationSummaryCheckbox = By.xpath("//input[@type='checkbox' and @id='39']");
+	public By RoleManagementCheckbox = By.xpath("//input[@type='checkbox' and @id='19']");
+	public By SupportRequestCheckbox = By.xpath("//input[@type='checkbox' and @id='48']");
+	public By SupportRequestStatusCheckbox = By.xpath("//input[@type='checkbox' and @id='46']");
 
-	
-	
-	
-	
-	
 
 }

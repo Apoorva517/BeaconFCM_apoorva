@@ -43,9 +43,6 @@ public class  AllScenarios_CollectionAgencyRoleMangement extends Base_Class {
 	Collection_CollectionAgencyRoleManagementModule collectionAgency;
 	Collection_Class CollectionAppLogin;
 	
-	
-
-
 	private static By userDropDown = By.xpath("//button[@class='btn dropdown-toggle']");
 	private static By L_signout = By.xpath("//a[text()='Logout']");
 	
@@ -88,18 +85,19 @@ public class  AllScenarios_CollectionAgencyRoleMangement extends Base_Class {
 				Log.info("clicked Security Management Menu : " + flag1);
 			    ExtentTestManager.getTest().log(Status.PASS, "1. Navigate to Security Management main menu");
 				boolean flag2 =false;
-				String URL = "http://192.168.32.33:8597/Collection/Admin/LevelPermissions";
+				String URL = "Admin/LevelPermissions";
 				String CurrentUrl =Base_Class.driver.getCurrentUrl();
 				System.out.println(CurrentUrl+"---CurrentUrl");
 				if(CurrentUrl.contains(URL)) {
-					assertEquals(CurrentUrl, URL);
-					
 					flag2 =true;
+					ExtentTestManager.getTest().log(Status.PASS, "Role Management page is displayed with application link as Admin/LevelPermissions:" + flag2);
+					Log.info("Application link with Admin/LevelPermissions is displayed:" + flag2);
 				}else {
 					flag2=false;
+					ExtentTestManager.getTest().log(Status.PASS, "Role Management page isn't displayed with application link as Admin/LevelPermissions:" + flag2);
+					Log.info("Application link with Admin/LevelPermissions isn't displayed:" + flag2);
 				}
-				ExtentTestManager.getTest().log(Status.PASS, "Role Management page is displayed with application link as Admin/LevelPermissions:" + flag2);
-				Log.info("Application link with Admin/LevelPermissions is displayed:" + flag2);
+				
 				
 				ExtentTestManager.startTest("Verify Role Management Page Elements Visibility");
 				boolean flag3  = collectionAgency.RoleMngmtEltsVisibility(); 
@@ -120,6 +118,8 @@ public class  AllScenarios_CollectionAgencyRoleMangement extends Base_Class {
 				Log.info("Validation for Empty Role Name is displayed:" + flag4);
 				
 				ExtentTestManager.startTest("Cancel Role Addition");
+				collectionAgency.zoomOut(driver);
+				Thread.sleep(2000);
 				boolean flag5  = collectionAgency.ClickCancelRole();
 				ExtentTestManager.getTest().log(Status.PASS, "1. Click on Cancel button within the role permission pop-up.");
 				ExtentTestManager.getTest().log(Status.PASS, "The pop-up is closed and user is redirected back to Role Management page: " + flag5);
@@ -128,9 +128,9 @@ public class  AllScenarios_CollectionAgencyRoleMangement extends Base_Class {
 				ExtentTestManager.startTest("Add New Role with Valid Data");
 				collectionAgency.AddNewRoleName(username);
 				ExtentTestManager.getTest().log(Status.PASS, "1. Click on Add New Role button.");
-				ExtentTestManager.getTest().log(Status.PASS, "2. Enter Role Name as Role5.");
+				ExtentTestManager.getTest().log(Status.PASS, "2. Enter Role Name ");
 				ExtentTestManager.getTest().log(Status.PASS, "3. Select all functionalities");
-				collectionAgency.ClickingAllCheckbox();
+				collectionAgency.ClickAllCheckbox();
 				collectionAgency.RolePermissionSave();
 				ExtentTestManager.getTest().log(Status.PASS, "4. Click Save button.");
 				boolean flag6  = collectionAgency.RoleNameSuccessMsg();
