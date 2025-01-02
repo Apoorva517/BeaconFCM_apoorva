@@ -56,6 +56,7 @@ public class Collection_CollectionAgencyRoleManagementModule extends Base_Class 
 		fluentWait("checkbox", PageRepositry.checkbox);
 		Thread.sleep(3000);
 		click(PageRepositry.checkbox);
+		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.waitSpinner);
 		//Thread.sleep(2000);
 		return true;
 		
@@ -64,6 +65,7 @@ public class Collection_CollectionAgencyRoleManagementModule extends Base_Class 
 	public boolean RolePermissionSave() throws InterruptedException {
 		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.waitSpinner);
 		click(PageRepositry.RolePermissionSave);
+		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.waitSpinner);
 		return true;
 	}
 	public boolean RoleNameErrorMsg() throws InterruptedException {
@@ -120,6 +122,7 @@ public class Collection_CollectionAgencyRoleManagementModule extends Base_Class 
 	
 	public boolean ClickCheckbox() throws InterruptedException {
 		click(PageRepositry.checkbox);
+		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.waitSpinner);
 		return true;
 	}
     	 

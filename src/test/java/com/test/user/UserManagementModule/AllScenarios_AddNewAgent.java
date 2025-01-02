@@ -42,16 +42,16 @@ public class  AllScenarios_AddNewAgent extends Base_Class {
 	Log log;
 	TestListener TestListener;
 	com.Utility.ScreenShot screenShot;
-	Collection_CollectionAgencyRoleManagementModule collectionAgency;
-	//AddNewAgent_Class AddNewAgentLogin;
+	Add_AddNewAgent AddNewAgent;
+	Collection_Class AddNewAgentLogin;
 	
 	private static By userDropDown = By.xpath("//button[@class='btn dropdown-toggle']");
 	private static By L_signout = By.xpath("//a[text()='Logout']");
 	
 	@BeforeSuite
 	public void reference() {
-		
-		//AddNewAgentLogin = new AddNewAgent_Class();
+	
+		AddNewAgentLogin = new Collection_Class();
 		ExcelReader = new com.Utility.ExcelReader("CollectionAgency");
 		log = new Log();
 		TestListener = new TestListener();
@@ -99,3 +99,13 @@ public class  AllScenarios_AddNewAgent extends Base_Class {
 				}
 				ExtentTestManager.getTest().log(Status.PASS, "Role Management page is displayed with application link as Admin/LevelPermissions:" + flag2);
 				Log.info("Application link with Admin/LevelPermissions is displayed:" + flag2);
+			}
+		} finally {
+			if(driver != null) {
+				driver.quit();
+			}
+		}
+	}
+	
+}
+				

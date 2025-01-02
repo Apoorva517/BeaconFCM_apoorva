@@ -16,6 +16,8 @@ public class AddNewAgent
 	public By MobileNumber= By.xpath("//label[contains(.,'Mobile Number')]/following-sibling::input");
 	public By Role = By.xpath("//div[@class='rz-helper-hidden-accessible']/following-sibling::label");
 	public By IsActive= By.xpath("//label[text()='Is Active']");
+	public By NextBtn= By.xpath("(//span[@class='page-link']) [2]");
+	public By waitSpinner= By.xpath("(//div[@class='spinner']) [1]");
 	
 	
 	

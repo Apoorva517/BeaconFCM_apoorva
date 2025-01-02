@@ -111,7 +111,11 @@ public class  AllScenarios_CollectionAgencyRoleMangement extends Base_Class {
 				collectionAgency.RolePermissionPopup();
 				ExtentTestManager.getTest().log(Status.PASS, "1. Click on Add New Role button.");
 				ExtentTestManager.getTest().log(Status.PASS, "2. Without entering a role name, select functionalities checkboxes.");
+				collectionAgency.zoomOut(driver);
+				Thread.sleep(2000);
 				collectionAgency.RolePermissionSave();
+				collectionAgency.zoomIn(driver);
+				Thread.sleep(2000);
 				ExtentTestManager.getTest().log(Status.PASS, "3. Click on Save button.");
 				boolean flag4  = collectionAgency.RoleNameErrorMsg(); 
 				ExtentTestManager.getTest().log(Status.PASS, "Warning message \"Enter Role Name\" is displayed: " + flag4);
@@ -131,7 +135,11 @@ public class  AllScenarios_CollectionAgencyRoleMangement extends Base_Class {
 				ExtentTestManager.getTest().log(Status.PASS, "2. Enter Role Name ");
 				ExtentTestManager.getTest().log(Status.PASS, "3. Select all functionalities");
 				collectionAgency.ClickAllCheckbox();
+				collectionAgency.zoomOut(driver);
+				Thread.sleep(2000);
 				collectionAgency.RolePermissionSave();
+				collectionAgency.zoomIn(driver);
+				Thread.sleep(2000);
 				ExtentTestManager.getTest().log(Status.PASS, "4. Click Save button.");
 				boolean flag6  = collectionAgency.RoleNameSuccessMsg();
 				ExtentTestManager.getTest().log(Status.PASS, "Success message \"Record saved successfully\" is displayed and user is redirected to Role Management page : " + flag6);
@@ -158,7 +166,11 @@ public class  AllScenarios_CollectionAgencyRoleMangement extends Base_Class {
 				collectionAgency.EditRole();
 				ExtentTestManager.getTest().log(Status.PASS, "1. Click on Edit option for Role5");
 				ExtentTestManager.getTest().log(Status.PASS, "2. Uncheck \"Agent Account Allocation\" and \"Disposition\" checkboxes.");
+				collectionAgency.zoomOut(driver);
+				Thread.sleep(2000);
 				collectionAgency.RolePermissionSave();
+				collectionAgency.zoomIn(driver);
+				Thread.sleep(2000);
 				ExtentTestManager.getTest().log(Status.PASS, "3. Click Save button.");
 				boolean flag9  = collectionAgency.UpdateRoleSuccessMsg();
 				Thread.sleep(3000);
@@ -173,7 +185,11 @@ public class  AllScenarios_CollectionAgencyRoleMangement extends Base_Class {
 				ExtentTestManager.getTest().log(Status.PASS, "1. For Role Name, use inputs with Alphanumeric characters.");
 				collectionAgency.ClickCheckbox();
 				Thread.sleep(6000);
+				collectionAgency.zoomOut(driver);
+				Thread.sleep(2000);
 				boolean flag10  = collectionAgency.RolePermissionSave();
+				collectionAgency.zoomOut(driver);
+				Thread.sleep(2000);
 				ExtentTestManager.getTest().log(Status.PASS, "2. Click Save button.");
 				ExtentTestManager.getTest().log(Status.PASS, "Alphanumeric inputs are allowed : " + flag10);
 				Log.info("Alphanumeric Role Name is displayed:" + flag10);

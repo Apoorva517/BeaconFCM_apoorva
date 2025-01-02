@@ -1,27 +1,41 @@
-[INFO ] 2024-12-26 12:29:16.960 [main] Log - *** Running test method TC_ProcessSheet_CollectionAgency...
-[INFO ] 2024-12-26 12:29:44.846 [main] Log - Driver has initialized successfully for chromebrowser
-[INFO ] 2024-12-26 12:29:50.900 [main] Log - Title is displayed : BeaconICnRM
-[INFO ] 2024-12-26 12:29:59.388 [main] Log - Login successful !
-[ERROR] 2024-12-26 12:32:09.996 [main] Log - *** Test execution TC_ProcessSheet_CollectionAgency failed...
-[ERROR] 2024-12-26 12:32:09.997 [main] Log - Expected condition failed: waiting for element to be clickable: By.xpath: (//a[@data-bs-toggle='tooltip']) [2] (tried for 180 second(s) with 500 milliseconds interval)
-main] Log - Validation for Empty Role Name is displayed:true
-[INFO ] 2024-12-26 12:31:33.265 [main] Log - Cancel Role Addition is successful:true
-[INFO ] 2024-12-26 12:33:03.896 [main] Log - New Role with Valid Date is displayed:true
-[INFO ] 2024-12-26 12:33:29.739 [main] Log - Existing Role is displayed:true
-[INFO ] 2024-12-26 12:33:30.292 [main] Log - Edit Option is displayed:true
-[INFO ] 2024-12-26 12:33:53.958 [main] Log - Updated Role Name Success message is displayed:true
-[INFO ] 2024-12-26 12:34:44.618 [main] Log - Alphanumeric Role Name is displayed:true
-[INFO ] 2024-12-26 12:35:20.359 [main] Log - System able to found the element :By.xpath: (//table[@class='rz-grid-table rz-grid-table-fixed']//tbody//tr//td[@rowspan='1']//span[@class='rz-cell-data'])[1]
-[INFO ] 2024-12-26 12:35:22.518 [main] Log - System able to found the element :By.xpath: (//table[@class='rz-grid-table rz-grid-table-fixed']//tbody//tr//td[@rowspan='1']//span[@class='rz-cell-data'])[3]
-[INFO ] 2024-12-26 12:35:24.649 [main] Log - System able to found the element :By.xpath: (//table[@class='rz-grid-table rz-grid-table-fixed']//tbody//tr//td[@rowspan='1']//span[@class='rz-cell-data'])[5]
-[INFO ] 2024-12-26 12:35:26.799 [main] Log - System able to found the element :By.xpath: (//table[@class='rz-grid-table rz-grid-table-fixed']//tbody//tr//td[@rowspan='1']//span[@class='rz-cell-data'])[7]
-[INFO ] 2024-12-26 12:35:28.971 [main] Log - System able to found the element :By.xpath: (//table[@class='rz-grid-table rz-grid-table-fixed']//tbody//tr//td[@rowspan='1']//span[@class='rz-cell-data'])[9]
-[INFO ] 2024-12-26 12:35:31.139 [main] Log - System able to found the element :By.xpath: (//table[@class='rz-grid-table rz-grid-table-fixed']//tbody//tr//td[@rowspan='1']//span[@class='rz-cell-data'])[11]
-[INFO ] 2024-12-26 12:35:33.347 [main] Log - System able to found the element :By.xpath: (//table[@class='rz-grid-table rz-grid-table-fixed']//tbody//tr//td[@rowspan='1']//span[@class='rz-cell-data'])[13]
-[INFO ] 2024-12-26 12:35:35.536 [main] Log - System able to found the element :By.xpath: (//table[@class='rz-grid-table rz-grid-table-fixed']//tbody//tr//td[@rowspan='1']//span[@class='rz-cell-data'])[15]
-[INFO ] 2024-12-26 12:35:37.717 [main] Log - System able to found the element :By.xpath: (//table[@class='rz-grid-table rz-grid-table-fixed']//tbody//tr//td[@rowspan='1']//span[@class='rz-cell-data'])[17]
-[INFO ] 2024-12-26 12:35:39.903 [main] Log - System able to found the element :By.xpath: (//table[@class='rz-grid-table rz-grid-table-fixed']//tbody//tr//td[@rowspan='1']//span[@class='rz-cell-data'])[19]
-[INFO ] 2024-12-26 12:35:41.915 [main] Log - Empty Roles Search:true
-[INFO ] 2024-12-26 12:36:02.159 [main] Log - No Records to display:true
-[INFO ] 2024-12-26 12:36:05.467 [main] Log - Logout is done!
-[INFO ] 2024-12-26 12:36:05.891 [main] Log - *** Test Suite TC_ProcessSheet_CollectionAgency ending ***
+[INFO ] 2024-12-28 19:00:15.972 [main] Log - Driver has initialized successfully for chrome browser
+[INFO ] 2024-12-28 19:01:00.779 [main] Log - Title is displayed: BeaconICnRM
+[INFO ] 2024-12-28 19:01:01.276 [main] Log - Entered IBU0001195 in user name field
+[INFO ] 2024-12-28 19:01:01.482 [main] Log - Entered test@123 in password field
+[INFO ] 2024-12-28 19:01:01.702 [main] Log - Clicked on login button
+[INFO ] 2024-12-28 19:01:09.341 [main] Log - Entered IBU0001195 in user name field
+[INFO ] 2024-12-28 19:01:09.438 [main] Log - Entered test@123 in password field
+[INFO ] 2024-12-28 19:01:09.538 [main] Log - Clicked on login button
+[INFO ] 2024-12-28 19:01:09.538 [main] Log - Clicked on already login yes button and logged in again with valid credentials
+[INFO ] 2024-12-28 19:01:11.351 [main] Log - Module selection page not appeared
+[INFO ] 2024-12-28 19:01:32.873 [main] Log - UserID in Dashboard: IBU0001195
+[INFO ] 2024-12-28 19:01:33.487 [main] Log - Org Name: Ahmedabad, Org Type Name: Zone/CO
+[INFO ] 2024-12-28 19:01:55.480 [main] Log - ***Navigation to User Management Page***
+[INFO ] 2024-12-28 19:01:55.490 [main] Log - Login successful !
+[INFO ] 2024-12-28 19:01:55.706 [main] Log - 1. Click on Security Management menu
+[INFO ] 2024-12-28 19:01:56.182 [main] Log - 2. Click on User Management submenutrue
+[INFO ] 2024-12-28 19:02:16.360 [main] Log - All elements in UserManagementPage displayed : true
+[INFO ] 2024-12-28 19:02:16.375 [main] Log - Check the default state of 'Is Active' checkbox.
+[INFO ] 2024-12-28 19:02:16.378 [main] Log - ****Test Failed in method: User_search_page__Default_State_of_IsActive_Checkbox --> Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
+[INFO ] 2024-12-28 19:02:16.654 [main] Log - Displayed UserManagement PreviousBtn : true
+[INFO ] 2024-12-28 19:02:16.794 [main] Log - Displayed UserManagement FirstPageBtn : true
+[INFO ] 2024-12-28 19:02:16.923 [main] Log - Displayed UserManagement SecondPageBtn : true
+[INFO ] 2024-12-28 19:02:17.047 [main] Log - Displayed UserManagement NextBtn : true
+[INFO ] 2024-12-28 19:02:17.187 [main] Log - Displayed User search page - Pagination of Active users : true
+[INFO ] 2024-12-28 19:02:17.434 [main] Log - ****Test Failed in method: User_search_page_Pagination_of_Active_users_Second_page_button_functionality_and_data_checking --> null
+[INFO ] 2024-12-28 19:02:23.291 [main] Log - ****Test Failed in method: User_search_page_Pagination_of_Active_users_Last_page_button_functionality_and_data_checking --> null
+[INFO ] 2024-12-28 19:02:23.793 [main] Log - ****Test Failed in method: User_search_page_Pagination_of_Active_users_Previous_page_button_functionality_and_data_checking --> null
+[INFO ] 2024-12-28 19:02:24.289 [main] Log - ****Test Failed in method: Test_Redirect_to_Add_New_User_Page --> null
+[INFO ] 2024-12-28 19:02:26.402 [main] Log - Entered valid Name is showing : true
+[INFO ] 2024-12-28 19:02:26.566 [main] Log - Entered valid Email is showing : true
+[INFO ] 2024-12-28 19:02:26.642 [main] Log - Entered valid Phonenumber is showing : true
+[INFO ] 2024-12-28 19:02:36.038 [main] Log - Successfully user found and clicked on the NewrolePlaywright value inside the dropdown 
+[INFO ] 2024-12-28 19:02:36.038 [main] Log - Selected valid Testrole : true
+[INFO ] 2024-12-28 19:02:39.677 [main] Log - Successfully user found and clicked on the Head office value inside the dropdown 
+[INFO ] 2024-12-28 19:02:39.679 [main] Log - ****Test Failed in method: Add_new_user_page_Organization_Type_Selection_as_Head_office_Display_Head_Office_Dropdown --> null
+[INFO ] 2024-12-28 19:02:43.708 [main] Log - Successfully user found and clicked on the Zone/CO value inside the dropdown 
+[INFO ] 2024-12-28 19:02:43.709 [main] Log - ****Test Failed in method: Add_new_user_page_Organization_Type_Selection_as_Zone_Co_Display_Head_office_and_Zone_CO_dropdown_fields --> null
+[INFO ] 2024-12-28 19:02:47.801 [main] Log - Successfully user found and clicked on the Region value inside the dropdown 
+[INFO ] 2024-12-28 19:02:47.802 [main] Log - ****Test Failed in method: Add_new_user_page_Organization_Type_Selection_as_Region_Display_Head_office_and_Zone_CO_Region_dropdown_fields --> null
+[INFO ] 2024-12-28 19:02:51.868 [main] Log - Successfully user found and clicked on the Branch value inside the dropdown 
+[INFO ] 2024-12-28 19:02:51.869 [main] Log - ****Test Failed in method: Add_new_user_page_Organization_Type_Selection_as_Branch_Display_Head_office_and_Zone_CO_Region_and_Branch_dropdown_fields --> null

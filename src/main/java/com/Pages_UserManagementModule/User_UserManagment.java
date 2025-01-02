@@ -312,7 +312,7 @@ public class User_UserManagment extends Base_Class
     
     public boolean ClickAddNewUserCloseBtn() throws InterruptedException 
 	{
-    	fluentWait("Close Btn",PageRepositry.AddNewUserCloseBtn);
+    	//fluentWait("Close Btn",PageRepositry.AddNewUserCloseBtn);
     	click(PageRepositry.AddNewUserCloseBtn);
     	Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.UserManagementSpinner);
     	ExtentTestManager.getTest().log(Status.INFO, " Close button is clicked");

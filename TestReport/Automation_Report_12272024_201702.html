@@ -1,0 +1,2900 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='EEEE, MMMM dd, yyyy, hh:mm a '('zzz')''/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>Automation_Report_12272024_201702.html</title>
+
+	<style type='text/css'>
+	</style>
+</head>
+
+	<body class='extent dark default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>Automation_Report_12272024_201702.html</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Friday, December 27, 2024, 08:17 PM (IST)</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>3.1.5</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>40</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='80.345%'><span class='strong'>233</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='19.655%'>57</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Navigation to User Management Page</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:17 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:17 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:17 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 13s+617ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:17:02 PM</td>
+					<td class='step-details'>1. Click on Security Management menu</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:17:15 PM</td>
+					<td class='step-details'>2. Click on User Management submenu</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:17:15 PM</td>
+					<td class='step-details'>User management page is displayed with search inputs,buttons and active roles grid.
+
+Confirm presence of User Name, Name, Mobile Number, Email ID, Role drop down, Is Active checkbox, Search button, Add User button.
+Confirm list columns: SL NO, USER NAME, NAME, ROLE, MOBILE NO, EMAIL ID, STATUS, ACTION: true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>User search page - Default State of 'Is Active' Checkbox</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:17 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:17 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:17 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+24ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:17:15 PM</td>
+					<td class='step-details'>1. Check the default state of 'Is Active' checkbox</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:17:15 PM</td>
+					<td class='step-details'>'Is Active' checkbox is in selected state by default: true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>User search page - Pagination of Active users</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:17 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:17 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:17 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+319ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:17:16 PM</td>
+					<td class='step-details'>Displayed UserManagement FirstPageBtn : true</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:17:16 PM</td>
+					<td class='step-details'>Observe the pagination showing under active users grid</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:17:16 PM</td>
+					<td class='step-details'>Pagination option should be displayed, showing 10 users per page and should show Next, 1,2(Indicating page numbers) and >> (Indication of redirecting to last page) buttons: true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>User search page - Pagination of Active users - Second page button functionality and data checking</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:17 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:17 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:17 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+248ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:17:22 PM</td>
+					<td class='step-details'>Click on the '2' button in pagination showing under active users grid</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:17:22 PM</td>
+					<td class='step-details'>Should navigate into 2nd page of the active users list : true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>User search page - Pagination of Active users - Last page button functionality and data checking</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:17 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:17 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:17 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+202ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:17:22 PM</td>
+					<td class='step-details'>Click on the '>>' button in pagination showing under active users grid</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:17:22 PM</td>
+					<td class='step-details'>Should navigate into last page of the active users list: true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>User search page - Pagination of Active users - Previous page button functionality and data checking</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:17 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:17 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:17 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+885ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:17:28 PM</td>
+					<td class='step-details'>Click on the 'Previous' button in pagination showing under active users grid</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:17:28 PM</td>
+					<td class='step-details'>Should navigate into 1st page of the active users list : true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>Test Redirect to Add New User Page</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:17 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:17 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:17 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+419ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:17:38 PM</td>
+					<td class='step-details'>Click on Add User button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:17:38 PM</td>
+					<td class='step-details'>1. Click on Add User button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:17:39 PM</td>
+					<td class='step-details'>All elements of Add new user page displayed</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:17:39 PM</td>
+					<td class='step-details'>Page redirects to 'Add New User' page showing Name, Email, Phone number fields, Role and Organization Type drop-downs, Close and Submit buttons are visible: true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>Add new user page - Organization Type Selection as Head office - Display Head Office Dropdown</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:17 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:17 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:17 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 13s+686ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:17:40 PM</td>
+					<td class='step-details'>1.Enter name=kishan</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:17:41 PM</td>
+					<td class='step-details'>2.Enter email=kishan@gmail.com</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:17:41 PM</td>
+					<td class='step-details'>3.Enter phone number=8089889900</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:17:45 PM</td>
+					<td class='step-details'>4. Select role=TestRole</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:17:48 PM</td>
+					<td class='step-details'>5. Select organization type=Head office</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:17:54 PM</td>
+					<td class='step-details'>6. Observe if there is any new field is appeared in the page</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:17:54 PM</td>
+					<td class='step-details'>Should show Head office drop down field in the add new user page : true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>Add new user page - Organization Type Selection as Zone/Co - Display Head office and Zone/CO drop down fields</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:17 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:17 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:17 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+588ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:17:57 PM</td>
+					<td class='step-details'>1.Enter name=kishan</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:17:57 PM</td>
+					<td class='step-details'>2.Enter email=kishan@gmail.com</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:17:57 PM</td>
+					<td class='step-details'>3.Enter phone number=8089889900</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:17:57 PM</td>
+					<td class='step-details'>4. Select role=TestRole</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:17:57 PM</td>
+					<td class='step-details'>5. Select organization type=Zone/CO</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:17:57 PM</td>
+					<td class='step-details'>Head office field is displayed</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:17:57 PM</td>
+					<td class='step-details'>6. Observe if there is any new field is appeared in the page</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:17:57 PM</td>
+					<td class='step-details'>Head office and Zone/CO dropdown fields should display : true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>Add new user page - Organization Type Selection as Region - Display Head office, Zone/CO and Region drop down fields</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:17 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:17 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:18 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+902ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:18:01 PM</td>
+					<td class='step-details'>1.Enter name=kishan</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:18:01 PM</td>
+					<td class='step-details'>2.Enter email=kishan@gmail.com</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:18:01 PM</td>
+					<td class='step-details'>3.Enter phone number=8089889900</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:18:01 PM</td>
+					<td class='step-details'>4. Select role=TestRole</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:18:01 PM</td>
+					<td class='step-details'>5. Select organization type=Region</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:18:01 PM</td>
+					<td class='step-details'>Head office field is displayed</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:18:01 PM</td>
+					<td class='step-details'>Zone/CO field is displayed</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:18:06 PM</td>
+					<td class='step-details'>6. Observe if there is any new field is appeared in the page</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:18:06 PM</td>
+					<td class='step-details'>Head office, Zone/CO and Region dropdown fields should display : true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>Add new user page - Organization Type Selection as Branch - Display Head office, Zone/CO, Region and Branch drop down fields</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:18 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:18 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:18 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+414ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:18:10 PM</td>
+					<td class='step-details'>1.Enter name=kishan</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:18:10 PM</td>
+					<td class='step-details'>2.Enter email=kishan@gmail.com</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:18:10 PM</td>
+					<td class='step-details'>3.Enter phone number=8089889900</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:18:10 PM</td>
+					<td class='step-details'>4. Select role=TestRole</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:18:10 PM</td>
+					<td class='step-details'>5. Select organization type=Branch</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:18:10 PM</td>
+					<td class='step-details'>Head office field is displayed</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:18:10 PM</td>
+					<td class='step-details'>Zone/CO field is displayed</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:18:10 PM</td>
+					<td class='step-details'>Region field is displayed</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:18:15 PM</td>
+					<td class='step-details'>6. Observe if there is any new field is appeared in the page</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:18:15 PM</td>
+					<td class='step-details'>Head office, Zone/CO, Region and Branch dropdown fields should display : true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>Add new user page - Submit Without Inputs</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:18 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:18 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:18 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 22s+365ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:18:27 PM</td>
+					<td class='step-details'>Close button is clicked</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:18:36 PM</td>
+					<td class='step-details'>Click on Add User button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:18:37 PM</td>
+					<td class='step-details'>1. Leave Name, Email, Phone number fields empty on</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:18:37 PM</td>
+					<td class='step-details'>2. Do not select any option for Role and Organization type dropdowns</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:18:37 PM</td>
+					<td class='step-details'>Clicked AddNewUser SubmitBtn : true</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:18:37 PM</td>
+					<td class='step-details'>3. Click on Submit button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:18:37 PM</td>
+					<td class='step-details'>Error messages: "Name is required", "Email is required", "Phone number is required", "Role is required", "Organization type is required" are displayed under corresponding fields : true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>Add new user page - Enter and select inputs for all fields except Name Field and click on submit button</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:18 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:18 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:19 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 41s+687ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:18:50 PM</td>
+					<td class='step-details'>Close button is clicked</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:18:59 PM</td>
+					<td class='step-details'>Click on Add User button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:18:59 PM</td>
+					<td class='step-details'>1. Keep the Name field blank</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:18:59 PM</td>
+					<td class='step-details'>2.Enter valid inputs for Email and Phone number</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:19:04 PM</td>
+					<td class='step-details'>3. Select valid option for Role</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:19:08 PM</td>
+					<td class='step-details'>4. Select option for Organization type=Head office</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:19:18 PM</td>
+					<td class='step-details'>5. Select option for Head office=Mumbai</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:19:18 PM</td>
+					<td class='step-details'>6.Click on Submit button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:19:19 PM</td>
+					<td class='step-details'>Error message: "Name is required" is displayed under Name field : true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>Add new user page - Enter and select inputs for all fields except Email Field and click on submit button</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:19 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:19 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:20 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 42s+909ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:19:32 PM</td>
+					<td class='step-details'>Close button is clicked</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:19:42 PM</td>
+					<td class='step-details'>Click on Add User button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:19:42 PM</td>
+					<td class='step-details'>1. Enter a valid name</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:19:43 PM</td>
+					<td class='step-details'>2.Leave the Email field blank</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:19:43 PM</td>
+					<td class='step-details'>3. Enter a valid phone number</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:19:47 PM</td>
+					<td class='step-details'>4. Select valid option for Role</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:19:50 PM</td>
+					<td class='step-details'>5. Select option for Organization type=Head office.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:20:01 PM</td>
+					<td class='step-details'>6. Select option for Head office=Mumbai</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:20:02 PM</td>
+					<td class='step-details'>7.Click on Submit button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:20:02 PM</td>
+					<td class='step-details'>Error message for EmailField is displayed under Email field.: true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>Add new user page - Enter and select inputs for all fields except Phone number Field and click on submit button</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:20 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:20 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:20 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 42s+318ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:20:15 PM</td>
+					<td class='step-details'>Close button is clicked</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:20:24 PM</td>
+					<td class='step-details'>Click on Add User button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:20:24 PM</td>
+					<td class='step-details'>1. Enter a valid name and Email</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:20:29 PM</td>
+					<td class='step-details'>2. Leave the Phone number field</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:20:29 PM</td>
+					<td class='step-details'>3. Select valid option for Role</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:20:32 PM</td>
+					<td class='step-details'>4. Select option for Organization type=Head office</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:20:43 PM</td>
+					<td class='step-details'>5. Select option for Head office=Mumbai</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:20:43 PM</td>
+					<td class='step-details'>6.Click on Submit button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:20:44 PM</td>
+					<td class='step-details'>Error message: "Phone number is required" is displayed under Phone number field : true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>Add new user page - Enter and select inputs for all fields except role drop down and click on submit button</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:20 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:20 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:21 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 38s+268ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:20:57 PM</td>
+					<td class='step-details'>Close button is clicked</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:21:06 PM</td>
+					<td class='step-details'>Click on Add User button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:21:07 PM</td>
+					<td class='step-details'>1. Enter valid inputs for Name, Email, and Phone number</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:21:07 PM</td>
+					<td class='step-details'>2.Do not select any option for Role</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:21:11 PM</td>
+					<td class='step-details'>3. Select option for Organization type=Head office</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:21:22 PM</td>
+					<td class='step-details'>4. Select option for Head office=Mumbai</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:21:22 PM</td>
+					<td class='step-details'>6.Click on Submit button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:21:22 PM</td>
+					<td class='step-details'>Error message: "Role is required" is displayed under Role dropdown: true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='17'>
+					<div class='test-heading'>
+						<span class='test-name'>Add new user page - Enter and select inputs for all fields except organization type drop down and click on submit button</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:21 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:21 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:21 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 27s+458ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:21:35 PM</td>
+					<td class='step-details'>Close button is clicked</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:21:45 PM</td>
+					<td class='step-details'>Click on Add User button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:21:46 PM</td>
+					<td class='step-details'>1. Enter valid inputs for Name, Email, and Phone number</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:21:49 PM</td>
+					<td class='step-details'>2. Select valid option for Role</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:21:49 PM</td>
+					<td class='step-details'>3. Do not select any option for Organization type</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:21:50 PM</td>
+					<td class='step-details'>4.Click on Submit button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:21:50 PM</td>
+					<td class='step-details'>Error message: "Organization type is required" is displayed under Organization type dropdown : true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='18'>
+					<div class='test-heading'>
+						<span class='test-name'>Add new user page - Invalid Email Format-missing '@ and domain'</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:21 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:21 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:23 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 23s+794ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:21:55 PM</td>
+					<td class='step-details'>Close button is clicked</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:22:12 PM</td>
+					<td class='step-details'>Click on Add User button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:22:13 PM</td>
+					<td class='step-details'>1. Enter valid inputs for Name and Phone number</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:22:13 PM</td>
+					<td class='step-details'>2. Enter an invalid email format (e.g., missing '@' )</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:22:20 PM</td>
+					<td class='step-details'>3. Select valid options for Role and Organization type</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:22:31 PM</td>
+					<td class='step-details'>4.Click on Submit button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:22:31 PM</td>
+					<td class='step-details'>Should show error message 'Invalid Email Id with @': true</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:22:44 PM</td>
+					<td class='step-details'>Close button is clicked</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:22:54 PM</td>
+					<td class='step-details'>Click on Add User button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:22:55 PM</td>
+					<td class='step-details'>1. Enter valid inputs for Name and Phone number</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:22:55 PM</td>
+					<td class='step-details'>2. Enter an invalid email format (e.g., missing 'domain' )</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:23:02 PM</td>
+					<td class='step-details'>3. Select valid options for Role and Organization type</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:23:13 PM</td>
+					<td class='step-details'>4.Click on Submit button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:23:14 PM</td>
+					<td class='step-details'>Should show error message 'Invalid Email Id' with domain : true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='19'>
+					<div class='test-heading'>
+						<span class='test-name'>Add new user page -Invalid Phone Number Format- with letters and digits</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:23 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:23 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:24 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 24s+432ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:23:25 PM</td>
+					<td class='step-details'>Close button is clicked</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:23:36 PM</td>
+					<td class='step-details'>Click on Add User button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:23:37 PM</td>
+					<td class='step-details'>1. Enter valid inputs for Name and Email</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:23:37 PM</td>
+					<td class='step-details'>2. Enter an invalid phone number format (e.g:letters)</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:23:44 PM</td>
+					<td class='step-details'>3. Select valid options for Role and Organization type.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:23:55 PM</td>
+					<td class='step-details'>4.Click on Submit button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:23:55 PM</td>
+					<td class='step-details'>Should show error message ""Invalid Mobile Number" with letters: true</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:24:09 PM</td>
+					<td class='step-details'>Close button is clicked</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:24:18 PM</td>
+					<td class='step-details'>Click on Add User button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:24:19 PM</td>
+					<td class='step-details'>1. Enter valid inputs for Name and Email</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:24:19 PM</td>
+					<td class='step-details'>2. Enter an invalid phone number format (e.g:8 digits)</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:24:27 PM</td>
+					<td class='step-details'>3. Select valid options for Role and Organization type.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:24:38 PM</td>
+					<td class='step-details'>4.Click on Submit button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:24:38 PM</td>
+					<td class='step-details'>Should show error message 'Invalid Mobile Number' with 8 digits : true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='20'>
+					<div class='test-heading'>
+						<span class='test-name'>Add new user - Name Field - ECP Validations(Alphabetic inputs)</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:24 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:24 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:27 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 2m 30s+785ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:24:51 PM</td>
+					<td class='step-details'>Close button is clicked</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:25:01 PM</td>
+					<td class='step-details'>Click on Add User button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:25:02 PM</td>
+					<td class='step-details'>1. Enter valid Email</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:25:02 PM</td>
+					<td class='step-details'>2. Enter an valid phone number format.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:25:06 PM</td>
+					<td class='step-details'>3. Select valid options for Role and Organization type.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:25:20 PM</td>
+					<td class='step-details'>4. For the Name field, test inputs with Alphabets characters</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:25:26 PM</td>
+					<td class='step-details'>5.Click on Submit button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:25:44 PM</td>
+					<td class='step-details'>Alphabetic inputs are allowed.<br>Other inputs prompt error message "Invalid Name": true</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:25:53 PM</td>
+					<td class='step-details'>Click on Add User button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:25:54 PM</td>
+					<td class='step-details'>1. Enter valid Email</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:25:54 PM</td>
+					<td class='step-details'>2. Enter an valid phone number format.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:26:01 PM</td>
+					<td class='step-details'>3. Select valid options for Role and Organization type.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:26:12 PM</td>
+					<td class='step-details'>4. For the Name field, test inputs with  Numeric characters</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:26:12 PM</td>
+					<td class='step-details'>5.Click on Submit button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:26:17 PM</td>
+					<td class='step-details'>Numeric inputs prompt error message 'Invalid Name': true</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:26:30 PM</td>
+					<td class='step-details'>Close button is clicked</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:26:39 PM</td>
+					<td class='step-details'>Click on Add User button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:26:40 PM</td>
+					<td class='step-details'>1. Enter valid Email</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:26:40 PM</td>
+					<td class='step-details'>2. Enter an valid phone number format.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:26:48 PM</td>
+					<td class='step-details'>3. Select valid options for Role and Organization type.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:26:58 PM</td>
+					<td class='step-details'>4. For the Name field, test inputs with  AlphaNumeric characters</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:27:03 PM</td>
+					<td class='step-details'>5.Click on Submit button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:27:09 PM</td>
+					<td class='step-details'>Alpha Numeric inputs prompt error message 'Invalid Name' : true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='21'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Head Office User - No Head Office Selected - Error message validation</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:27 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:27 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:27 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 35s+914ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:27:21 PM</td>
+					<td class='step-details'>Close button is clicked</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:27:31 PM</td>
+					<td class='step-details'>Click on Add User button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:27:32 PM</td>
+					<td class='step-details'>1. Enter valid inputs in Name, Email, and Phone number fields</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:27:44 PM</td>
+					<td class='step-details'>2. Select 'Head Office' from Organization type dropdown</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:27:44 PM</td>
+					<td class='step-details'>3. Do not select any value from Head office dropdown</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:27:44 PM</td>
+					<td class='step-details'>4. Select a valid input from Role dropdown</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:27:45 PM</td>
+					<td class='step-details'>5.Click on Submit button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:27:45 PM</td>
+					<td class='step-details'>Error message "Head office is Required" should show and the user is not created : true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='22'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Head Office User - Valid Inputs - Successful user creation</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:27 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:27 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:28 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 3s+188ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:28:01 PM</td>
+					<td class='step-details'>Close button is clicked</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:28:12 PM</td>
+					<td class='step-details'>Click on Add User button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:28:13 PM</td>
+					<td class='step-details'>1. Enter valid inputs in Name, Email, and Phone number fields</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:28:20 PM</td>
+					<td class='step-details'>2. Select 'Head Office' from Organization type dropdown</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:28:30 PM</td>
+					<td class='step-details'>3. Select a valid value from Head office dropdown</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:28:30 PM</td>
+					<td class='step-details'>4. Select a valid input from Role dropdown</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:28:30 PM</td>
+					<td class='step-details'>5.Click on Submit button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:28:48 PM</td>
+					<td class='step-details'>Page redirects to user search page and should show Success message displays: "User created successfully. Present password for the user: IBU000xxxx is xxxxxx" and Newly created user appears at the top of the search results : true</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:28:48 PM</td>
+					<td class='step-details'>Fetch table header value</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:28:48 PM</td>
+					<td class='step-details'>Getting username and password</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='23'>
+					<div class='test-heading'>
+						<span class='test-name'>Add new user - User already exists case</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:28 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:28 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:29 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 34s+409ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:28:58 PM</td>
+					<td class='step-details'>Click on Add User button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:28:59 PM</td>
+					<td class='step-details'>1.Enter valid same inputs in Name, Email, and Phone number fields</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:29:06 PM</td>
+					<td class='step-details'>2. Select 'Head Office' from Organization type dropdown</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:29:16 PM</td>
+					<td class='step-details'>3. Select a valid value from Head office dropdown</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:29:16 PM</td>
+					<td class='step-details'>4. Select a valid input from Role dropdown</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:29:17 PM</td>
+					<td class='step-details'>5.Click on Submit button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:29:22 PM</td>
+					<td class='step-details'>Should show error message 'Already User Exist' true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='24'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Head Office User - Login with newly created user</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:29 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:29 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:29 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+620ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:29:28 PM</td>
+					<td class='step-details'>1.Enter user Name of Head office user in User Name field</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:29:28 PM</td>
+					<td class='step-details'>2.Enter Password of Head office user in Password field</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:29:33 PM</td>
+					<td class='step-details'>3. Click on Login button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:29:39 PM</td>
+					<td class='step-details'>Should redirect to module selection page and should show Go Collection button, Set as Default checkbox, Go Recovery button and Set as Default checkbox. Also should show User ID and User name on top of left side: true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='25'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Zone/CO User - No Zone/Co Selected - Error message validation</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:29 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:29 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:30 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 7s+525ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:30:23 PM</td>
+					<td class='step-details'>Click on Add User button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:30:23 PM</td>
+					<td class='step-details'>1.Enter valid same inputs in Name, Email, and Phone number fields</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:30:35 PM</td>
+					<td class='step-details'>2. Select 'Zone/CO' from Organization type dropdown</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:30:46 PM</td>
+					<td class='step-details'>3. Select any value from Head office dropdown</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:30:46 PM</td>
+					<td class='step-details'>4. Do not select any value from Zone/CO dropdown.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:30:46 PM</td>
+					<td class='step-details'>5. Select a valid input from Role dropdown</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:30:46 PM</td>
+					<td class='step-details'>6.Click on Submit button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:30:46 PM</td>
+					<td class='step-details'>Error message 'Zone/CO is Required' should show and the user is not created : true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='26'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Zone/CO User - Valid Inputs - Successful user creation</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:30 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:30 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:31 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 8s+833ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:30:47 PM</td>
+					<td class='step-details'>Close button is clicked</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:31:05 PM</td>
+					<td class='step-details'>Click on Add User button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:31:05 PM</td>
+					<td class='step-details'>1.Enter valid inputs in Name, Email, and Phone number fields</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:31:17 PM</td>
+					<td class='step-details'>2. Select 'Zone/CO' from Organization type dropdown.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:31:28 PM</td>
+					<td class='step-details'>3. Select any value from Head office dropdown.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:31:37 PM</td>
+					<td class='step-details'>4. Select any value from Zone/CO dropdown</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:31:37 PM</td>
+					<td class='step-details'>5. Select a valid input from Role dropdown</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:31:37 PM</td>
+					<td class='step-details'>6.Click on Submit button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:31:55 PM</td>
+					<td class='step-details'>Page redirects to user search page and should show Success message displays: "User created successfully. Present password for the user: IBU000xxxx is xxxxxx" and Newly created user appears at the top of the search results. : true</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:31:55 PM</td>
+					<td class='step-details'>Getting username and password</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:31:55 PM</td>
+					<td class='step-details'>Fetch table header value</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='27'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Zone/CO User - Login with newly created user</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:31 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:31 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:32 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 22s+188ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:32:06 PM</td>
+					<td class='step-details'>1. Enter user Name of Zone/Co user in User Name field.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:32:06 PM</td>
+					<td class='step-details'>2. Enter Password of Zone/CO user in Password field</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:32:11 PM</td>
+					<td class='step-details'>3. Click on Login button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:32:17 PM</td>
+					<td class='step-details'>Should redirect to module selection page and should show Go Collection button, Set as Default checkbox, Go Recovery button and Set as Default checkbox. Also should show User ID and User name on top of left side. true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='28'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Region User - No Region Selected - Error message validation</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:32 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:32 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:33 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 19s+100ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:33:06 PM</td>
+					<td class='step-details'>Click on Add User button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:33:07 PM</td>
+					<td class='step-details'>1.Enter valid inputs in Name, Email, and Phone number fields</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:33:11 PM</td>
+					<td class='step-details'>2. Select a valid input from Role dropdown</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:33:15 PM</td>
+					<td class='step-details'>3. Select 'Region' from Organization type dropdown.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:33:26 PM</td>
+					<td class='step-details'>4. Select any value from Head office dropdown.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:33:36 PM</td>
+					<td class='step-details'>5. Select any value from Zone/CO dropdown.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:33:36 PM</td>
+					<td class='step-details'>6. Do not select any value from Region drop down.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:33:36 PM</td>
+					<td class='step-details'>7. Click on Submit button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:33:37 PM</td>
+					<td class='step-details'>Error message 'Region is Required' should show and the user is not created. true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='29'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Region User - Valid Inputs - Successful user creation</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:33 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:33 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:34 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 18s+399ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:33:49 PM</td>
+					<td class='step-details'>Close button is clicked</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:33:59 PM</td>
+					<td class='step-details'>Click on Add User button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:34:00 PM</td>
+					<td class='step-details'>1.Enter valid inputs in Name, Email, and Phone number fields</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:34:03 PM</td>
+					<td class='step-details'>2. Select a valid input from Role dropdown</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:34:07 PM</td>
+					<td class='step-details'>3. Select 'Region' from Organization type dropdown.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:34:18 PM</td>
+					<td class='step-details'>4. Select any value from Head office dropdown.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:34:28 PM</td>
+					<td class='step-details'>5. Select any value from Zone/CO dropdown.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:34:28 PM</td>
+					<td class='step-details'>6. Do not select any value from Region drop down.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:34:37 PM</td>
+					<td class='step-details'>7. Click on Submit button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:34:55 PM</td>
+					<td class='step-details'>Page redirects to user search page and should show Success message displays: "User created successfully. Present password for the user: IBU000xxxx is xxxxxx" and Newly created user appears at the top of the search results.: true</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:34:55 PM</td>
+					<td class='step-details'>Getting username and password</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:34:55 PM</td>
+					<td class='step-details'>Fetch table header value</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='30'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Region User - Login with newly created user</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:34 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:34 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:35 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 17s+637ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:35:01 PM</td>
+					<td class='step-details'>1. Enter user Name of Region user in User Name field</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:35:01 PM</td>
+					<td class='step-details'>2. Enter Password of Region user in Password field.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:35:01 PM</td>
+					<td class='step-details'>3. Click on Login button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:35:13 PM</td>
+					<td class='step-details'>Should redirect to module selection page and should show Go Collection button, Set as Default checkbox, Go Recovery button and Set as Default checkbox. Also should show User ID and User name on top of left side.true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='31'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Branch User - No Branch Selected - Error message validation</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:35 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:35 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:36 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 25s+994ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:36:00 PM</td>
+					<td class='step-details'>Click on Add User button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:36:01 PM</td>
+					<td class='step-details'>1.Enter valid inputs in Name, Email, and Phone number fields</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:36:05 PM</td>
+					<td class='step-details'>2. Select a valid input from Role dropdown</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:36:08 PM</td>
+					<td class='step-details'>3. Select 'Region' from Organization type dropdown.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:36:19 PM</td>
+					<td class='step-details'>4. Select any value from Head office dropdown.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:36:29 PM</td>
+					<td class='step-details'>5. Select any value from Zone/CO dropdown.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:36:29 PM</td>
+					<td class='step-details'>6. Select any value from Region drop down.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:36:38 PM</td>
+					<td class='step-details'>7. Do not select any value from Region drop down.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:36:38 PM</td>
+					<td class='step-details'>8. Click on Submit button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:36:39 PM</td>
+					<td class='step-details'>Error message Branch Required should show and the user is not created: true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='32'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Branch User - Valid Inputs - Successful user creation</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:36 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:36 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:38 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 30s+371ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:36:51 PM</td>
+					<td class='step-details'>Close button is clicked</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:37:01 PM</td>
+					<td class='step-details'>Click on Add User button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:37:02 PM</td>
+					<td class='step-details'>1.Enter valid inputs in Name, Email, and Phone number fields</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:37:06 PM</td>
+					<td class='step-details'>2. Select a valid input from Role dropdown</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:37:09 PM</td>
+					<td class='step-details'>3. Select 'Branch' from Organization type dropdown.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:37:21 PM</td>
+					<td class='step-details'>4. Select any value from Head office dropdown.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:37:33 PM</td>
+					<td class='step-details'>5. Select any value from Zone/CO dropdown.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:37:44 PM</td>
+					<td class='step-details'>6. Select any value from Region drop down.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:37:50 PM</td>
+					<td class='step-details'>7. Select any value from Branch drop down.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:37:50 PM</td>
+					<td class='step-details'>8. Click on Submit button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:38:09 PM</td>
+					<td class='step-details'>Getting username and password</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:38:09 PM</td>
+					<td class='step-details'>Page redirects to user search page and should show Success message displays: "User created successfully. Present password for the user: IBU000xxxx is xxxxxx" and Newly created user appears at the top of the search results: true</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:38:09 PM</td>
+					<td class='step-details'>Fetch table header value</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='33'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Branch User - Login with newly created user</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:38 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:38 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:38 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 35s+376ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:38:24 PM</td>
+					<td class='step-details'>1. Enter user Name of Branch user in User Name field.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:38:24 PM</td>
+					<td class='step-details'>2. Enter Password of Branch user in Password field.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:38:24 PM</td>
+					<td class='step-details'>3. Click on Login button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:38:44 PM</td>
+					<td class='step-details'>Should redirect to module selection page and should show Go Collection button, Set as Default checkbox, Go Recovery button and Set as Default checkbox. Also should show User ID and User name on top of left side. : true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='34'>
+					<div class='test-heading'>
+						<span class='test-name'>User search page - Search with Valid User Name</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:38 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:38 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:39 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 52s+650ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:38:45 PM</td>
+					<td class='step-details'>Click logout button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:38:51 PM</td>
+					<td class='step-details'>Click login button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:39:25 PM</td>
+					<td class='step-details'>Land to UserManagement page</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:39:25 PM</td>
+					<td class='step-details'>1. Enter "IBU0001192" into User Name field</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:39:37 PM</td>
+					<td class='step-details'>2. Click on Search button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:39:37 PM</td>
+					<td class='step-details'>Search result displays user with columns: SL NO, USER NAME, NAME, ROLE, MOBILE NO, EMAIL ID, STATUS, ACTION with status green tick.: true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='35'>
+					<div class='test-heading'>
+						<span class='test-name'>User search page - Role Dropdown Selection</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:39 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:39 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:39 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 18s+957ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:39:44 PM</td>
+					<td class='step-details'>1. Select Admin Role from the role drop-down.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:39:44 PM</td>
+					<td class='step-details'>2. Leave all other fields empty</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:39:56 PM</td>
+					<td class='step-details'>3. Click on Search button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:39:56 PM</td>
+					<td class='step-details'>Users matching the selected role are displayed. : true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='36'>
+					<div class='test-heading'>
+						<span class='test-name'>User search page - Search with Invalid User Name</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:39 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:39 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:40 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+4ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:39:56 PM</td>
+					<td class='step-details'>1. Enter "InvalidUser" into User Name field</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:40:02 PM</td>
+					<td class='step-details'>2. Click on Search button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:40:02 PM</td>
+					<td class='step-details'>System displays "No records to display." message. : true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='37'>
+					<div class='test-heading'>
+						<span class='test-name'>User search page - Activate/Deactivate selection of an Active User</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:40 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:40 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:40 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 37s+464ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:40:04 PM</td>
+					<td class='step-details'>1. Enter "IBU0001192" into User Name field and click on Search button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:40:17 PM</td>
+					<td class='step-details'>2. Click on three-dot menu in ACTION column</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:40:17 PM</td>
+					<td class='step-details'>3. Select Activate/De-activate</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:40:22 PM</td>
+					<td class='step-details'>SuccessMessage</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:40:39 PM</td>
+					<td class='step-details'>Red Status is displayed</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:40:39 PM</td>
+					<td class='step-details'>"Success Status Changed" message appears. User is deactivated. Status changes to red cross on re-search with "Is Active" unchecked. : true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='38'>
+					<div class='test-heading'>
+						<span class='test-name'>User search page  - Activate/Deactivate selection of an Inactive User</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:40 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:40 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:41 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 21s+865ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:40:40 PM</td>
+					<td class='step-details'>1. Enter "IBU0001192" into User Name field and click on Search button with "Is Active" unchecked"</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:40:42 PM</td>
+					<td class='step-details'>2. Click on three-dot menu in ACTION column</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:40:42 PM</td>
+					<td class='step-details'>3. Select Activate/De-activate</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:40:47 PM</td>
+					<td class='step-details'>SuccessMessage</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:41:02 PM</td>
+					<td class='step-details'>Green Status is displayed</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:41:02 PM</td>
+					<td class='step-details'>Record Activated, Green cross is displayed : true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='39'>
+					<div class='test-heading'>
+						<span class='test-name'>User search page  - Reset Password</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:41 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:41 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:41 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 23s+916ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:41:05 PM</td>
+					<td class='step-details'>1. Enter "IBU0001192" into User Name field and click on Search button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:41:16 PM</td>
+					<td class='step-details'>2. Click on three-dot menu in ACTION column</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:41:24 PM</td>
+					<td class='step-details'>3. Select Reset Password</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:41:26 PM</td>
+					<td class='step-details'>'The password has been reset successfully. Present password for the user IBU0001192 is xxxxxxx' message is displayed : true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='40'>
+					<div class='test-heading'>
+						<span class='test-name'>User search page  -  Edit User Details</span>
+						<span class='test-time'>Friday, December 27, 2024, 08:41 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Friday, December 27, 2024, 08:41 PM (IST)</span>
+	<span class='label end-time'>Friday, December 27, 2024, 08:42 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 33s+423ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:41:28 PM</td>
+					<td class='step-details'>1. Enter "IBU0001192" into User Name field and click on Search button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:41:37 PM</td>
+					<td class='step-details'>2. Click on three-dot menu in ACTION column</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:41:38 PM</td>
+					<td class='step-details'>3. Select Edit</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:42:00 PM</td>
+					<td class='step-details'>User is redirected to edit page showing Name, Email, Phone number fields, Role and Organization Type drop-downs, Close and Update buttons. : true</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<!-- category view -->
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>40</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>290</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Friday, December 27, 2024, 08:17 PM (IST)</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Friday, December 27, 2024, 08:42 PM (IST)</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 25m 0s+939ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>OS</td>
+								<td>Windows</td>
+							</tr>
+							<tr>
+								<td>AUT</td>
+								<td>QA</td>
+							</tr>
+							<tr>
+								<td>Author</td>
+								<td>Linita Shivalkar</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 40,
+				failParent: 0,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 0,
+				
+				passChild: 233,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 57,
+				exceptionsChild: 0,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/fca20fb7653aade98810546ab96a2a4360e3e712/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+ 		<script type='text/javascript'>
+ 		</script>
+	</body>
+	
+</html>

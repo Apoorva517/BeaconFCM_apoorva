@@ -2,19 +2,20 @@ package com.Pages_UserManagementModule;
 
 import com.BasePackage.Base_Class;
 import com.BasePackage.Common;
-import com.Page_Repositary.CollectionAgency;
+import com.Page_Repositary.AddNewAgent;
+
 
 public class Add_AddNewAgent extends Base_Class {
 	
-	Add_AddNewAgent PageRepositry= new Add_AddNewAgent();
+	AddNewAgent PageRepositry= new AddNewAgent();
 
 	public boolean ClickSecurityManagement() throws InterruptedException 
 	{
-		click(PageRepositry.SecurityManagementMenu);
-		click(PageRepositry.RoleManagementOption);
+		click(PageRepositry.AgentManagement);
+		click(PageRepositry.AgentlistSubMenu);
 		Common.waitForSpinnerToDisappear(driver, "Loading Spinner", PageRepositry.waitSpinner);
 		fluentWait("Next Btn", PageRepositry.NextBtn);
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		return true;
 		
 	}
